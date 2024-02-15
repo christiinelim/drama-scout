@@ -1,0 +1,2123 @@
+[
+    {
+        "id": 0,
+        "drama": "Love in the Moonlight",
+        "dramaImage": "image/0.png",
+        "genre": ["Romance", "Historical", "Comedy"],
+        "year": 2016,
+        "synopsis": "Hong Ra On disguises herself as a man and counsels men on dating. Due to a love letter she wrote for a client, she meets Crown Prince Hyo Myeong. Ra On is unaware that he is the Crown Prince and Hyo Myeong is unaware that Ra On is a woman. The Crown Prince becomes interested in Ra On. His eunuchs become aware of this and attempt to get Ra On to become one of them.",
+        "location": [
+            {
+                "name": "Gyeongbokgung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5789,
+                "longitude": 126.977,
+                "website": "https://royal.cha.go.kr/ROYAL/contents/menuInfo-gbg.do?grpCode=gbg"
+            }, 
+            {
+                "name": "Damyang",
+                "image": "/",
+                "province": "Jeollanam-do",
+                "area": "Damyang",
+                "address": "Damyang, Jeollanam-do, South Korea",
+                "latitude": 35.3186,
+                "longitude": 126.9994,
+                "website": "nil"
+            },
+            {
+                "name": "Garden of the Morning Calm",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Gapyeong",
+                "address": "432 Sumogwon-ro, Sang-myeon, Gapyeong-gun, Gyeonggi-do, South Korea",
+                "latitude": 37.7076,
+                "longitude": 127.426,
+                "website": "https://www.morningcalm.co.kr/html/main.php"
+            },
+            {
+                "name": "Dongdaemun Design Plaza (DDP)",
+                "image": "image/1c.png",
+                "province": "Seoul",
+                "area": "Eulji-ro",
+                "address": "281 Eulji-ro, Euljiro 7(chil)-ga, Jung-gu, Seoul, South Korea",
+                "latitude": 37.5663,
+                "longitude": 127.0079,
+                "website": "http://www.ddp.or.kr/"
+            },
+            {
+                "name": "Namsan Hanok Village",
+                "image": "image/1e.png",
+                "province": "Seoul",
+                "area": "Toegye-ro",
+                "address": "28, Toegye-ro 34-gil, Jung-gu, Seoul, South Korea",
+                "latitude": 37.5592,
+                "longitude": 126.994,
+                "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264129"
+            },
+            {
+                "name": "Namwon Gwanghallu Pavilion",
+                "image": "/",
+                "province": "Jeollabuk-do",
+                "area": "Namwon-si",
+                "address": "130-6, Gwanghalluwon-ro, Namwon-si, Jeollabuk-do, South Korea",
+                "latitude": 35.412,
+                "longitude": 127.386,
+                "website": "https://www.namwon.go.kr/tour/index.do?menuCd=DOM_000001001007001000"
+            },
+            {
+                "name": "Jangchungdan Park",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jangchungdan-ro",
+                "address": "5 Jangchungdan-ro, Pil-dong, Jung-gu, Seoul, South Korea",
+                "latitude": 37.558,
+                "longitude": 126.9984,
+                "website": "nil"
+            },
+            {
+                "name": "Nonsan Sunshine Land",
+                "image": "/",
+                "province": "Chungcheongnam-do",
+                "area": "Sunchon-don",
+                "address": "10 Sunchon-dong, Nonsan-si, Chungcheongnam-do, South Korea",
+                "latitude": 36.2075,
+                "longitude": 127.0672,
+                "website": "nil"
+            },
+            {
+                "name": "Chuncheon Myeongdong Street",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Myeongdong-gil",
+                "address": "Myeongdong-gil, Chuncheon-si, Gangwon-do, South Korea",
+                "latitude": 37.8829,
+                "longitude": 127.7363,
+                "website": "nil"
+            },
+            {
+                "name": "Hongik University",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Mapo-gu",
+                "address": "94 Wausan-ro, Seogyo-dong, Mapo-gu, Seoul, South Korea",
+                "latitude": 37.5514,
+                "longitude": 126.9246,
+                "website": "https://en.hongik.ac.kr/index.do"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "drama": "My Love From Another Star",
+        "dramaImage": "image/1.png",
+        "genre": ["Alien", "Comedy", "Romance"],
+        "year": 2013,
+        "synopsis": "Do Min Joon is an alien who landed on Earth 400 years ago during the Joseon Dynasty period. He possesses a near perfect appearance and enhanced physical abilities involving his vision, hearing and speed. Later, he discovers that he has three months left on Earth. And that is when he meets Cheon Song Yi, the biggest Hallyu star in Korea.",
+        "location": [
+            {
+                "name": "Namsan Tower",
+                "image": "image/1a.png",
+                "province": "Seoul",
+                "area": "Yongsan-gu",
+                "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
+                "latitude": 37.5512,
+                "longitude": 126.9876,
+                "website": "https://www.nseoultower.co.kr/"
+            }, 
+            {
+                "name": "Petite France",
+                "image": "image/1b.png",
+                "province": "Gyeonggi-do",
+                "area": "Gapyeong",
+                "address": "1063 Hoban-ro, Cheongpyeong-myeon, Gapyeong-gun, Gyeonggi-do, South Korea",
+                "latitude": 37.8328,
+                "longitude": 127.7693,
+                "website": "http://www.pfcamp.com/"
+            },
+            {
+                "name": "Dongdaemun Design Plaza (DDP)",
+                "image": "image/1c.png",
+                "province": "Seoul",
+                "area": "Eulji-ro",
+                "address": "281 Eulji-ro, Euljiro 7(chil)-ga, Jung-gu, Seoul, South Korea",
+                "latitude": 37.5663,
+                "longitude": 127.0079,
+                "website": "http://www.ddp.or.kr/"
+            },
+            {
+                "name": "Haneul Park",
+                "image": "image/1d.png",
+                "province": "Seoul",
+                "area": "Mapo-gu",
+                "address": "95 Haneulgongwon-ro, Mapo-gu, Seoul, South Korea",
+                "latitude": 37.571,
+                "longitude": 126.8824,
+                "website": "nil"
+            },
+            {
+                "name": "Namsan Hanok Village",
+                "image": "image/1e.png",
+                "province": "Seoul",
+                "area": "Toegye-ro",
+                "address": "28, Toegye-ro 34-gil, Jung-gu, Seoul, South Korea",
+                "latitude": 37.5592,
+                "longitude": 126.994,
+                "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264129"
+            },
+            {
+                "name": "Bukchon Hanok Village",
+                "image": "image/1f.png",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "Bukchon Hanok Village, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5823,
+                "longitude": 126.985,
+                "website": "nil"
+            },
+            {
+                "name": "Sinchon Railway Bridge",
+                "image": "image/1g.png",
+                "province": "Seoul",
+                "area": "Mapo-gu",
+                "address": "Sinchon-dong, Mapo-gu, Seoul, South Korea",
+                "latitude": 37.5598,
+                "longitude": 126.938,
+                "website": "nil"
+            },
+            {
+                "name": "Seonam Village",
+                "image": "image/1h.png",
+                "province": "Gyeonggi-do",
+                "area": "Yangpyeong",
+                "address": "Seonam Village, Yangpyeong-gun, Gyeonggi-do, South Korea",
+                "latitude": 37.4938,
+                "longitude": 127.6679,
+                "website": "nil"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "drama": "Moon Lovers: Scarlet Heart Ryeo",
+        "dramaImage": "image/2.png",
+        "genre": ["Romance", "Historical", "Time Travel"],
+        "year": 2016,
+        "synopsis": "This drama is based on Chinese novel “Bu Bu Jing Xin” by Tong Hua which was originally published online in 2005 on Jinjiang Original Network. The novel also adapted into the chinese television series “Scarlet Heart” which was aired in Hunan Broadcasting System (HBS) from 2011-Sep-10 to 2011-Sep-29 and also “Scarlet Heart 2” which was aired in Zhejiang STV (ZJTV) from 2014-Apr-22 to 2014-May-07.This drama was fully pre-produced before airing which is a departure from the live-shoot production format that characterizes most Korean dramas. The Filming Began on 2016-Jan and Completed on 2016-June-30. The series will be simulcast in China.When a total eclipse of the sun takes place, a 21st-century woman, Go Ha Jin, is transported back in time to the Goryeo Dynasty of Korea. She wakes up in the body of 16-year-old Hae Soo, an aristocrat living with Lady Hae, her cousin who happens to be married to one of the sons of King Taejo. She soon befriends several of the princes, who find her carefree and exuberant attitude refreshing. Although she knows she should not get involved in palace intrigues over the succession to the throne, she inadvertently becomes a pawn in the struggle, as several of the Princes fall in love with her.Adapted from the Chinese novel “Bu Bu Jing Xin” (步步惊心) by Tong Hua (桐华).",
+        "location": [
+            {
+                "name": "Namsan Hanok Village",
+                "image": "image/1e.png",
+                "province": "Seoul",
+                "area": "Toegye-ro",
+                "address": "28, Toegye-ro 34-gil, Jung-gu, Seoul, South Korea",
+                "latitude": 37.5592,
+                "longitude": 126.994,
+                "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264129"
+            }, 
+            {
+                "name": "Bukchon Hanok Village",
+                "image": "image/1f.png",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "Bukchon Hanok Village, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5823,
+                "longitude": 126.985,
+                "website": "nil"
+            },
+            {
+                "name": "Daereungwon Tomb Complex",
+                "image": "/",
+                "province": "Gyeongsangbuk-do",
+                "area": "Neungnae-ro",
+                "address": "9 Neungnae-ro, Gyeongju, Gyeongsangbuk-do, South Korea",
+                "latitude": 35.8302,
+                "longitude": 129.2132,
+                "website": "https://gjfmc.or.kr/gjsiseol/facility/facilityTab1.do?classId=TOUR&itemId=T0000005"
+            },
+            {
+                "name": "Jeonju Hanok Village",
+                "image": "/",
+                "province": "Jeollabuk-do",
+                "area": "Girin-daero",
+                "address": "99 Girin-daero, Wansan-gu, Jeonju, Jeollabuk-do, South Korea",
+                "latitude": 35.8174,
+                "longitude": 127.1494,
+                "website": "https://hanok.jeonju.go.kr/"
+            },
+            {
+                "name": "Suncheonman Bay Wetland Reserve",
+                "image": "/",
+                "province": "Jeollanam-do",
+                "area": "Suncheonman-gil",
+                "address": "513-25 Suncheonman-gil, Suncheon-si, Jeollanam-do, South Korea",
+                "latitude": 34.8888,
+                "longitude": 127.5237,
+                "website": "https://scbay.suncheon.go.kr/intro.jsp"
+            },
+            {
+                "name": "Hwaseong Fortress",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Jeongjo-ro",
+                "address": "910 Jeongjo-ro, Paldal-gu, Suwon-si, Gyeonggi-do, South Korea",
+                "latitude": 37.2872,
+                "longitude": 127.011,
+                "website": "https://www.swcf.or.kr/"
+            },
+            {
+                "name": "Nami Island",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Namisum-gil",
+                "address": "1 Namisum-gil, Namsan-myeon, Chuncheon-si, Gangwon-do, South Korea",
+                "latitude": 37.791,
+                "longitude": 127.525,
+                "website": "https://www.namisum.com/"
+            },
+            {
+                "name": "Petite France",
+                "image": "image/1b.png",
+                "province": "Gyeonggi-do",
+                "area": "Gapyeong",
+                "address": "1063 Hoban-ro, Cheongpyeong-myeon, Gapyeong-gun, Gyeonggi-do, South Korea",
+                "latitude": 37.8328,
+                "longitude": 127.7693,
+                "website": "http://www.pfcamp.com/"
+            },
+            {
+                "name": "Hwaseong Haenggung Palace",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Jeongjo-ro",
+                "address": "825 Jeongjo-ro, Paldal-gu, Suwon-si, Gyeonggi-do, South Korea",
+                "latitude": 37.2894,
+                "longitude": 127.0103,
+                "website": "https://www.swcf.or.kr/?p=62"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "drama": "Goblin",
+        "dramaImage": "image/3.png",
+        "genre": ["Romance", "Comedy", "Fantasy"],
+        "year": 2016,
+        "synopsis": "Kim Shin is a goblin who is also a protector of souls. He lives together with an amnesiac grim reaper who is in charge of taking deceased souls. Together the two of them sees the dead off into the afterlife. Meanwhile, Ji Eun Tak is a high school student who despite her painful reality, remains optimistic. She ends up falling in love with the goblin. Kim Sun is an owner of a chicken shop; a bright and attractive girl who is loved by all men.",
+        "location": [
+            {
+                "name": "Gyeongbokgung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5789,
+                "longitude": 126.977,
+                "website": "https://royal.cha.go.kr/ROYAL/contents/menuInfo-gbg.do?grpCode=gbg"
+            }, 
+            {
+                "name": "Haneul Park",
+                "image": "image/1d.png",
+                "province": "Seoul",
+                "area": "Mapo-gu",
+                "address": "95 Haneulgongwon-ro, Mapo-gu, Seoul, South Korea",
+                "latitude": 37.571,
+                "longitude": 126.8824,
+                "website": "nil"
+            },
+            {
+                "name": "Seonam Village",
+                "image": "image/1h.png",
+                "province": "Gyeonggi-do",
+                "area": "Yangpyeong",
+                "address": "Seonam Village, Yangpyeong-gun, Gyeonggi-do, South Korea",
+                "latitude": 37.4938,
+                "longitude": 127.6679,
+                "website": "nil"
+            },
+            {
+                "name": "Jeongdongjin Beach",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Jeongdongjin-ri",
+                "address": "Jeongdongjin-ri, Gangneung-si, Gangwon-do, South Korea",
+                "latitude": 37.7997,
+                "longitude": 129.3735,
+                "website": "nil"
+            },
+            {
+                "name": "Jeongseon Railbike Park",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Cheongnim-ro",
+                "address": "19, Cheongnim-ro, Gohan-eup, Jeongseon-gun, Gangwon-do, South Korea",
+                "latitude": 37.3068,
+                "longitude": 128.7704,
+                "website": "https://www.railtrip.co.kr/homepage/jeongseon/"
+            },
+            {
+                "name": "Jeju Loveland",
+                "image": "/",
+                "province": "Jeju-do",
+                "area": "Cheonbaek-ro",
+                "address": "2894-72 1100(Cheonbaek)-ro, Jeju-si, Jeju-do, South Korea",
+                "latitude": 33.4591,
+                "longitude": 126.3531,
+                "website": "http://www.jejuloveland.com/language/eng.htm"
+            },
+            {
+                "name": "Seonbichon Village",
+                "image": "/",
+                "province": "Gyeongsangbuk-do",
+                "area": "Andong-si",
+                "address": "Seonbichon Village, Andong-si, Gyeongsangbuk-do, South Korea",
+                "latitude": 36.525,
+                "longitude": 128.7147,
+                "website": "http://www.sunbichon.net/home/"
+            },
+            {
+                "name": "Haesindang Park",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Haesingdang-gil",
+                "address": "22-13 Haesingdang-gil, Sinnam, Samcheok, Gangwon-do, South Korea",
+                "latitude": 37.2047,
+                "longitude": 129.2179,
+                "website": "https://www.samcheok.go.kr/tour/01456/01462/02228.web"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "drama": "The Heirs",
+        "dramaImage": "image/4.png",
+        "genre": ["Romance", "Youth", "Drama"],
+        "year": 2013,
+        "synopsis": "The series follows a group of rich, privileged high school students as they are about to take over their families' business empires, overcoming their personal struggles and romantic entanglements along the way.",
+        "location": [
+            {
+                "name": "Hanguk University of Foreign Studies",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Yongin-si",
+                "address": "107 Imun-ro, Yongin-si, Gyeonggi-do, South Korea",
+                "latitude": 37.3018,
+                "longitude": 127.177,
+                "website": "https://www.hufs.ac.kr/"
+            },
+            {
+                "name": "Gyeongbokgung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5789,
+                "longitude": 126.977,
+                "website": "https://royal.cha.go.kr/ROYAL/contents/menuInfo-gbg.do?grpCode=gbg"
+            },
+            {
+                "name": "Namsan Park",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Yongsan-gu",
+                "address": "231 Samil-daero 30-gil, Yongsan-gu, Seoul, South Korea",
+                "latitude": 37.5502,
+                "longitude": 126.9947,
+                "website": "nil"
+            },
+            {
+                "name": "Bukchon Hanok Village",
+                "image": "image/1f.png",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "Bukchon Hanok Village, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5823,
+                "longitude": 126.985,
+                "website": "nil"
+            },
+            {
+                "name": "Gangnam District",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Gangnam-gu",
+                "address": "Yeoksam-dong, Gangnam-gu, Seoul, South Korea",
+                "latitude": 37.5172,
+                "longitude": 127.0473,
+                "website": "nil"
+            },
+            {
+                "name": "Los Angeles",
+                "image": "/",
+                "province": "California",
+                "area": "Los Angeles",
+                "address": "Los Angeles, California, USA",
+                "latitude": 34.0522,
+                "longitude": -118.2437,
+                "website": "nil"
+            },
+            {
+                "name": "Zion National Park",
+                "image": "/",
+                "province": "Utah",
+                "area": "Springdale",
+                "address": "Zion National Park, Springdale, Utah, USA",
+                "latitude": 37.2982,
+                "longitude": -113.0263,
+                "website": "https://www.nps.gov/zion/index.htm"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "drama": "Boys Over Flowers",
+        "dramaImage": "image/5.png",
+        "genre": ["Romance", "Comedy", "Drama"],
+        "year": 2009,
+        "synopsis": "The story centers around a poor yet feisty girl named Geum Jan-di, who finds herself entangled with the F4, a group of rich and powerful boys at the prestigious Shinhwa High School. Despite facing many challenges, including bullying and social class differences, Jan-di stands up to the F4 and eventually captures the heart of one of its members, Gu Jun-pyo.",
+        "location": [
+            {
+                "name": "Shinwa High School",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Gangnam-gu",
+                "address": "394 Bongeunsa-ro, Nonhyeon-dong, Gangnam-gu, Seoul, South Korea",
+                "latitude": 37.5179,
+                "longitude": 127.0414,
+                "website": "nil"
+            },
+            {
+                "name": "Namsan Tower",
+                "image": "image/1a.png",
+                "province": "Seoul",
+                "area": "Yongsan-gu",
+                "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
+                "latitude": 37.5512,
+                "longitude": 126.9876,
+                "website": "https://www.nseoultower.co.kr/"
+            },
+            {
+                "name": "Korea University",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Seongbuk-gu",
+                "address": "145 Anam-ro, Seongbuk-gu, Seoul, South Korea",
+                "latitude": 37.5899,
+                "longitude": 127.0318,
+                "website": "https://www.korea.edu/"
+            },
+            {
+                "name": "Seoul Institute of the Arts",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Ansan",
+                "address": "194, Dasin-ro, Sangnok-gu, Ansan-si, Gyeonggi-do, South Korea",
+                "latitude": 37.3391,
+                "longitude": 126.8432,
+                "website": "https://www.sia.or.kr/"
+            },
+            {
+                "name": "Everland",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Yongin-si",
+                "address": "199, Everland-ro, Pogok-eup, Cheoin-gu, Yongin-si, Gyeonggi-do, South Korea",
+                "latitude": 37.293,
+                "longitude": 127.2027,
+                "website": "https://www.everland.com/web/multi/english/everland/main.html"
+            },
+            {
+                "name": "Seoul World Cup Stadium",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Mapo-gu",
+                "address": "240 World Cup-ro, Mapo-gu, Seoul, South Korea",
+                "latitude": 37.5686,
+                "longitude": 126.8974,
+                "website": "https://www.sisul.or.kr/"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "drama": "Winter Sonata",
+        "dramaImage": "image/6.png",
+        "genre": ["Romance", "Melodrama"],
+        "year": 2002,
+        "synopsis": "The story follows the love between two childhood friends, Joon-sang and Yoo-jin, who get separated due to a tragic accident. Ten years later, they reunite in high school, but Joon-sang, who has lost his memory, does not recognize Yoo-jin. As their past and present become intertwined, secrets are revealed, and they must confront the painful truth about their past.",
+        "location": [
+            {
+                "name": "Nami Island",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Namisum-gil",
+                "address": "1 Namisum-gil, Namsan-myeon, Chuncheon-si, Gangwon-do, South Korea",
+                "latitude": 37.791,
+                "longitude": 127.525,
+                "website": "https://www.namisum.com/"
+            },
+            {
+                "name": "Chuncheon",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Chuncheon-si",
+                "address": "Chuncheon-si, Gangwon-do, South Korea",
+                "latitude": 37.8744,
+                "longitude": 127.7342,
+                "website": "nil"
+            },
+            {
+                "name": "Petite France",
+                "image": "image/1b.png",
+                "province": "Gyeonggi-do",
+                "area": "Gapyeong",
+                "address": "1063 Hoban-ro, Cheongpyeong-myeon, Gapyeong-gun, Gyeonggi-do, South Korea",
+                "latitude": 37.8328,
+                "longitude": 127.7693,
+                "website": "http://www.pfcamp.com/"
+            },
+            {
+                "name": "Yongpyong Resort",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Daegwallyeong-myeon",
+                "address": "715, Olympic-ro, Daegwallyeong-myeon, Pyeongchang-gun, Gangwon-do, South Korea",
+                "latitude": 37.6624,
+                "longitude": 128.6842,
+                "website": "https://www.yongpyong.co.kr/"
+            },
+            {
+                "name": "Jeju Island",
+                "image": "/",
+                "province": "Jeju-do",
+                "area": "Jeju-si",
+                "address": "Jeju-si, Jeju-do, South Korea",
+                "latitude": 33.489,
+                "longitude": 126.4983,
+                "website": "https://www.visitjeju.net/en/index.jto"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "drama": "Queen Inhyun's Man",
+        "dramaImage": "image/7.png",
+        "genre": ["Romance", "Historical", "Time Travel"],
+        "year": 2012,
+        "synopsis": "The story revolves around Kim Boong-do, a nobleman from the Joseon Dynasty who travels to the future to save his beloved Queen Inhyun from being assassinated. In modern-day Seoul, he meets Choi Hee-jin, a struggling actress who bears a striking resemblance to Queen Inhyun. Together, they navigate the challenges of time travel and their blossoming romance.",
+        "location": [
+            {
+                "name": "Deoksugung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jeong-dong",
+                "address": "99 Sejong-daero, Jung-gu, Seoul, South Korea",
+                "latitude": 37.5658,
+                "longitude": 126.975,
+                "website": "https://www.deoksugung.go.kr/"
+            },
+            {
+                "name": "Han River",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Various locations",
+                "address": "Han River, Seoul, South Korea",
+                "latitude": 37.5537,
+                "longitude": 126.9715,
+                "website": "nil"
+            },
+            {
+                "name": "Jeongdong Observatory",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jeong-dong",
+                "address": "Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5684,
+                "longitude": 126.9754,
+                "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264549"
+            },
+            {
+                "name": "Sangdo-dong",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Dongjak-gu",
+                "address": "Sangdo-dong, Dongjak-gu, Seoul, South Korea",
+                "latitude": 37.4927,
+                "longitude": 126.9269,
+                "website": "nil"
+            },
+            {
+                "name": "Seoul Museum of Art",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "61 Deoksugung-gil, Jung-gu, Seoul, South Korea",
+                "latitude": 37.5694,
+                "longitude": 126.979,
+                "website": "http://sema.seoul.go.kr/"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "drama": "Crash Landing on You",
+        "dramaImage": "image/8.png",
+        "genre": ["Romance", "Drama", "Comedy"],
+        "year": 2019,
+        "synopsis": "Yoon Se-ri, a wealthy South Korean businesswoman, crash-lands in North Korea after a paragliding accident. There, she meets Ri Jeong-hyeok, a North Korean army officer, who tries to help her hide and return to South Korea while developing feelings for each other.",
+        "location": [
+            {
+                "name": "Demilitarized Zone (DMZ)",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Paju-si",
+                "address": "DMZ, Paju-si, Gyeonggi-do, South Korea",
+                "latitude": 37.9514,
+                "longitude": 126.6928,
+                "website": "nil"
+            },
+            {
+                "name": "Rakkojae Seoul",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "218 Gahoe-dong, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5833,
+                "longitude": 126.9842,
+                "website": "http://www.rkj.co.kr/eng/"
+            },
+            {
+                "name": "Seoraksan National Park",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Inje",
+                "address": "Seoraksan-ro, Inje-gun, Gangwon-do, South Korea",
+                "latitude": 38.2021,
+                "longitude": 128.4369,
+                "website": "nil"
+            },
+            {
+                "name": "Namsan Park",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jung-gu",
+                "address": "Namsan Park, Jung-gu, Seoul, South Korea",
+                "latitude": 37.5515,
+                "longitude": 126.988,
+                "website": "nil"
+            },
+            {
+                "name": "Pyongyang, North Korea",
+                "image": "/",
+                "province": "North Korea",
+                "area": "Pyongyang",
+                "address": "Pyongyang, North Korea",
+                "latitude": 39.0392,
+                "longitude": 125.7625,
+                "website": "nil"
+            },
+            {
+                "name": "Swiss Village",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Hoengseong",
+                "address": "365-12, Daegwallyeongmaru-gil(Daegwallyeong-myeon)",
+                "latitude": 37.3702,
+                "longitude": 128.393,
+                "website": "nil"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "drama": "Fight for My Way",
+        "dramaImage": "image/9.png",
+        "genre": ["Romance", "Comedy"],
+        "year": 2017,
+        "synopsis": "Ko Dong Man and Choi Ae Ra are two longtime friends who dream of breaking into the world of mixed martial arts and broadcasting, respectively. Despite facing numerous challenges and setbacks, they strive to pursue their dreams while navigating the complexities of adulthood and romance.",
+        "location": [
+            {
+                "name": "Boryeong Mud Festival",
+                "image": "/",
+                "province": "Chungcheongnam-do",
+                "area": "Boryeong",
+                "address": "123 Misari-ro, Boryeong-si, Chungcheongnam-do, South Korea",
+                "latitude": 36.3324,
+                "longitude": 126.6043,
+                "website": "http://www.mudfestival.or.kr/"
+            },
+            {
+                "name": "Taekwondowon",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Muju",
+                "address": "35 Taekwondowon-gil, Muju-gun, Gyeonggi-do, South Korea",
+                "latitude": 36.0121,
+                "longitude": 127.6768,
+                "website": "http://www.kukkiwon.or.kr/"
+            },
+            {
+                "name": "Hongdae Street",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Mapo-gu",
+                "address": "Hongdae, Mapo-gu, Seoul, South Korea",
+                "latitude": 37.5509,
+                "longitude": 126.9196,
+                "website": "nil"
+            },
+            {
+                "name": "Incheon International Airport",
+                "image": "/",
+                "province": "Incheon",
+                "area": "Jung-gu",
+                "address": "272 Gonghang-ro, Jung-gu, Incheon, South Korea",
+                "latitude": 37.4602,
+                "longitude": 126.4407,
+                "website": "https://www.airport.kr/"
+            },
+            {
+                "name": "Suseong Lake",
+                "image": "/",
+                "province": "Daegu",
+                "area": "Dalseo-gu",
+                "address": "128, Suseong-ro, Dalseo-gu, Daegu, South Korea",
+                "latitude": 35.8527,
+                "longitude": 128.5913,
+                "website": "nil"
+            },
+            {
+                "name": "N Seoul Tower",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Yongsan-gu",
+                "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
+                "latitude": 37.5512,
+                "longitude": 126.9876,
+                "website": "https://www.nseoultower.co.kr/"
+            },
+            {
+                "name": "Lotte World Tower",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Songpa-gu",
+                "address": "300 Olympic-ro, Songpa-gu, Seoul, South Korea",
+                "latitude": 37.5126,
+                "longitude": 127.1025,
+                "website": "http://www.lwt.co.kr/"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "drama": "Vincenzo",
+        "dramaImage": "image/10.png",
+        "genre": ["Crime", "Comedy", "Legal"],
+        "year": 2021,
+        "synopsis": "Vincenzo Cassano, a Korean-Italian lawyer and Mafia consigliere, flees to South Korea after a conflict within the organization. In Seoul, he encounters Cha-young, a feisty lawyer, and together they take on corrupt conglomerates and seek justice in unconventional ways.",
+        "location": [
+            {
+                "name": "Seoul Central District Court",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jung-gu",
+                "address": "219 Jongno 6(yuk)-ga, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5664,
+                "longitude": 126.9779,
+                "website": "https://www.scourt.go.kr/eng/"
+            },
+            {
+                "name": "Seoul International Financial Center (SIFC)",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Yeongdeungpo-gu",
+                "address": "10 Gukjegeumyung-ro 8-gil, Yeongdeungpo-gu, Seoul, South Korea",
+                "latitude": 37.5229,
+                "longitude": 126.9285,
+                "website": "http://www.sifc.or.kr/"
+            },
+            {
+                "name": "Itaewon",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Yongsan-gu",
+                "address": "Itaewon-dong, Yongsan-gu, Seoul, South Korea",
+                "latitude": 37.5346,
+                "longitude": 126.9948,
+                "website": "nil"
+            },
+            {
+                "name": "Mapo Bridge",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Mapo-gu",
+                "address": "Mapo Bridge, Sangsu-dong, Mapo-gu, Seoul, South Korea",
+                "latitude": 37.5402,
+                "longitude": 126.9403,
+                "website": "nil"
+            },
+            {
+                "name": "Incheon City Hall",
+                "image": "/",
+                "province": "Incheon",
+                "area": "Namdong-gu",
+                "address": "44 Nokdong-ro 217beon-gil, Namdong-gu, Incheon, South Korea",
+                "latitude": 37.4497,
+                "longitude": 126.7079,
+                "website": "https://www.icity.go.kr/eng/"
+            },
+            {
+                "name": "Seorae Village (French Village)",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Seocho-gu",
+                "address": "Seorae Village, Banpo 4(sa)-dong, Seocho-gu, Seoul, South Korea",
+                "latitude": 37.4999,
+                "longitude": 127.0254,
+                "website": "nil"
+            },
+            {
+                "name": "Namhansanseong Provincial Park",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Gwangju",
+                "address": "Namhansanseong-ro 4, Gwangju-si, Gyeonggi-do, South Korea",
+                "latitude": 37.4864,
+                "longitude": 127.1667,
+                "website": "http://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264196"
+            },
+            {
+                "name": "Seoul World Cup Stadium",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Mapo-gu",
+                "address": "240 World Cup-ro, Mapo-gu, Seoul, South Korea",
+                "latitude": 37.5683,
+                "longitude": 126.8978,
+                "website": "http://english.visitseoul.net/attractions/Seoul-World-Cup-Stadium_/25"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "drama": "Reply 1988",
+        "dramaImage": "image/11.png",
+        "genre": ["Drama", "Slice of Life", "Comedy"],
+        "year": 2015,
+        "synopsis": "Set in the late 1980s, 'Reply 1988' follows the lives of five families who live on the same street in Seoul. The drama explores themes of friendship, family, and love as the characters navigate the challenges and joys of adolescence and adulthood.",
+        "location": [
+            {
+                "name": "Hyundai Department Store - Apgujeong Branch",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Gangnam-gu",
+                "address": "165 Apgujeong-ro, Gangnam-gu, Seoul, South Korea",
+                "latitude": 37.5267,
+                "longitude": 127.0299,
+                "website": "https://www.ehyundai.com/newPortal/DP/DP051001"
+            },
+            {
+                "name": "Bukhansan National Park",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Bukhansan",
+                "address": "262 Bogungmun-ro, Songbuk-dong, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.6619,
+                "longitude": 126.9778,
+                "website": "https://english.knps.or.kr/"
+            },
+            {
+                "name": "Gwanaksan Mountain",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Gwanak-gu",
+                "address": "Gwanaksan Mountain, Gwanak-gu, Seoul, South Korea",
+                "latitude": 37.4453,
+                "longitude": 126.9616,
+                "website": "https://english.visitseoul.net/nature/Gwanaksan-Mountain_/2381"
+            },
+            {
+                "name": "Seoul Institute of the Arts",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Anseong",
+                "address": "133 Anseo-ro, Baebang-eup, Seobuk-gu, Anseong-si, Gyeonggi-do, South Korea",
+                "latitude": 37.0088,
+                "longitude": 127.2754,
+                "website": "https://www.siakorea.ac.kr/en"
+            },
+            {
+                "name": "Yeouido Hangang Park",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Yeongdeungpo-gu",
+                "address": "330 Yeouidong-ro, Yeongdeungpo-gu, Seoul, South Korea",
+                "latitude": 37.5291,
+                "longitude": 126.9337,
+                "website": "https://english.visitseoul.net/nature/Yeouido-Hangang-Park_/2456"
+            },
+            {
+                "name": "Dongdaemun Market",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jung-gu",
+                "address": "289 Jong-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5702,
+                "longitude": 127.0094,
+                "website": "http://english.visitseoul.net/shopping/Dongdaemun-Market_/96"
+            },
+            {
+                "name": "Changgyeonggung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "185 Changgyeonggung-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5788,
+                "longitude": 126.9965,
+                "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264288"
+            },
+            {
+                "name": "Bupyeong Market",
+                "image": "/",
+                "province": "Incheon",
+                "area": "Bupyeong-gu",
+                "address": "31 Bupyeong 5(o)-gil, Bupyeong 1(il)-dong, Bupyeong-gu, Incheon, South Korea",
+                "latitude": 37.4986,
+                "longitude": 126.7241,
+                "website": "nil"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "drama": "Castaway Diva",
+        "dramaImage": "image/12.png",
+        "genre": ["Romance", "Drama"],
+        "year": 2021,
+        "synopsis": "Castaway Diva tells the story of Ha Jin, a woman who, after getting dumped by her boyfriend and fired from her job, decides to embark on a solo trip to an uninhabited island in search of herself. There, she encounters a mysterious man named Ra Bong, and together they navigate the challenges of survival and healing.",
+        "location": [
+            {
+                "name": "Nami Island",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Chuncheon",
+                "address": "1 Namisum-gil, Namsan-myeon, Chuncheon-si, Gangwon-do, South Korea",
+                "latitude": 37.7914,
+                "longitude": 127.525,
+                "website": "https://namisum.com/"
+            },
+            {
+                "name": "Seogwipo City",
+                "image": "/",
+                "province": "Jeju Island",
+                "area": "Seogwipo",
+                "address": "Seogwipo-si, Jeju Island, South Korea",
+                "latitude": 33.2467,
+                "longitude": 126.565,
+                "website": "http://english.seogwipo.go.kr/"
+            },
+            {
+                "name": "Mount Hallasan",
+                "image": "/",
+                "province": "Jeju Island",
+                "area": "Jeju-si",
+                "address": "Hallasan-ro, Jeju-si, Jeju Island, South Korea",
+                "latitude": 33.3625,
+                "longitude": 126.5348,
+                "website": "http://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264550"
+            },
+            {
+                "name": "Udo Island",
+                "image": "/",
+                "province": "Jeju Island",
+                "area": "Jeju-si",
+                "address": "Udo-ri, Jeju-si, Jeju Island, South Korea",
+                "latitude": 33.5063,
+                "longitude": 126.953,
+                "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264279"
+            },
+            {
+                "name": "Gwaneum Temple",
+                "image": "/",
+                "province": "Jeju Island",
+                "area": "Jeju-si",
+                "address": "58 Gwaneum-ro 14-gil, Gujwa-eup, Jeju-si, Jeju Island, South Korea",
+                "latitude": 33.5568,
+                "longitude": 126.8065,
+                "website": "http://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264154"
+            },
+            {
+                "name": "Woljeongri Beach",
+                "image": "/",
+                "province": "Jeju Island",
+                "area": "Jeju-si",
+                "address": "Woljeong-ri, Gujwa-eup, Jeju-si, Jeju Island, South Korea",
+                "latitude": 33.5488,
+                "longitude": 126.7692,
+                "website": "https://www.visitjeju.net/en/detail/view?contentsid=CONT_000000000500735"
+            },
+            {
+                "name": "Saryeoni Forest Path",
+                "image": "/",
+                "province": "Jeju Island",
+                "area": "Jeju-si",
+                "address": "Saryeoni Forest, Jeoji-ri, Jocheon-eup, Jeju-si, Jeju Island, South Korea",
+                "latitude": 33.4641,
+                "longitude": 126.6959,
+                "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264208"
+            },
+            {
+                "name": "Oedolgae Rock",
+                "image": "/",
+                "province": "Jeju Island",
+                "area": "Seogwipo",
+                "address": "Oedolgae-ro, Seogwipo-si, Jeju Island, South Korea",
+                "latitude": 33.2435,
+                "longitude": 126.415,
+                "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264073"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "drama": "Rooftop Prince",
+        "dramaImage": "image/13.png",
+        "genre": ["Romance", "Comedy", "Historical"],
+        "year": 2012,
+        "synopsis": "Rooftop Prince tells the story of Crown Prince Lee Gak, who travels 300 years into the future from the Joseon Dynasty to modern-day Seoul, along with his three loyal retainers. In the present, they encounter Park Ha, a woman who bears a striking resemblance to the prince's late wife. Together, they navigate the challenges of adapting to modern life while unraveling the mysteries of the past.",
+        "location": [
+            {
+                "name": "Gyeongbokgung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5779,
+                "longitude": 126.9768,
+                "website": "http://www.royalpalace.go.kr:8080/"
+            },
+            {
+                "name": "Cheonggyecheon Stream",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "Cheonggyecheon-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5697,
+                "longitude": 126.9909,
+                "website": "http://english.visitseoul.net/attractions/Cheonggyecheon-Stream_/96"
+            },
+            {
+                "name": "Seoul National University",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Gwanak-gu",
+                "address": "1 Gwanak-ro, Gwanak-gu, Seoul, South Korea",
+                "latitude": 37.4602,
+                "longitude": 126.9517,
+                "website": "http://www.useoul.edu/"
+            },
+            {
+                "name": "Namsan Tower",
+                "image": "image/1a.png",
+                "province": "Seoul",
+                "area": "Yongsan-gu",
+                "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
+                "latitude": 37.5512,
+                "longitude": 126.9876,
+                "website": "https://www.nseoultower.co.kr/"
+            },
+            {
+                "name": "Namsan Hanok Village",
+                "image": "image/1e.png",
+                "province": "Seoul",
+                "area": "Toegye-ro",
+                "address": "28, Toegye-ro 34-gil, Jung-gu, Seoul, South Korea",
+                "latitude": 37.5592,
+                "longitude": 126.994,
+                "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264129"
+            },
+            {
+                "name": "Myeongdong Shopping Street",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jung-gu",
+                "address": "Myeong-dong, Jung-gu, Seoul, South Korea",
+                "latitude": 37.5641,
+                "longitude": 126.985,
+                "website": "http://english.visitseoul.net/shopping/Myeong-dong-/29"
+            },
+            {
+                "name": "Dongdaemun Design Plaza (DDP)",
+                "image": "image/1c.png",
+                "province": "Seoul",
+                "area": "Eulji-ro",
+                "address": "281 Eulji-ro, Euljiro 7(chil)-ga, Jung-gu, Seoul, South Korea",
+                "latitude": 37.5663,
+                "longitude": 127.0079,
+                "website": "http://www.ddp.or.kr/"
+            },
+            {
+                "name": "Hangang Park",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Various locations",
+                "address": "Hangang Park, Seoul, South Korea",
+                "latitude": 37.5439,
+                "longitude": 126.8917,
+                "website": "http://hangang.seoul.go.kr/"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "drama": "Memories of the Alhambra",
+        "dramaImage": "image/14.png",
+        "genre": ["Romance", "Thriller", "Fantasy"],
+        "year": 2018,
+        "synopsis": "Memories of the Alhambra follows the story of Yoo Jin-woo, a CEO of an investment company, who travels to Spain to meet the creator of an augmented reality game. However, his business trip takes a mysterious turn when he becomes embroiled in a series of strange events involving the game and its connection to reality.",
+        "location": [
+            {
+                "name": "Alhambra Palace",
+                "image": "/",
+                "province": "Andalusia",
+                "area": "Granada",
+                "address": "Calle Real de la Alhambra, s/n, 18009 Granada, Spain",
+                "latitude": 37.176,
+                "longitude": -3.5888,
+                "website": "https://www.alhambradegranada.org/en/"
+            },
+            {
+                "name": "Seoul Station",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jung-gu",
+                "address": "405 Hangang-daero, Huam-dong, Yongsan-gu, Seoul, South Korea",
+                "latitude": 37.5536,
+                "longitude": 126.972,
+                "website": "http://www.letskorail.com/ebizbf/EbizBfTicketSearch.do"
+            },
+            {
+                "name": "Gyeonggi English Village (Paju Camp)",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Paju",
+                "address": "312 Bangeojin-gil, Geumwang-eup, Paju-si, Gyeonggi-do, South Korea",
+                "latitude": 37.8601,
+                "longitude": 126.7838,
+                "website": "http://www.gev.or.kr/eng/"
+            },
+            {
+                "name": "Jeju Island",
+                "image": "/",
+                "province": "Jeju Province",
+                "area": "Jeju-si",
+                "address": "Jeju-do, South Korea",
+                "latitude": 33.489,
+                "longitude": 126.4983,
+                "website": "https://www.visitjeju.net/en/index.jto"
+            },
+            {
+                "name": "Hongdae Street",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Mapo-gu",
+                "address": "Hongdae, Mapo-gu, Seoul, South Korea",
+                "latitude": 37.5509,
+                "longitude": 126.9196,
+                "website": "nil"
+            },
+            {
+                "name": "Gangnam District",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Gangnam-gu",
+                "address": "Gangnam-gu, Seoul, South Korea",
+                "latitude": 37.5172,
+                "longitude": 127.0473,
+                "website": "nil"
+            },
+            {
+                "name": "Dongdaemun Design Plaza (DDP)",
+                "image": "image/1c.png",
+                "province": "Seoul",
+                "area": "Eulji-ro",
+                "address": "281 Eulji-ro, Euljiro 7(chil)-ga, Jung-gu, Seoul, South Korea",
+                "latitude": 37.5663,
+                "longitude": 127.0079,
+                "website": "http://www.ddp.or.kr/"
+            },
+            {
+                "name": "Bukchon Hanok Village",
+                "image": "image/1f.png",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "Bukchon Hanok Village, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5823,
+                "longitude": 126.985,
+                "website": "nil"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "drama": "The King: Eternal Monarch",
+        "dramaImage": "image/15.png",
+        "genre": ["Romance", "Fantasy", "Thriller"],
+        "year": 2020,
+        "synopsis": "The King: Eternal Monarch follows the story of Emperor Lee Gon from the Kingdom of Corea, who discovers a mysterious portal that leads him to the modern world of South Korea. There, he encounters detective Jung Tae-eul and begins a journey to close the portal and uncover the secrets of his own past.",
+        "location": [
+            {
+                "name": "Gyeongbokgung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5779,
+                "longitude": 126.9768,
+                "website": "http://www.royalpalace.go.kr:8080/"
+            },
+            {
+                "name": "N Seoul Tower",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Yongsan-gu",
+                "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
+                "latitude": 37.5512,
+                "longitude": 126.9876,
+                "website": "https://www.nseoultower.co.kr/"
+            },
+            {
+                "name": "Ewha Womans University",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Seodaemun-gu",
+                "address": "52 Ewhayeodae-gil, Daehyeon-dong, Seodaemun-gu, Seoul, South Korea",
+                "latitude": 37.5585,
+                "longitude": 126.9432,
+                "website": "http://www.ewha.ac.kr/"
+            },
+            {
+                "name": "Cheonggyecheon Stream",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "Cheonggyecheon-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5697,
+                "longitude": 126.9909,
+                "website": "http://english.visitseoul.net/attractions/Cheonggyecheon-Stream_/96"
+            },
+            {
+                "name": "Unhyeongung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "114-10 Unni-dong, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5775,
+                "longitude": 126.9985,
+                "website": "nil"
+            },
+            {
+                "name": "Jungang Market",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jung-gu",
+                "address": "6-1 Changsin 1(il)-ga, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5678,
+                "longitude": 127.0082,
+                "website": "nil"
+            },
+            {
+                "name": "Songdo Central Park",
+                "image": "/",
+                "province": "Incheon",
+                "area": "Yeonsu-gu",
+                "address": "200, Technopark-ro, Yeonsu-gu, Incheon, South Korea",
+                "latitude": 37.3919,
+                "longitude": 126.6405,
+                "website": "https://www.songdo.com/"
+            },
+            {
+                "name": "Gwanghwamun Square",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "172 Sejong-daero, Sejongno, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5759,
+                "longitude": 126.9768,
+                "website": "nil"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "drama": "Empress Ki",
+        "dramaImage": "image/16.png",
+        "genre": ["Historical", "Romance", "Drama"],
+        "year": 2013,
+        "synopsis": "Empress Ki tells the story of Empress Ki, a Goryeo-born woman who rises to power as the empress of the Yuan Dynasty. Through her wit, intelligence, and strategic alliances, she navigates the treacherous politics of the court while grappling with her complicated love life.",
+        "location": [
+            {
+                "name": "Gyeongbokgung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5779,
+                "longitude": 126.9768,
+                "website": "http://www.royalpalace.go.kr:8080/"
+            },
+            {
+                "name": "Hwaseong Fortress",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Suwon",
+                "address": "825 Jeongjo-ro, Paldal-gu, Suwon, Gyeonggi-do, South Korea",
+                "latitude": 37.2877,
+                "longitude": 127.0074,
+                "website": "http://eng.suwon.ne.kr/"
+            },
+            {
+                "name": "Namhansanseong Fortress",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Gwangju",
+                "address": "188 Sannae-ri, Jeongnam-myeon, Hwaseong, Gyeonggi-do, South Korea",
+                "latitude": 37.4725,
+                "longitude": 127.2196,
+                "website": "http://www.namhansanseong.or.kr/"
+            },
+            {
+                "name": "Bukhansanseong Fortress",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Goyang",
+                "address": "152 Beodeunaru-ro, Ukjon-ri, Jeongbalsan-dong, Ilsandong-gu, Goyang-si, Gyeonggi-do, South Korea",
+                "latitude": 37.6944,
+                "longitude": 126.9911,
+                "website": "http://bukhansanita.org/"
+            },
+            {
+                "name": "Changdeokgung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "99 Yulgok-ro, Waryong-dong, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5788,
+                "longitude": 126.9969,
+                "website": "http://eng.cdg.go.kr/"
+            },
+            {
+                "name": "Haeundae Beach",
+                "image": "/",
+                "province": "Busan",
+                "area": "Haeundae-gu",
+                "address": "264 Haeundaehaebyeon-ro, Haeundae-gu, Busan, South Korea",
+                "latitude": 35.1605,
+                "longitude": 129.1613,
+                "website": "http://www.haeundae.go.kr/"
+            },
+            {
+                "name": "Munhwa Broadcasting Corporation (MBC) Dramia",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Icheon",
+                "address": "33 Hwahap-ro 2107beon-gil, Yongmun-myeon, Icheon-si, Gyeonggi-do, South Korea",
+                "latitude": 37.1768,
+                "longitude": 127.4978,
+                "website": "http://www.mbcdramia.com/"
+            },
+            {
+                "name": "Sangdangsanseong Fortress",
+                "image": "/",
+                "province": "Chungcheongbuk-do",
+                "area": "Cheongju",
+                "address": "San 28-2 Sangdang-gu, Cheongju-si, Chungcheongbuk-do, South Korea",
+                "latitude": 36.6344,
+                "longitude": 127.5065,
+                "website": "http://www.sangdang.org/"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "drama": "Hwarang",
+        "dramaImage": "image/17.png",
+        "genre": ["Historical", "Romance", "Drama"],
+        "year": 2016,
+        "synopsis": "Hwarang tells the story of an elite group of young warriors known as Hwarang, who trained in martial arts, literature, and the arts during the Silla Dynasty in ancient Korea. The drama follows the journey of Moo Myung, a young man of common birth, as he becomes involved with the Hwarang and navigates the complex political intrigues of the royal court.",
+        "location": [
+            {
+                "name": "Gyeongju Historic Areas",
+                "image": "/",
+                "province": "Gyeongsangbuk-do",
+                "area": "Gyeongju",
+                "address": "Gyeongju-si, Gyeongsangbuk-do, South Korea",
+                "latitude": 35.8566,
+                "longitude": 129.224,
+                "website": "https://www.gyeongju.go.kr/"
+            },
+            {
+                "name": "Bulguksa Temple",
+                "image": "/",
+                "province": "Gyeongsangbuk-do",
+                "area": "Gyeongju",
+                "address": "15, Jinhyeon-dong, Gyeongju-si, Gyeongsangbuk-do, South Korea",
+                "latitude": 35.7945,
+                "longitude": 129.332,
+                "website": "http://www.bulguksa.or.kr/"
+            },
+            {
+                "name": "Seorabeol City",
+                "image": "/",
+                "province": "Gyeongsangbuk-do",
+                "area": "Gyeongju",
+                "address": "Gyeongju-si, Gyeongsangbuk-do, South Korea",
+                "latitude": 35.8384,
+                "longitude": 129.211,
+                "website": "https://www.gyeongju.go.kr/"
+            },
+            {
+                "name": "Anapji Pond",
+                "image": "/",
+                "province": "Gyeongsangbuk-do",
+                "area": "Gyeongju",
+                "address": "Apsin-gil, Gyeongju-si, Gyeongsangbuk-do, South Korea",
+                "latitude": 35.8372,
+                "longitude": 129.2203,
+                "website": "http://www.gyeongju.go.kr/"
+            },
+            {
+                "name": "Naksansa Temple",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Yangyang",
+                "address": "100 Naksansa-ro, Ganghyeon-myeon, Yangyang-gun, Gangwon-do, South Korea",
+                "latitude": 38.0668,
+                "longitude": 128.4152,
+                "website": "http://www.naksansa.org/"
+            },
+            {
+                "name": "Samcheong-dong",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "Samcheong-dong, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5819,
+                "longitude": 126.982,
+                "website": "nil"
+            },
+            {
+                "name": "Namhansanseong Fortress",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Gwangju",
+                "address": "188 Sannae-ri, Jeongnam-myeon, Hwaseong, Gyeonggi-do, South Korea",
+                "latitude": 37.4725,
+                "longitude": 127.2196,
+                "website": "http://www.namhansanseong.or.kr/"
+            },
+            {
+                "name": "Sangdangsanseong Fortress",
+                "image": "/",
+                "province": "Chungcheongbuk-do",
+                "area": "Cheongju",
+                "address": "San 28-2 Sangdang-gu, Cheongju-si, Chungcheongbuk-do, South Korea",
+                "latitude": 36.6344,
+                "longitude": 127.5065,
+                "website": "http://www.sangdang.org/"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "drama": "The Princess' Man",
+        "dramaImage": "image/18.png",
+        "genre": ["Historical", "Romance", "Drama"],
+        "year": 2011,
+        "synopsis": "The Princess' Man follows the story of Kim Seung-yoo, a nobleman's son, and Lee Se-ryung, the daughter of a prominent politician. Despite their families' political rivalry, they fall deeply in love. Set during the Joseon Dynasty, the drama portrays their struggle to maintain their relationship amidst the turmoil of political intrigue and power struggles.",
+        "location": [
+            {
+                "name": "Gyeongbokgung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5779,
+                "longitude": 126.9768,
+                "website": "http://www.royalpalace.go.kr:8080/"
+            },
+            {
+                "name": "Hwaseong Fortress",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Suwon",
+                "address": "825 Jeongjo-ro, Paldal-gu, Suwon, Gyeonggi-do, South Korea",
+                "latitude": 37.2877,
+                "longitude": 127.0074,
+                "website": "http://eng.suwon.ne.kr/"
+            },
+            {
+                "name": "Bukchon Hanok Village",
+                "image": "image/1f.png",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "Bukchon Hanok Village, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5823,
+                "longitude": 126.985,
+                "website": "nil"
+            },
+            {
+                "name": "Hapcheon Image Theme Park",
+                "image": "/",
+                "province": "Gyeongsangnam-do",
+                "area": "Hapcheon-gun",
+                "address": "1-13 Eumseo-ro, Hapcheon-eup, Hapcheon-gun, Gyeongsangnam-do, South Korea",
+                "latitude": 35.5653,
+                "longitude": 128.1743,
+                "website": "nil"
+            },
+            {
+                "name": "Seoul Baekje Museum",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Songpa-gu",
+                "address": "188-5 Jamsilbon-dong, Songpa-gu, Seoul, South Korea",
+                "latitude": 37.5115,
+                "longitude": 127.0866,
+                "website": "http://seoulbaekjemuseum.seoul.go.kr/"
+            },
+            {
+                "name": "Seoul Forest",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Seongdong-gu",
+                "address": "273 Ttukseom-ro, Seongsu-dong 1(il)-ga, Seongdong-gu, Seoul, South Korea",
+                "latitude": 37.5425,
+                "longitude": 127.0418,
+                "website": "http://english.seoul.go.kr/culture-recreation/seoul-forest/"
+            },
+            {
+                "name": "Changdeokgung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "99 Yulgok-ro, Waryong-dong, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5788,
+                "longitude": 126.9969,
+                "website": "http://eng.cdg.go.kr/"
+            },
+            {
+                "name": "Namsan Park",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jung-gu",
+                "address": "231-1 Hoehyeon-dong 1(il)-ga, Jung-gu, Seoul, South Korea",
+                "latitude": 37.5512,
+                "longitude": 126.9909,
+                "website": "http://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264354"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "drama": "Jumong",
+        "dramaImage": "image/19.png",
+        "genre": ["Historical", "Epic", "Drama"],
+        "year": 2006,
+        "synopsis": "Jumong chronicles the life of Jumong, the founder of the Goguryeo Kingdom, one of the three kingdoms of ancient Korea. Born as the illegitimate son of a prince, Jumong embarks on a journey of self-discovery and heroism, leading his people to establish a powerful kingdom amidst political turmoil and warfare.",
+        "location": [
+            {
+                "name": "Gyerim Forest",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Yongin",
+                "address": "269-4 Maseok-ri, Giheung-eup, Yongin-si, Gyeonggi-do, South Korea",
+                "latitude": 37.2672,
+                "longitude": 127.1571,
+                "website": "http://yonginforest.co.kr/"
+            },
+            {
+                "name": "Jumong Bridge",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Yongin",
+                "address": "Hwasan-ri, Giheung-eup, Yongin-si, Gyeonggi-do, South Korea",
+                "latitude": 37.2664,
+                "longitude": 127.1576,
+                "website": "nil"
+            },
+            {
+                "name": "Korean Folk Village",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Yongin",
+                "address": "90 Minsokchon-ro, Giheung-gu, Yongin-si, Gyeonggi-do, South Korea",
+                "latitude": 37.2834,
+                "longitude": 127.1079,
+                "website": "https://www.koreanfolk.co.kr/multi/english/"
+            },
+            {
+                "name": "Paju Book City",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Paju",
+                "address": "Gyeonggi-do, Paju-si, Tanhyeon-myeon, Unjeong-ro, South Korea",
+                "latitude": 37.7484,
+                "longitude": 126.6817,
+                "website": "http://www.pajubookcity.org/"
+            },
+            {
+                "name": "Jungang Park",
+                "image": "/",
+                "province": "Chungcheongnam-do",
+                "area": "Asan",
+                "address": "65-5 Sinsang-dong, Asan-si, Chungcheongnam-do, South Korea",
+                "latitude": 36.7846,
+                "longitude": 127.0029,
+                "website": "http://tour.asan.go.kr/"
+            },
+            {
+                "name": "Namhansanseong Fortress",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Gwangju",
+                "address": "188 Sannae-ri, Jeongnam-myeon, Hwaseong, Gyeonggi-do, South Korea",
+                "latitude": 37.4725,
+                "longitude": 127.2196,
+                "website": "http://www.namhansanseong.or.kr/"
+            },
+            {
+                "name": "Yongin Dae Jang Geum Park",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Icheon",
+                "address": "33 Hwahap-ro 2107beon-gil, Yongmun-myeon, Icheon-si, Gyeonggi-do, South Korea",
+                "latitude": 37.1768,
+                "longitude": 127.4978,
+                "website": "https://djgpark.imbc.com/"
+            },
+            {
+                "name": "Songgwangsa Temple",
+                "image": "/",
+                "province": "Jeollanam-do",
+                "area": "Suncheon",
+                "address": "344 Songgwangsa-ro, Songgwang-myeon, Suncheon-si, Jeollanam-do, South Korea",
+                "latitude": 34.9892,
+                "longitude": 127.3292,
+                "website": "http://www.songgwangsa.org/eng/index.asp"
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "drama": "Mr. Sunshine",
+        "dramaImage": "image/20.png",
+        "genre": ["Historical", "Romance", "Drama"],
+        "year": 2018,
+        "synopsis": "Mr. Sunshine is set during the late 19th century and follows the story of a Korean-born American soldier, Eugene Choi, who returns to his homeland as a U.S. Marine Corps officer. He falls in love with an aristocrat's daughter, Go Ae-shin, and becomes involved in the political upheaval and resistance against foreign powers in Korea.",
+        "location": [
+            {
+                "name": "Gyeongbokgung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5779,
+                "longitude": 126.9768,
+                "website": "http://www.royalpalace.go.kr:8080/"
+            },
+            {
+                "name": "Namsan Hanok Village",
+                "image": "image/1e.png",
+                "province": "Seoul",
+                "area": "Toegye-ro",
+                "address": "28, Toegye-ro 34-gil, Jung-gu, Seoul, South Korea",
+                "latitude": 37.5592,
+                "longitude": 126.994,
+                "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264129"
+            },
+            {
+                "name": "Songdo Beach",
+                "image": "/",
+                "province": "Incheon",
+                "area": "Mansu-gu",
+                "address": "123, Haean-ro, Yeongjongdo-dong, Jung-gu, Incheon, South Korea",
+                "latitude": 37.4104,
+                "longitude": 126.4914,
+                "website": "nil"
+            },
+            {
+                "name": "Naejangsan National Park",
+                "image": "/",
+                "province": "Jeollabuk-do",
+                "area": "Jeongeup",
+                "address": "Naejang-dong, Jeongeup-si, Jeollabuk-do, South Korea",
+                "latitude": 35.8026,
+                "longitude": 126.8195,
+                "website": "http://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264019"
+            },
+            {
+                "name": "Unhyeongung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "114-10 Unni-dong, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5775,
+                "longitude": 126.9985,
+                "website": "nil"
+            },
+            {
+                "name": "Gangneung Coffee Street",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Gangneung",
+                "address": "54-1, Changhae-ro 4-gil, Gangneung-si, Gangwon-do, South Korea",
+                "latitude": 37.7589,
+                "longitude": 128.8978,
+                "website": "nil"
+            },
+            {
+                "name": "Yongdusan Park",
+                "image": "/",
+                "province": "Busan",
+                "area": "Jung-gu",
+                "address": "37-55 Yongdusan-gil, Jung-gu, Busan, South Korea",
+                "latitude": 35.1014,
+                "longitude": 129.0302,
+                "website": "nil"
+            },
+            {
+                "name": "Wolmido Island",
+                "image": "/",
+                "province": "Incheon",
+                "area": "Jung-gu",
+                "address": "36 Wolmimunhwa-ro, Jung-gu, Incheon, South Korea",
+                "latitude": 37.4668,
+                "longitude": 126.6024,
+                "website": "http://www.wolmido.com/"
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "drama": "Weightlifting Fairy Kim Bok Joo",
+        "dramaImage": "image/21.png",
+        "genre": ["Romance", "Comedy", "Youth"],
+        "year": 2016,
+        "synopsis": "Weightlifting Fairy Kim Bok Joo follows the story of Kim Bok Joo, a weightlifter who aspires to compete at the Olympics, and her journey of self-discovery, friendship, and love while navigating the challenges of university life.",
+        "location": [
+            {
+                "name": "Haneol Sports University",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Ansan",
+                "address": "15 Pungdeokcheon-ro 23beon-gil, Danwon-gu, Ansan-si, Gyeonggi-do, South Korea",
+                "latitude": 37.3106,
+                "longitude": 126.8617,
+                "website": "https://www.knsu.ac.kr/knsu/index.do"
+            },
+            {
+                "name": "Hanwool College of Physical Education",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Yangpyeong",
+                "address": "307 Daehak-ro, Baegam-myeon, Yangpyeong-gun, Gyeonggi-do, South Korea",
+                "latitude": 37.4036,
+                "longitude": 127.5523,
+                "website": "nil"
+            },
+            {
+                "name": "Yeouido Hangang Park",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Yeongdeungpo-gu",
+                "address": "330 Yeouidong-ro, Yeongdeungpo-gu, Seoul, South Korea",
+                "latitude": 37.5281,
+                "longitude": 126.9341,
+                "website": "nil"
+            },
+            {
+                "name": "Nami Island",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Chuncheon",
+                "address": "1 Namisum-gil, Namsan-myeon, Chuncheon-si, Gangwon-do, South Korea",
+                "latitude": 37.7914,
+                "longitude": 127.525,
+                "website": "https://namisum.com/"
+            },
+            {
+                "name": "Seoul Olympic Park",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Songpa-gu",
+                "address": "424 Olympic-ro, Jamsil-dong, Songpa-gu, Seoul, South Korea",
+                "latitude": 37.5204,
+                "longitude": 127.1218,
+                "website": "https://www.ksponco.or.kr/olympicpark/"
+            },
+            {
+                "name": "Sinchon, Seoul",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Mapo-gu",
+                "address": "Sinchon-dong, Mapo-gu, Seoul, South Korea",
+                "latitude": 37.5572,
+                "longitude": 126.9368,
+                "website": "nil"
+            },
+            {
+                "name": "Changgyeonggung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "185 Changgyeonggung-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.578,
+                "longitude": 126.9972,
+                "website": "https://royal.cha.go.kr/ROYAL/contents/menuInfo-gbg.do?grpCode=cgg"
+            },
+            {
+                "name": "Hongdae Street",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Mapo-gu",
+                "address": "Hongdae-dong, Mapo-gu, Seoul, South Korea",
+                "latitude": 37.557,
+                "longitude": 126.9266,
+                "website": "nil"
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "drama": "The Producers",
+        "dramaImage": "image/22.png",
+        "genre": ["Comedy", "Romance"],
+        "year": 2015,
+        "synopsis": "The Producers is a drama set in the world of variety show production, following the lives of producers, directors, and celebrities as they navigate the challenges and behind-the-scenes antics of the entertainment industry.",
+        "location": [
+            {
+                "name": "KBS Broadcasting Station",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Yeongdeungpo-gu",
+                "address": "18 Yeouido-dong, Yeongdeungpo-gu, Seoul, South Korea",
+                "latitude": 37.5264,
+                "longitude": 126.9193,
+                "website": "https://www.kbs.co.kr/"
+            },
+            {
+                "name": "Sogang University",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Mapo-gu",
+                "address": "35 Baekbeom-ro (Sinsu-dong), Mapo-gu, Seoul, South Korea",
+                "latitude": 37.5514,
+                "longitude": 126.9411,
+                "website": "https://www.sogang.ac.kr/"
+            },
+            {
+                "name": "Namsan Park",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jung-gu",
+                "address": "231 Sadang-ro, Yongsan 2(i)ga-dong, Yongsan-gu, Seoul, South Korea",
+                "latitude": 37.5517,
+                "longitude": 126.9885,
+                "website": "nil"
+            },
+            {
+                "name": "Garosu-gil",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Gangnam-gu",
+                "address": "Sinsa-dong, Gangnam-gu, Seoul, South Korea",
+                "latitude": 37.5181,
+                "longitude": 127.0222,
+                "website": "nil"
+            },
+            {
+                "name": "Yongin Dae Jang Geum Park",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Icheon",
+                "address": "33 Hwahap-ro 2107beon-gil, Yongmun-myeon, Icheon-si, Gyeonggi-do, South Korea",
+                "latitude": 37.1768,
+                "longitude": 127.4978,
+                "website": "https://djgpark.imbc.com/"
+            },
+            {
+                "name": "Itaewon",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Yongsan-gu",
+                "address": "Itaewon-dong, Yongsan-gu, Seoul, South Korea",
+                "latitude": 37.5345,
+                "longitude": 126.9947,
+                "website": "nil"
+            },
+            {
+                "name": "SBS Broadcasting Center",
+                "image": "/",
+                "province": "Gyeonggi-do",
+                "area": "Goyang",
+                "address": "260 Sangam-dong, Mapo-gu, Seoul, South Korea",
+                "latitude": 37.5696,
+                "longitude": 126.8979,
+                "website": "https://programs.sbs.co.kr/"
+            },
+            {
+                "name": "Gyeongui Line Forest Park",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Mapo-gu",
+                "address": "191-1 Seongsan-dong, Mapo-gu, Seoul, South Korea",
+                "latitude": 37.5691,
+                "longitude": 126.9135,
+                "website": "nil"
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "drama": "My Sassy Girl",
+        "dramaImage": "image/23.png",
+        "genre": ["Romantic Comedy"],
+        "year": 2001,
+        "synopsis": "My Sassy Girl is a romantic comedy film that tells the story of a young man who encounters a drunk and unpredictable girl on the subway platform. Despite their initial awkward encounter, they eventually develop a unique and heartwarming relationship filled with laughter, love, and unexpected adventures.",
+        "location": [
+            {
+                "name": "Seoul Metropolitan Subway",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Various",
+                "address": "Seoul, South Korea",
+                "latitude": 37.5665,
+                "longitude": 126.978,
+                "website": "https://www.seoulmetro.co.kr/"
+            },
+            {
+                "name": "Gyeongbokgung Palace",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jongno-gu",
+                "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5775,
+                "longitude": 126.9769,
+                "website": "https://www.royalpalace.go.kr/"
+            },
+            {
+                "name": "Cheonggyecheon Stream",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Jung-gu",
+                "address": "Cheonggyecheon-ro, Jongno-gu, Seoul, South Korea",
+                "latitude": 37.5697,
+                "longitude": 126.9783,
+                "website": "https://english.visitkorea.or.kr/"
+            },
+            {
+                "name": "Han River",
+                "image": "/",
+                "province": "Seoul",
+                "area": "Various",
+                "address": "Han River, Seoul, South Korea",
+                "latitude": 37.5485,
+                "longitude": 126.941,
+                "website": "nil"
+            },
+            {
+                "name": "Namsan Tower",
+                "image": "image/1a.png",
+                "province": "Seoul",
+                "area": "Yongsan-gu",
+                "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
+                "latitude": 37.5512,
+                "longitude": 126.9876,
+                "website": "https://www.nseoultower.co.kr/"
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "drama": "Hometown Cha-Cha-Cha",
+        "dramaImage": "image/24.png",
+        "genre": ["Romantic Comedy"],
+        "year": 2021,
+        "synopsis": "Hometown Cha-Cha-Cha tells the story of Yoon Hye-jin, a talented dentist who moves to the seaside village of Gongjin and crosses paths with Hong Du-sik, a pragmatic and resourceful handyman known as 'Mr. Hong.' As they navigate life's challenges and quirky village residents, they find love and solace in each other's company.",
+        "location": [
+            {
+                "name": "Gongjin Village",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Yangyang-gun",
+                "address": "Gongjin Village, Yangyang-gun, Gangwon-do, South Korea",
+                "latitude": 38.0686,
+                "longitude": 128.6268,
+                "website": "nil"
+            },
+            {
+                "name": "Jukdobong Peak",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Yangyang-gun",
+                "address": "Jukdobong Peak, Yangyang-gun, Gangwon-do, South Korea",
+                "latitude": 38.0845,
+                "longitude": 128.5811,
+                "website": "nil"
+            },
+            {
+                "name": "Yangyang Beach",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Yangyang-gun",
+                "address": "Yangyang Beach, Yangyang-gun, Gangwon-do, South Korea",
+                "latitude": 38.0634,
+                "longitude": 128.6339,
+                "website": "nil"
+            },
+            {
+                "name": "Seoraksan National Park",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Inje",
+                "address": "Seoraksan National Park, Inje, Gangwon-do, South Korea",
+                "latitude": 38.1191,
+                "longitude": 128.4654,
+                "website": "https://english.knps.or.kr/"
+            },
+            {
+                "name": "Naksansa Temple",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Yangyang-gun",
+                "address": "100 Naksansa-ro, Yangyang-eup, Yangyang-gun, Gangwon-do, South Korea",
+                "latitude": 38.1115,
+                "longitude": 128.4202,
+                "website": "https://www.naksansa.org/"
+            },
+            {
+                "name": "Naksan Beach",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Yangyang-gun",
+                "address": "Naksan Beach, Yangyang-gun, Gangwon-do, South Korea",
+                "latitude": 38.2268,
+                "longitude": 128.5402,
+                "website": "nil"
+            },
+            {
+                "name": "Naksan Beach Sunrise Park",
+                "image": "/",
+                "province": "Gangwon-do",
+                "area": "Yangyang-gun",
+                "address": "Naksan Beach Sunrise Park, Yangyang-gun, Gangwon-do, South Korea",
+                "latitude": 38.2283,
+                "longitude": 128.5419,
+                "website": "nil"
+            }
+        ]
+    }    
+    
+]
