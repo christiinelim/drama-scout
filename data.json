@@ -15,6 +15,9 @@
                 "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5789,
                 "longitude": 126.977,
+                "description": "A majestic historical landmark built in the 14th century, renowned for its grandeur and significance as the primary royal palace of the Joseon dynasty.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://royal.cha.go.kr/ROYAL/contents/menuInfo-gbg.do?grpCode=gbg"
             }, 
             {
@@ -25,6 +28,9 @@
                 "address": "Damyang, Jeollanam-do, South Korea",
                 "latitude": 35.3186,
                 "longitude": 126.9994,
+                "description": "A unique picturesque bamboo forests, tranquil rivers, and traditional Korean architecture, offering visitors a serene escape into nature and culture.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -35,6 +41,9 @@
                 "address": "432 Sumogwon-ro, Sang-myeon, Gapyeong-gun, Gyeonggi-do, South Korea",
                 "latitude": 37.7076,
                 "longitude": 127.426,
+                "description": "Renowned for its serene beauty and meticulously landscaped terrain, showcasing a harmonious blend of Korean traditional and contemporary garden designs.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.morningcalm.co.kr/html/main.php"
             },
             {
@@ -45,6 +54,9 @@
                 "address": "281 Eulji-ro, Euljiro 7(chil)-ga, Jung-gu, Seoul, South Korea",
                 "latitude": 37.5663,
                 "longitude": 127.0079,
+                "description": "A futuristic architectural marvel and cultural hub, showcasing innovative design, technology, and creativity, symbolizing Seoul's vibrant and dynamic spirit.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.ddp.or.kr/"
             },
             {
@@ -55,6 +67,9 @@
                 "address": "28, Toegye-ro 34-gil, Jung-gu, Seoul, South Korea",
                 "latitude": 37.5592,
                 "longitude": 126.994,
+                "description": "A charming cultural enclave that preserves the traditional Korean way of life, offering visitors a glimpse into the country's rich heritage and architectural beauty.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264129"
             },
             {
@@ -65,6 +80,9 @@
                 "address": "130-6, Gwanghalluwon-ro, Namwon-si, Jeollabuk-do, South Korea",
                 "latitude": 35.412,
                 "longitude": 127.386,
+                "description": "Built during the Joseon Dynasty, this elegant pavilion is a timeless symbol of love and romance deeply rooted in Korean folklore.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.namwon.go.kr/tour/index.do?menuCd=DOM_000001001007001000"
             },
             {
@@ -75,6 +93,9 @@
                 "address": "5 Jangchungdan-ro, Pil-dong, Jung-gu, Seoul, South Korea",
                 "latitude": 37.558,
                 "longitude": 126.9984,
+                "description": "This historic park, located near the iconic Dongdaemun area, offers visitors a serene escape with its lush greenery, scenic walking paths, and tranquil ponds.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -85,6 +106,9 @@
                 "address": "10 Sunchon-dong, Nonsan-si, Chungcheongnam-do, South Korea",
                 "latitude": 36.2075,
                 "longitude": 127.0672,
+                "description": "With its vibrant atmosphere and exciting attractions, including thrilling rides, colorful parades, and engaging shows, the amusement park promises endless entertainment and adventure.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -95,6 +119,9 @@
                 "address": "Myeongdong-gil, Chuncheon-si, Gangwon-do, South Korea",
                 "latitude": 37.8829,
                 "longitude": 127.7363,
+                "description": "A bustling district renowned for its vibrant atmosphere and diverse culinary delights, offering visitors a taste of local flavors and shopping experience amidst a lively urban backdrop.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -105,6 +132,9 @@
                 "address": "94 Wausan-ro, Seogyo-dong, Mapo-gu, Seoul, South Korea",
                 "latitude": 37.5514,
                 "longitude": 126.9246,
+                "description": "A bustling hub of creativity and youthful energy, renowned for its dynamic arts scene, trendy boutiques, and eclectic street performances, making it a must-visit destination for art enthusiasts.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://en.hongik.ac.kr/index.do"
             }
         ]
@@ -125,6 +155,9 @@
                 "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5512,
                 "longitude": 126.9876,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.nseoultower.co.kr/"
             }, 
             {
@@ -135,6 +168,9 @@
                 "address": "1063 Hoban-ro, Cheongpyeong-myeon, Gapyeong-gun, Gyeonggi-do, South Korea",
                 "latitude": 37.8328,
                 "longitude": 127.7693,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.pfcamp.com/"
             },
             {
@@ -145,6 +181,9 @@
                 "address": "281 Eulji-ro, Euljiro 7(chil)-ga, Jung-gu, Seoul, South Korea",
                 "latitude": 37.5663,
                 "longitude": 127.0079,
+                "description": "A futuristic architectural marvel and cultural hub, showcasing innovative design, technology, and creativity, symbolizing Seoul's vibrant and dynamic spirit.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.ddp.or.kr/"
             },
             {
@@ -155,6 +194,9 @@
                 "address": "95 Haneulgongwon-ro, Mapo-gu, Seoul, South Korea",
                 "latitude": 37.571,
                 "longitude": 126.8824,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -165,6 +207,9 @@
                 "address": "28, Toegye-ro 34-gil, Jung-gu, Seoul, South Korea",
                 "latitude": 37.5592,
                 "longitude": 126.994,
+                "description": "A charming cultural enclave that preserves the traditional Korean way of life, offering visitors a glimpse into the country's rich heritage and architectural beauty.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264129"
             },
             {
@@ -175,6 +220,9 @@
                 "address": "Bukchon Hanok Village, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5823,
                 "longitude": 126.985,
+                "description": "This historic village offers visitors a captivating journey back in time, with its winding alleyways, stunning architecture, and immersive cultural experiences.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -185,6 +233,9 @@
                 "address": "Sinchon-dong, Mapo-gu, Seoul, South Korea",
                 "latitude": 37.5598,
                 "longitude": 126.938,
+                "description": "Originally constructed in the early 20th century, the bridge now serves as a pedestrian walkway and a vibrant cultural space, offering panoramic views of the city skyline.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -195,6 +246,9 @@
                 "address": "Seonam Village, Yangpyeong-gun, Gyeonggi-do, South Korea",
                 "latitude": 37.4938,
                 "longitude": 127.6679,
+                "description": "With its quaint hanok houses, lush greenery, and tranquil atmosphere, Seonam Village offers visitors a peaceful retreat from the hustle and bustle of modern life.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             }
         ]
@@ -205,7 +259,7 @@
         "dramaImage": "image/2.png",
         "genre": ["Romance", "Historical", "Time Travel"],
         "year": 2016,
-        "synopsis": "This drama is based on Chinese novel “Bu Bu Jing Xin” by Tong Hua which was originally published online in 2005 on Jinjiang Original Network. The novel also adapted into the chinese television series “Scarlet Heart” which was aired in Hunan Broadcasting System (HBS) from 2011-Sep-10 to 2011-Sep-29 and also “Scarlet Heart 2” which was aired in Zhejiang STV (ZJTV) from 2014-Apr-22 to 2014-May-07.This drama was fully pre-produced before airing which is a departure from the live-shoot production format that characterizes most Korean dramas. The Filming Began on 2016-Jan and Completed on 2016-June-30. The series will be simulcast in China.When a total eclipse of the sun takes place, a 21st-century woman, Go Ha Jin, is transported back in time to the Goryeo Dynasty of Korea. She wakes up in the body of 16-year-old Hae Soo, an aristocrat living with Lady Hae, her cousin who happens to be married to one of the sons of King Taejo. She soon befriends several of the princes, who find her carefree and exuberant attitude refreshing. Although she knows she should not get involved in palace intrigues over the succession to the throne, she inadvertently becomes a pawn in the struggle, as several of the Princes fall in love with her.Adapted from the Chinese novel “Bu Bu Jing Xin” (步步惊心) by Tong Hua (桐华).",
+        "synopsis": "When a total eclipse of the sun takes place, a 21st-century woman, Go Ha Jin, is transported back in time to the Goryeo Dynasty of Korea. She wakes up in the body of 16-year-old Hae Soo, an aristocrat living with Lady Hae, her cousin who happens to be married to one of the sons of King Taejo. She soon befriends several of the princes, who find her carefree and exuberant attitude refreshing.",
         "location": [
             {
                 "name": "Namsan Hanok Village",
@@ -215,6 +269,9 @@
                 "address": "28, Toegye-ro 34-gil, Jung-gu, Seoul, South Korea",
                 "latitude": 37.5592,
                 "longitude": 126.994,
+                "description": "A charming cultural enclave that preserves the traditional Korean way of life, offering visitors a glimpse into the country's rich heritage and architectural beauty.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264129"
             }, 
             {
@@ -225,6 +282,9 @@
                 "address": "Bukchon Hanok Village, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5823,
                 "longitude": 126.985,
+                "description": "This historic village offers visitors a captivating journey back in time, with its winding alleyways, stunning architecture, and immersive cultural experiences.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -235,6 +295,9 @@
                 "address": "9 Neungnae-ro, Gyeongju, Gyeongsangbuk-do, South Korea",
                 "latitude": 35.8302,
                 "longitude": 129.2132,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://gjfmc.or.kr/gjsiseol/facility/facilityTab1.do?classId=TOUR&itemId=T0000005"
             },
             {
@@ -245,6 +308,9 @@
                 "address": "99 Girin-daero, Wansan-gu, Jeonju, Jeollabuk-do, South Korea",
                 "latitude": 35.8174,
                 "longitude": 127.1494,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://hanok.jeonju.go.kr/"
             },
             {
@@ -255,6 +321,9 @@
                 "address": "513-25 Suncheonman-gil, Suncheon-si, Jeollanam-do, South Korea",
                 "latitude": 34.8888,
                 "longitude": 127.5237,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://scbay.suncheon.go.kr/intro.jsp"
             },
             {
@@ -265,6 +334,9 @@
                 "address": "910 Jeongjo-ro, Paldal-gu, Suwon-si, Gyeonggi-do, South Korea",
                 "latitude": 37.2872,
                 "longitude": 127.011,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.swcf.or.kr/"
             },
             {
@@ -275,6 +347,9 @@
                 "address": "1 Namisum-gil, Namsan-myeon, Chuncheon-si, Gangwon-do, South Korea",
                 "latitude": 37.791,
                 "longitude": 127.525,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.namisum.com/"
             },
             {
@@ -285,6 +360,9 @@
                 "address": "1063 Hoban-ro, Cheongpyeong-myeon, Gapyeong-gun, Gyeonggi-do, South Korea",
                 "latitude": 37.8328,
                 "longitude": 127.7693,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.pfcamp.com/"
             },
             {
@@ -295,6 +373,9 @@
                 "address": "825 Jeongjo-ro, Paldal-gu, Suwon-si, Gyeonggi-do, South Korea",
                 "latitude": 37.2894,
                 "longitude": 127.0103,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.swcf.or.kr/?p=62"
             }
         ]
@@ -315,6 +396,9 @@
                 "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5789,
                 "longitude": 126.977,
+                "description": "A majestic historical landmark built in the 14th century, renowned for its grandeur and significance as the primary royal palace of the Joseon dynasty.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://royal.cha.go.kr/ROYAL/contents/menuInfo-gbg.do?grpCode=gbg"
             }, 
             {
@@ -325,6 +409,9 @@
                 "address": "95 Haneulgongwon-ro, Mapo-gu, Seoul, South Korea",
                 "latitude": 37.571,
                 "longitude": 126.8824,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -335,6 +422,9 @@
                 "address": "Seonam Village, Yangpyeong-gun, Gyeonggi-do, South Korea",
                 "latitude": 37.4938,
                 "longitude": 127.6679,
+                "description": "With its quaint hanok houses, lush greenery, and tranquil atmosphere, Seonam Village offers visitors a peaceful retreat from the hustle and bustle of modern life.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -345,6 +435,9 @@
                 "address": "Jeongdongjin-ri, Gangneung-si, Gangwon-do, South Korea",
                 "latitude": 37.7997,
                 "longitude": 129.3735,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -355,6 +448,9 @@
                 "address": "19, Cheongnim-ro, Gohan-eup, Jeongseon-gun, Gangwon-do, South Korea",
                 "latitude": 37.3068,
                 "longitude": 128.7704,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.railtrip.co.kr/homepage/jeongseon/"
             },
             {
@@ -365,6 +461,9 @@
                 "address": "2894-72 1100(Cheonbaek)-ro, Jeju-si, Jeju-do, South Korea",
                 "latitude": 33.4591,
                 "longitude": 126.3531,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.jejuloveland.com/language/eng.htm"
             },
             {
@@ -375,6 +474,9 @@
                 "address": "Seonbichon Village, Andong-si, Gyeongsangbuk-do, South Korea",
                 "latitude": 36.525,
                 "longitude": 128.7147,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.sunbichon.net/home/"
             },
             {
@@ -385,6 +487,9 @@
                 "address": "22-13 Haesingdang-gil, Sinnam, Samcheok, Gangwon-do, South Korea",
                 "latitude": 37.2047,
                 "longitude": 129.2179,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.samcheok.go.kr/tour/01456/01462/02228.web"
             }
         ]
@@ -405,6 +510,9 @@
                 "address": "107 Imun-ro, Yongin-si, Gyeonggi-do, South Korea",
                 "latitude": 37.3018,
                 "longitude": 127.177,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.hufs.ac.kr/"
             },
             {
@@ -415,6 +523,9 @@
                 "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5789,
                 "longitude": 126.977,
+                "description": "A majestic historical landmark built in the 14th century, renowned for its grandeur and significance as the primary royal palace of the Joseon dynasty.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://royal.cha.go.kr/ROYAL/contents/menuInfo-gbg.do?grpCode=gbg"
             },
             {
@@ -425,6 +536,9 @@
                 "address": "231 Samil-daero 30-gil, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5502,
                 "longitude": 126.9947,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -435,6 +549,9 @@
                 "address": "Bukchon Hanok Village, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5823,
                 "longitude": 126.985,
+                "description": "This historic village offers visitors a captivating journey back in time, with its winding alleyways, stunning architecture, and immersive cultural experiences.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -445,6 +562,9 @@
                 "address": "Yeoksam-dong, Gangnam-gu, Seoul, South Korea",
                 "latitude": 37.5172,
                 "longitude": 127.0473,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -455,6 +575,9 @@
                 "address": "Los Angeles, California, USA",
                 "latitude": 34.0522,
                 "longitude": -118.2437,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -465,6 +588,9 @@
                 "address": "Zion National Park, Springdale, Utah, USA",
                 "latitude": 37.2982,
                 "longitude": -113.0263,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.nps.gov/zion/index.htm"
             }
         ]
@@ -485,6 +611,9 @@
                 "address": "394 Bongeunsa-ro, Nonhyeon-dong, Gangnam-gu, Seoul, South Korea",
                 "latitude": 37.5179,
                 "longitude": 127.0414,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -495,6 +624,9 @@
                 "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5512,
                 "longitude": 126.9876,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.nseoultower.co.kr/"
             },
             {
@@ -505,6 +637,9 @@
                 "address": "145 Anam-ro, Seongbuk-gu, Seoul, South Korea",
                 "latitude": 37.5899,
                 "longitude": 127.0318,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.korea.edu/"
             },
             {
@@ -515,6 +650,9 @@
                 "address": "194, Dasin-ro, Sangnok-gu, Ansan-si, Gyeonggi-do, South Korea",
                 "latitude": 37.3391,
                 "longitude": 126.8432,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.sia.or.kr/"
             },
             {
@@ -525,6 +663,9 @@
                 "address": "199, Everland-ro, Pogok-eup, Cheoin-gu, Yongin-si, Gyeonggi-do, South Korea",
                 "latitude": 37.293,
                 "longitude": 127.2027,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.everland.com/web/multi/english/everland/main.html"
             },
             {
@@ -535,6 +676,9 @@
                 "address": "240 World Cup-ro, Mapo-gu, Seoul, South Korea",
                 "latitude": 37.5686,
                 "longitude": 126.8974,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.sisul.or.kr/"
             }
         ]
@@ -555,6 +699,9 @@
                 "address": "1 Namisum-gil, Namsan-myeon, Chuncheon-si, Gangwon-do, South Korea",
                 "latitude": 37.791,
                 "longitude": 127.525,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.namisum.com/"
             },
             {
@@ -565,6 +712,9 @@
                 "address": "Chuncheon-si, Gangwon-do, South Korea",
                 "latitude": 37.8744,
                 "longitude": 127.7342,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -575,6 +725,9 @@
                 "address": "1063 Hoban-ro, Cheongpyeong-myeon, Gapyeong-gun, Gyeonggi-do, South Korea",
                 "latitude": 37.8328,
                 "longitude": 127.7693,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.pfcamp.com/"
             },
             {
@@ -585,6 +738,9 @@
                 "address": "715, Olympic-ro, Daegwallyeong-myeon, Pyeongchang-gun, Gangwon-do, South Korea",
                 "latitude": 37.6624,
                 "longitude": 128.6842,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.yongpyong.co.kr/"
             },
             {
@@ -595,6 +751,9 @@
                 "address": "Jeju-si, Jeju-do, South Korea",
                 "latitude": 33.489,
                 "longitude": 126.4983,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.visitjeju.net/en/index.jto"
             }
         ]
@@ -615,6 +774,9 @@
                 "address": "99 Sejong-daero, Jung-gu, Seoul, South Korea",
                 "latitude": 37.5658,
                 "longitude": 126.975,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.deoksugung.go.kr/"
             },
             {
@@ -625,6 +787,9 @@
                 "address": "Han River, Seoul, South Korea",
                 "latitude": 37.5537,
                 "longitude": 126.9715,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -635,6 +800,9 @@
                 "address": "Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5684,
                 "longitude": 126.9754,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264549"
             },
             {
@@ -645,6 +813,9 @@
                 "address": "Sangdo-dong, Dongjak-gu, Seoul, South Korea",
                 "latitude": 37.4927,
                 "longitude": 126.9269,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -655,6 +826,9 @@
                 "address": "61 Deoksugung-gil, Jung-gu, Seoul, South Korea",
                 "latitude": 37.5694,
                 "longitude": 126.979,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://sema.seoul.go.kr/"
             }
         ]
@@ -675,6 +849,9 @@
                 "address": "DMZ, Paju-si, Gyeonggi-do, South Korea",
                 "latitude": 37.9514,
                 "longitude": 126.6928,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -685,6 +862,9 @@
                 "address": "218 Gahoe-dong, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5833,
                 "longitude": 126.9842,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.rkj.co.kr/eng/"
             },
             {
@@ -695,6 +875,9 @@
                 "address": "Seoraksan-ro, Inje-gun, Gangwon-do, South Korea",
                 "latitude": 38.2021,
                 "longitude": 128.4369,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -705,6 +888,9 @@
                 "address": "Namsan Park, Jung-gu, Seoul, South Korea",
                 "latitude": 37.5515,
                 "longitude": 126.988,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -715,6 +901,9 @@
                 "address": "Pyongyang, North Korea",
                 "latitude": 39.0392,
                 "longitude": 125.7625,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -725,6 +914,9 @@
                 "address": "365-12, Daegwallyeongmaru-gil(Daegwallyeong-myeon)",
                 "latitude": 37.3702,
                 "longitude": 128.393,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             }
         ]
@@ -745,6 +937,9 @@
                 "address": "123 Misari-ro, Boryeong-si, Chungcheongnam-do, South Korea",
                 "latitude": 36.3324,
                 "longitude": 126.6043,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.mudfestival.or.kr/"
             },
             {
@@ -755,6 +950,9 @@
                 "address": "35 Taekwondowon-gil, Muju-gun, Gyeonggi-do, South Korea",
                 "latitude": 36.0121,
                 "longitude": 127.6768,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.kukkiwon.or.kr/"
             },
             {
@@ -765,6 +963,9 @@
                 "address": "Hongdae, Mapo-gu, Seoul, South Korea",
                 "latitude": 37.5509,
                 "longitude": 126.9196,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -775,6 +976,9 @@
                 "address": "272 Gonghang-ro, Jung-gu, Incheon, South Korea",
                 "latitude": 37.4602,
                 "longitude": 126.4407,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.airport.kr/"
             },
             {
@@ -785,6 +989,9 @@
                 "address": "128, Suseong-ro, Dalseo-gu, Daegu, South Korea",
                 "latitude": 35.8527,
                 "longitude": 128.5913,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -795,6 +1002,9 @@
                 "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5512,
                 "longitude": 126.9876,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.nseoultower.co.kr/"
             },
             {
@@ -805,6 +1015,9 @@
                 "address": "300 Olympic-ro, Songpa-gu, Seoul, South Korea",
                 "latitude": 37.5126,
                 "longitude": 127.1025,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.lwt.co.kr/"
             }
         ]
@@ -825,6 +1038,9 @@
                 "address": "219 Jongno 6(yuk)-ga, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5664,
                 "longitude": 126.9779,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.scourt.go.kr/eng/"
             },
             {
@@ -835,6 +1051,9 @@
                 "address": "10 Gukjegeumyung-ro 8-gil, Yeongdeungpo-gu, Seoul, South Korea",
                 "latitude": 37.5229,
                 "longitude": 126.9285,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.sifc.or.kr/"
             },
             {
@@ -845,6 +1064,9 @@
                 "address": "Itaewon-dong, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5346,
                 "longitude": 126.9948,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -855,6 +1077,9 @@
                 "address": "Mapo Bridge, Sangsu-dong, Mapo-gu, Seoul, South Korea",
                 "latitude": 37.5402,
                 "longitude": 126.9403,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -865,6 +1090,9 @@
                 "address": "44 Nokdong-ro 217beon-gil, Namdong-gu, Incheon, South Korea",
                 "latitude": 37.4497,
                 "longitude": 126.7079,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.icity.go.kr/eng/"
             },
             {
@@ -875,6 +1103,9 @@
                 "address": "Seorae Village, Banpo 4(sa)-dong, Seocho-gu, Seoul, South Korea",
                 "latitude": 37.4999,
                 "longitude": 127.0254,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -885,6 +1116,9 @@
                 "address": "Namhansanseong-ro 4, Gwangju-si, Gyeonggi-do, South Korea",
                 "latitude": 37.4864,
                 "longitude": 127.1667,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264196"
             },
             {
@@ -895,6 +1129,9 @@
                 "address": "240 World Cup-ro, Mapo-gu, Seoul, South Korea",
                 "latitude": 37.5683,
                 "longitude": 126.8978,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://english.visitseoul.net/attractions/Seoul-World-Cup-Stadium_/25"
             }
         ]
@@ -915,6 +1152,9 @@
                 "address": "165 Apgujeong-ro, Gangnam-gu, Seoul, South Korea",
                 "latitude": 37.5267,
                 "longitude": 127.0299,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.ehyundai.com/newPortal/DP/DP051001"
             },
             {
@@ -925,6 +1165,9 @@
                 "address": "262 Bogungmun-ro, Songbuk-dong, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.6619,
                 "longitude": 126.9778,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.knps.or.kr/"
             },
             {
@@ -935,6 +1178,9 @@
                 "address": "Gwanaksan Mountain, Gwanak-gu, Seoul, South Korea",
                 "latitude": 37.4453,
                 "longitude": 126.9616,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.visitseoul.net/nature/Gwanaksan-Mountain_/2381"
             },
             {
@@ -945,6 +1191,9 @@
                 "address": "133 Anseo-ro, Baebang-eup, Seobuk-gu, Anseong-si, Gyeonggi-do, South Korea",
                 "latitude": 37.0088,
                 "longitude": 127.2754,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.siakorea.ac.kr/en"
             },
             {
@@ -955,6 +1204,9 @@
                 "address": "330 Yeouidong-ro, Yeongdeungpo-gu, Seoul, South Korea",
                 "latitude": 37.5291,
                 "longitude": 126.9337,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.visitseoul.net/nature/Yeouido-Hangang-Park_/2456"
             },
             {
@@ -965,6 +1217,9 @@
                 "address": "289 Jong-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5702,
                 "longitude": 127.0094,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://english.visitseoul.net/shopping/Dongdaemun-Market_/96"
             },
             {
@@ -975,6 +1230,9 @@
                 "address": "185 Changgyeonggung-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5788,
                 "longitude": 126.9965,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264288"
             },
             {
@@ -985,6 +1243,9 @@
                 "address": "31 Bupyeong 5(o)-gil, Bupyeong 1(il)-dong, Bupyeong-gu, Incheon, South Korea",
                 "latitude": 37.4986,
                 "longitude": 126.7241,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             }
         ]
@@ -1005,6 +1266,9 @@
                 "address": "1 Namisum-gil, Namsan-myeon, Chuncheon-si, Gangwon-do, South Korea",
                 "latitude": 37.7914,
                 "longitude": 127.525,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://namisum.com/"
             },
             {
@@ -1015,6 +1279,9 @@
                 "address": "Seogwipo-si, Jeju Island, South Korea",
                 "latitude": 33.2467,
                 "longitude": 126.565,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://english.seogwipo.go.kr/"
             },
             {
@@ -1025,6 +1292,9 @@
                 "address": "Hallasan-ro, Jeju-si, Jeju Island, South Korea",
                 "latitude": 33.3625,
                 "longitude": 126.5348,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264550"
             },
             {
@@ -1035,6 +1305,9 @@
                 "address": "Udo-ri, Jeju-si, Jeju Island, South Korea",
                 "latitude": 33.5063,
                 "longitude": 126.953,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264279"
             },
             {
@@ -1045,6 +1318,9 @@
                 "address": "58 Gwaneum-ro 14-gil, Gujwa-eup, Jeju-si, Jeju Island, South Korea",
                 "latitude": 33.5568,
                 "longitude": 126.8065,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264154"
             },
             {
@@ -1055,6 +1331,9 @@
                 "address": "Woljeong-ri, Gujwa-eup, Jeju-si, Jeju Island, South Korea",
                 "latitude": 33.5488,
                 "longitude": 126.7692,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.visitjeju.net/en/detail/view?contentsid=CONT_000000000500735"
             },
             {
@@ -1065,6 +1344,9 @@
                 "address": "Saryeoni Forest, Jeoji-ri, Jocheon-eup, Jeju-si, Jeju Island, South Korea",
                 "latitude": 33.4641,
                 "longitude": 126.6959,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264208"
             },
             {
@@ -1075,6 +1357,9 @@
                 "address": "Oedolgae-ro, Seogwipo-si, Jeju Island, South Korea",
                 "latitude": 33.2435,
                 "longitude": 126.415,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264073"
             }
         ]
@@ -1095,6 +1380,9 @@
                 "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5779,
                 "longitude": 126.9768,
+                "description": "A majestic historical landmark built in the 14th century, renowned for its grandeur and significance as the primary royal palace of the Joseon dynasty.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.royalpalace.go.kr:8080/"
             },
             {
@@ -1105,6 +1393,9 @@
                 "address": "Cheonggyecheon-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5697,
                 "longitude": 126.9909,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://english.visitseoul.net/attractions/Cheonggyecheon-Stream_/96"
             },
             {
@@ -1115,6 +1406,9 @@
                 "address": "1 Gwanak-ro, Gwanak-gu, Seoul, South Korea",
                 "latitude": 37.4602,
                 "longitude": 126.9517,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.useoul.edu/"
             },
             {
@@ -1125,6 +1419,9 @@
                 "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5512,
                 "longitude": 126.9876,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.nseoultower.co.kr/"
             },
             {
@@ -1135,6 +1432,9 @@
                 "address": "28, Toegye-ro 34-gil, Jung-gu, Seoul, South Korea",
                 "latitude": 37.5592,
                 "longitude": 126.994,
+                "description": "A charming cultural enclave that preserves the traditional Korean way of life, offering visitors a glimpse into the country's rich heritage and architectural beauty.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264129"
             },
             {
@@ -1145,6 +1445,9 @@
                 "address": "Myeong-dong, Jung-gu, Seoul, South Korea",
                 "latitude": 37.5641,
                 "longitude": 126.985,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://english.visitseoul.net/shopping/Myeong-dong-/29"
             },
             {
@@ -1155,6 +1458,9 @@
                 "address": "281 Eulji-ro, Euljiro 7(chil)-ga, Jung-gu, Seoul, South Korea",
                 "latitude": 37.5663,
                 "longitude": 127.0079,
+                "description": "A futuristic architectural marvel and cultural hub, showcasing innovative design, technology, and creativity, symbolizing Seoul's vibrant and dynamic spirit.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.ddp.or.kr/"
             },
             {
@@ -1165,6 +1471,9 @@
                 "address": "Hangang Park, Seoul, South Korea",
                 "latitude": 37.5439,
                 "longitude": 126.8917,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://hangang.seoul.go.kr/"
             }
         ]
@@ -1185,6 +1494,9 @@
                 "address": "Calle Real de la Alhambra, s/n, 18009 Granada, Spain",
                 "latitude": 37.176,
                 "longitude": -3.5888,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.alhambradegranada.org/en/"
             },
             {
@@ -1195,6 +1507,9 @@
                 "address": "405 Hangang-daero, Huam-dong, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5536,
                 "longitude": 126.972,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.letskorail.com/ebizbf/EbizBfTicketSearch.do"
             },
             {
@@ -1205,6 +1520,9 @@
                 "address": "312 Bangeojin-gil, Geumwang-eup, Paju-si, Gyeonggi-do, South Korea",
                 "latitude": 37.8601,
                 "longitude": 126.7838,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.gev.or.kr/eng/"
             },
             {
@@ -1215,6 +1533,9 @@
                 "address": "Jeju-do, South Korea",
                 "latitude": 33.489,
                 "longitude": 126.4983,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.visitjeju.net/en/index.jto"
             },
             {
@@ -1225,6 +1546,9 @@
                 "address": "Hongdae, Mapo-gu, Seoul, South Korea",
                 "latitude": 37.5509,
                 "longitude": 126.9196,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1235,6 +1559,9 @@
                 "address": "Gangnam-gu, Seoul, South Korea",
                 "latitude": 37.5172,
                 "longitude": 127.0473,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1245,6 +1572,9 @@
                 "address": "281 Eulji-ro, Euljiro 7(chil)-ga, Jung-gu, Seoul, South Korea",
                 "latitude": 37.5663,
                 "longitude": 127.0079,
+                "description": "A futuristic architectural marvel and cultural hub, showcasing innovative design, technology, and creativity, symbolizing Seoul's vibrant and dynamic spirit.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.ddp.or.kr/"
             },
             {
@@ -1255,6 +1585,9 @@
                 "address": "Bukchon Hanok Village, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5823,
                 "longitude": 126.985,
+                "description": "This historic village offers visitors a captivating journey back in time, with its winding alleyways, stunning architecture, and immersive cultural experiences.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             }
         ]
@@ -1275,6 +1608,9 @@
                 "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5779,
                 "longitude": 126.9768,
+                "description": "A majestic historical landmark built in the 14th century, renowned for its grandeur and significance as the primary royal palace of the Joseon dynasty.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.royalpalace.go.kr:8080/"
             },
             {
@@ -1285,6 +1621,9 @@
                 "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5512,
                 "longitude": 126.9876,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.nseoultower.co.kr/"
             },
             {
@@ -1295,6 +1634,9 @@
                 "address": "52 Ewhayeodae-gil, Daehyeon-dong, Seodaemun-gu, Seoul, South Korea",
                 "latitude": 37.5585,
                 "longitude": 126.9432,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.ewha.ac.kr/"
             },
             {
@@ -1305,6 +1647,9 @@
                 "address": "Cheonggyecheon-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5697,
                 "longitude": 126.9909,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://english.visitseoul.net/attractions/Cheonggyecheon-Stream_/96"
             },
             {
@@ -1315,6 +1660,9 @@
                 "address": "114-10 Unni-dong, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5775,
                 "longitude": 126.9985,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1325,6 +1673,9 @@
                 "address": "6-1 Changsin 1(il)-ga, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5678,
                 "longitude": 127.0082,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1335,6 +1686,9 @@
                 "address": "200, Technopark-ro, Yeonsu-gu, Incheon, South Korea",
                 "latitude": 37.3919,
                 "longitude": 126.6405,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.songdo.com/"
             },
             {
@@ -1345,6 +1699,9 @@
                 "address": "172 Sejong-daero, Sejongno, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5759,
                 "longitude": 126.9768,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             }
         ]
@@ -1365,6 +1722,9 @@
                 "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5779,
                 "longitude": 126.9768,
+                "description": "A majestic historical landmark built in the 14th century, renowned for its grandeur and significance as the primary royal palace of the Joseon dynasty.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.royalpalace.go.kr:8080/"
             },
             {
@@ -1375,6 +1735,9 @@
                 "address": "825 Jeongjo-ro, Paldal-gu, Suwon, Gyeonggi-do, South Korea",
                 "latitude": 37.2877,
                 "longitude": 127.0074,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://eng.suwon.ne.kr/"
             },
             {
@@ -1385,6 +1748,9 @@
                 "address": "188 Sannae-ri, Jeongnam-myeon, Hwaseong, Gyeonggi-do, South Korea",
                 "latitude": 37.4725,
                 "longitude": 127.2196,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.namhansanseong.or.kr/"
             },
             {
@@ -1395,6 +1761,9 @@
                 "address": "152 Beodeunaru-ro, Ukjon-ri, Jeongbalsan-dong, Ilsandong-gu, Goyang-si, Gyeonggi-do, South Korea",
                 "latitude": 37.6944,
                 "longitude": 126.9911,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://bukhansanita.org/"
             },
             {
@@ -1405,6 +1774,9 @@
                 "address": "99 Yulgok-ro, Waryong-dong, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5788,
                 "longitude": 126.9969,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://eng.cdg.go.kr/"
             },
             {
@@ -1415,6 +1787,9 @@
                 "address": "264 Haeundaehaebyeon-ro, Haeundae-gu, Busan, South Korea",
                 "latitude": 35.1605,
                 "longitude": 129.1613,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.haeundae.go.kr/"
             },
             {
@@ -1425,6 +1800,9 @@
                 "address": "33 Hwahap-ro 2107beon-gil, Yongmun-myeon, Icheon-si, Gyeonggi-do, South Korea",
                 "latitude": 37.1768,
                 "longitude": 127.4978,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.mbcdramia.com/"
             },
             {
@@ -1435,6 +1813,9 @@
                 "address": "San 28-2 Sangdang-gu, Cheongju-si, Chungcheongbuk-do, South Korea",
                 "latitude": 36.6344,
                 "longitude": 127.5065,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.sangdang.org/"
             }
         ]
@@ -1455,6 +1836,9 @@
                 "address": "Gyeongju-si, Gyeongsangbuk-do, South Korea",
                 "latitude": 35.8566,
                 "longitude": 129.224,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.gyeongju.go.kr/"
             },
             {
@@ -1465,6 +1849,9 @@
                 "address": "15, Jinhyeon-dong, Gyeongju-si, Gyeongsangbuk-do, South Korea",
                 "latitude": 35.7945,
                 "longitude": 129.332,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.bulguksa.or.kr/"
             },
             {
@@ -1475,6 +1862,9 @@
                 "address": "Gyeongju-si, Gyeongsangbuk-do, South Korea",
                 "latitude": 35.8384,
                 "longitude": 129.211,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.gyeongju.go.kr/"
             },
             {
@@ -1485,6 +1875,9 @@
                 "address": "Apsin-gil, Gyeongju-si, Gyeongsangbuk-do, South Korea",
                 "latitude": 35.8372,
                 "longitude": 129.2203,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.gyeongju.go.kr/"
             },
             {
@@ -1495,6 +1888,9 @@
                 "address": "100 Naksansa-ro, Ganghyeon-myeon, Yangyang-gun, Gangwon-do, South Korea",
                 "latitude": 38.0668,
                 "longitude": 128.4152,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.naksansa.org/"
             },
             {
@@ -1505,6 +1901,9 @@
                 "address": "Samcheong-dong, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5819,
                 "longitude": 126.982,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1515,6 +1914,9 @@
                 "address": "188 Sannae-ri, Jeongnam-myeon, Hwaseong, Gyeonggi-do, South Korea",
                 "latitude": 37.4725,
                 "longitude": 127.2196,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.namhansanseong.or.kr/"
             },
             {
@@ -1525,6 +1927,9 @@
                 "address": "San 28-2 Sangdang-gu, Cheongju-si, Chungcheongbuk-do, South Korea",
                 "latitude": 36.6344,
                 "longitude": 127.5065,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.sangdang.org/"
             }
         ]
@@ -1545,6 +1950,9 @@
                 "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5779,
                 "longitude": 126.9768,
+                "description": "A majestic historical landmark built in the 14th century, renowned for its grandeur and significance as the primary royal palace of the Joseon dynasty.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.royalpalace.go.kr:8080/"
             },
             {
@@ -1555,6 +1963,9 @@
                 "address": "825 Jeongjo-ro, Paldal-gu, Suwon, Gyeonggi-do, South Korea",
                 "latitude": 37.2877,
                 "longitude": 127.0074,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://eng.suwon.ne.kr/"
             },
             {
@@ -1565,6 +1976,9 @@
                 "address": "Bukchon Hanok Village, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5823,
                 "longitude": 126.985,
+                "description": "This historic village offers visitors a captivating journey back in time, with its winding alleyways, stunning architecture, and immersive cultural experiences.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1575,6 +1989,9 @@
                 "address": "1-13 Eumseo-ro, Hapcheon-eup, Hapcheon-gun, Gyeongsangnam-do, South Korea",
                 "latitude": 35.5653,
                 "longitude": 128.1743,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1585,6 +2002,9 @@
                 "address": "188-5 Jamsilbon-dong, Songpa-gu, Seoul, South Korea",
                 "latitude": 37.5115,
                 "longitude": 127.0866,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://seoulbaekjemuseum.seoul.go.kr/"
             },
             {
@@ -1595,6 +2015,9 @@
                 "address": "273 Ttukseom-ro, Seongsu-dong 1(il)-ga, Seongdong-gu, Seoul, South Korea",
                 "latitude": 37.5425,
                 "longitude": 127.0418,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://english.seoul.go.kr/culture-recreation/seoul-forest/"
             },
             {
@@ -1605,6 +2028,9 @@
                 "address": "99 Yulgok-ro, Waryong-dong, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5788,
                 "longitude": 126.9969,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://eng.cdg.go.kr/"
             },
             {
@@ -1615,6 +2041,9 @@
                 "address": "231-1 Hoehyeon-dong 1(il)-ga, Jung-gu, Seoul, South Korea",
                 "latitude": 37.5512,
                 "longitude": 126.9909,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264354"
             }
         ]
@@ -1635,6 +2064,9 @@
                 "address": "269-4 Maseok-ri, Giheung-eup, Yongin-si, Gyeonggi-do, South Korea",
                 "latitude": 37.2672,
                 "longitude": 127.1571,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://yonginforest.co.kr/"
             },
             {
@@ -1645,6 +2077,9 @@
                 "address": "Hwasan-ri, Giheung-eup, Yongin-si, Gyeonggi-do, South Korea",
                 "latitude": 37.2664,
                 "longitude": 127.1576,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1655,6 +2090,9 @@
                 "address": "90 Minsokchon-ro, Giheung-gu, Yongin-si, Gyeonggi-do, South Korea",
                 "latitude": 37.2834,
                 "longitude": 127.1079,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.koreanfolk.co.kr/multi/english/"
             },
             {
@@ -1665,6 +2103,9 @@
                 "address": "Gyeonggi-do, Paju-si, Tanhyeon-myeon, Unjeong-ro, South Korea",
                 "latitude": 37.7484,
                 "longitude": 126.6817,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.pajubookcity.org/"
             },
             {
@@ -1675,6 +2116,9 @@
                 "address": "65-5 Sinsang-dong, Asan-si, Chungcheongnam-do, South Korea",
                 "latitude": 36.7846,
                 "longitude": 127.0029,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://tour.asan.go.kr/"
             },
             {
@@ -1685,6 +2129,9 @@
                 "address": "188 Sannae-ri, Jeongnam-myeon, Hwaseong, Gyeonggi-do, South Korea",
                 "latitude": 37.4725,
                 "longitude": 127.2196,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.namhansanseong.or.kr/"
             },
             {
@@ -1695,6 +2142,9 @@
                 "address": "33 Hwahap-ro 2107beon-gil, Yongmun-myeon, Icheon-si, Gyeonggi-do, South Korea",
                 "latitude": 37.1768,
                 "longitude": 127.4978,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://djgpark.imbc.com/"
             },
             {
@@ -1705,6 +2155,9 @@
                 "address": "344 Songgwangsa-ro, Songgwang-myeon, Suncheon-si, Jeollanam-do, South Korea",
                 "latitude": 34.9892,
                 "longitude": 127.3292,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.songgwangsa.org/eng/index.asp"
             }
         ]
@@ -1725,6 +2178,9 @@
                 "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5779,
                 "longitude": 126.9768,
+                "description": "A majestic historical landmark built in the 14th century, renowned for its grandeur and significance as the primary royal palace of the Joseon dynasty.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.royalpalace.go.kr:8080/"
             },
             {
@@ -1735,6 +2191,9 @@
                 "address": "28, Toegye-ro 34-gil, Jung-gu, Seoul, South Korea",
                 "latitude": 37.5592,
                 "longitude": 126.994,
+                "description": "A charming cultural enclave that preserves the traditional Korean way of life, offering visitors a glimpse into the country's rich heritage and architectural beauty.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264129"
             },
             {
@@ -1745,6 +2204,9 @@
                 "address": "123, Haean-ro, Yeongjongdo-dong, Jung-gu, Incheon, South Korea",
                 "latitude": 37.4104,
                 "longitude": 126.4914,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1755,6 +2217,9 @@
                 "address": "Naejang-dong, Jeongeup-si, Jeollabuk-do, South Korea",
                 "latitude": 35.8026,
                 "longitude": 126.8195,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://english.visitkorea.or.kr/enu/ATR/SI_EN_3_1_1_1.jsp?cid=264019"
             },
             {
@@ -1765,6 +2230,9 @@
                 "address": "114-10 Unni-dong, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5775,
                 "longitude": 126.9985,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1775,6 +2243,9 @@
                 "address": "54-1, Changhae-ro 4-gil, Gangneung-si, Gangwon-do, South Korea",
                 "latitude": 37.7589,
                 "longitude": 128.8978,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1785,6 +2256,9 @@
                 "address": "37-55 Yongdusan-gil, Jung-gu, Busan, South Korea",
                 "latitude": 35.1014,
                 "longitude": 129.0302,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1795,6 +2269,9 @@
                 "address": "36 Wolmimunhwa-ro, Jung-gu, Incheon, South Korea",
                 "latitude": 37.4668,
                 "longitude": 126.6024,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "http://www.wolmido.com/"
             }
         ]
@@ -1815,6 +2292,9 @@
                 "address": "15 Pungdeokcheon-ro 23beon-gil, Danwon-gu, Ansan-si, Gyeonggi-do, South Korea",
                 "latitude": 37.3106,
                 "longitude": 126.8617,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.knsu.ac.kr/knsu/index.do"
             },
             {
@@ -1825,6 +2305,9 @@
                 "address": "307 Daehak-ro, Baegam-myeon, Yangpyeong-gun, Gyeonggi-do, South Korea",
                 "latitude": 37.4036,
                 "longitude": 127.5523,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1835,6 +2318,9 @@
                 "address": "330 Yeouidong-ro, Yeongdeungpo-gu, Seoul, South Korea",
                 "latitude": 37.5281,
                 "longitude": 126.9341,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1845,6 +2331,9 @@
                 "address": "1 Namisum-gil, Namsan-myeon, Chuncheon-si, Gangwon-do, South Korea",
                 "latitude": 37.7914,
                 "longitude": 127.525,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://namisum.com/"
             },
             {
@@ -1855,6 +2344,9 @@
                 "address": "424 Olympic-ro, Jamsil-dong, Songpa-gu, Seoul, South Korea",
                 "latitude": 37.5204,
                 "longitude": 127.1218,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.ksponco.or.kr/olympicpark/"
             },
             {
@@ -1865,6 +2357,9 @@
                 "address": "Sinchon-dong, Mapo-gu, Seoul, South Korea",
                 "latitude": 37.5572,
                 "longitude": 126.9368,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1875,6 +2370,9 @@
                 "address": "185 Changgyeonggung-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.578,
                 "longitude": 126.9972,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://royal.cha.go.kr/ROYAL/contents/menuInfo-gbg.do?grpCode=cgg"
             },
             {
@@ -1885,6 +2383,9 @@
                 "address": "Hongdae-dong, Mapo-gu, Seoul, South Korea",
                 "latitude": 37.557,
                 "longitude": 126.9266,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             }
         ]
@@ -1905,6 +2406,9 @@
                 "address": "18 Yeouido-dong, Yeongdeungpo-gu, Seoul, South Korea",
                 "latitude": 37.5264,
                 "longitude": 126.9193,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.kbs.co.kr/"
             },
             {
@@ -1915,6 +2419,9 @@
                 "address": "35 Baekbeom-ro (Sinsu-dong), Mapo-gu, Seoul, South Korea",
                 "latitude": 37.5514,
                 "longitude": 126.9411,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.sogang.ac.kr/"
             },
             {
@@ -1925,6 +2432,9 @@
                 "address": "231 Sadang-ro, Yongsan 2(i)ga-dong, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5517,
                 "longitude": 126.9885,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1935,6 +2445,9 @@
                 "address": "Sinsa-dong, Gangnam-gu, Seoul, South Korea",
                 "latitude": 37.5181,
                 "longitude": 127.0222,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1945,6 +2458,9 @@
                 "address": "33 Hwahap-ro 2107beon-gil, Yongmun-myeon, Icheon-si, Gyeonggi-do, South Korea",
                 "latitude": 37.1768,
                 "longitude": 127.4978,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://djgpark.imbc.com/"
             },
             {
@@ -1955,6 +2471,9 @@
                 "address": "Itaewon-dong, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5345,
                 "longitude": 126.9947,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -1965,6 +2484,9 @@
                 "address": "260 Sangam-dong, Mapo-gu, Seoul, South Korea",
                 "latitude": 37.5696,
                 "longitude": 126.8979,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://programs.sbs.co.kr/"
             },
             {
@@ -1975,6 +2497,9 @@
                 "address": "191-1 Seongsan-dong, Mapo-gu, Seoul, South Korea",
                 "latitude": 37.5691,
                 "longitude": 126.9135,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             }
         ]
@@ -1995,6 +2520,9 @@
                 "address": "Seoul, South Korea",
                 "latitude": 37.5665,
                 "longitude": 126.978,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.seoulmetro.co.kr/"
             },
             {
@@ -2005,6 +2533,9 @@
                 "address": "161 Sajik-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5775,
                 "longitude": 126.9769,
+                "description": "A majestic historical landmark built in the 14th century, renowned for its grandeur and significance as the primary royal palace of the Joseon dynasty.",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.royalpalace.go.kr/"
             },
             {
@@ -2015,6 +2546,9 @@
                 "address": "Cheonggyecheon-ro, Jongno-gu, Seoul, South Korea",
                 "latitude": 37.5697,
                 "longitude": 126.9783,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.visitkorea.or.kr/"
             },
             {
@@ -2025,6 +2559,9 @@
                 "address": "Han River, Seoul, South Korea",
                 "latitude": 37.5485,
                 "longitude": 126.941,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -2035,6 +2572,9 @@
                 "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5512,
                 "longitude": 126.9876,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.nseoultower.co.kr/"
             }
         ]
@@ -2055,6 +2595,9 @@
                 "address": "Gongjin Village, Yangyang-gun, Gangwon-do, South Korea",
                 "latitude": 38.0686,
                 "longitude": 128.6268,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -2065,6 +2608,9 @@
                 "address": "Jukdobong Peak, Yangyang-gun, Gangwon-do, South Korea",
                 "latitude": 38.0845,
                 "longitude": 128.5811,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -2075,6 +2621,9 @@
                 "address": "Yangyang Beach, Yangyang-gun, Gangwon-do, South Korea",
                 "latitude": 38.0634,
                 "longitude": 128.6339,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -2085,6 +2634,9 @@
                 "address": "Seoraksan National Park, Inje, Gangwon-do, South Korea",
                 "latitude": 38.1191,
                 "longitude": 128.4654,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://english.knps.or.kr/"
             },
             {
@@ -2095,6 +2647,9 @@
                 "address": "100 Naksansa-ro, Yangyang-eup, Yangyang-gun, Gangwon-do, South Korea",
                 "latitude": 38.1115,
                 "longitude": 128.4202,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "https://www.naksansa.org/"
             },
             {
@@ -2105,6 +2660,9 @@
                 "address": "Naksan Beach, Yangyang-gun, Gangwon-do, South Korea",
                 "latitude": 38.2268,
                 "longitude": 128.5402,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             },
             {
@@ -2115,6 +2673,9 @@
                 "address": "Naksan Beach Sunrise Park, Yangyang-gun, Gangwon-do, South Korea",
                 "latitude": 38.2283,
                 "longitude": 128.5419,
+                "description": "",
+                "openingHours": "",
+                "admissionFee": 0,
                 "website": "nil"
             }
         ]

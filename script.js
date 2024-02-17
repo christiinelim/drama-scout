@@ -1,4 +1,13 @@
 async function main(){
+    // data set
+    const data = await loadData();
+
+    // dramalist array
+    const dramaList = await loadDrama(data);
+
+    // render cards
+    renderCard(data);
+
     // navbar small
     document.querySelector("#menu-button-click").addEventListener("click", function(){
         if (document.querySelector("#dropdown").classList.contains("close")){
@@ -18,10 +27,6 @@ async function main(){
         }
     });
 
-    const data = await loadData();
-
-    const dramaList = await loadDrama(data);
-
 
     // autocomplete search
     document.querySelector("#input-text").addEventListener("keyup", function(){
@@ -39,8 +44,47 @@ async function main(){
         }
     })
 
-    // generate cards
-    generateCard(data)
+    // search
+    document.querySelector("#search-button-actual").addEventListener("click", function(){
+        const searchTerm = document.querySelector("#input-text").value;
+        let resultArray = [];
+
+        if (searchTerm == ""){
+            document.querySelector("#error-text").innerHTML = "Please give an input";
+            document.querySelector("#error-alert").classList.add("visible");
+            setTimeout(function(){
+                document.querySelector("#error-alert").classList.remove("visible");
+            }, 1500);
+        } else {
+            for (let element of data){
+                if (element.drama.toLowerCase().includes(searchTerm.toLowerCase())){
+                   resultArray.push(element);
+               }
+           }
+        }
+
+        if (resultArray.length == 0 && searchTerm != ""){
+            document.querySelector("#error-text").innerHTML = "Sorry no match found";
+            document.querySelector("#error-alert").classList.add("visible");
+            setTimeout(function(){
+                document.querySelector("#error-alert").classList.remove("visible");
+            }, 1500);
+            resetSearchField();
+        } else if (searchTerm == "") {
+            
+        } else {
+            renderCard(resultArray);
+            resetSearchField();
+        }
+    })
+
+    // clear search icon
+    document.querySelector("#x-icon").addEventListener("click", function(){
+        if (document.querySelector("#input-text").value != ""){
+            document.querySelector("#input-text").value = "";
+            renderCard(data);
+        }
+    })
 }
 
 
@@ -59,7 +103,8 @@ function autocompleteFilter(searchTerm, dramaList){
             searchList.appendChild(liElement);
             liElement.addEventListener("click", function(){
                 document.querySelector("#input-text").value = drama;
-                resetSearchField()
+                autocompleteSuggestion = true;
+                resetSearchField();
             })
         }
     }
@@ -80,23 +125,32 @@ function resetSearchField(){
     document.querySelector("#search-button").style.borderRadius = "0px 999px 999px 0px";
 }
 
-function generateCard(data){
+function renderCard(data){
     const divElement = document.querySelector("#drama-cards");
+    divElement.innerHTML = ``;
     
     for (let element of data){
         let cardElement = document.createElement("div");
-        cardElement.classList.add('my-card-container', 'col-6', 'col-md-4', 'col-lg-3');
+        cardElement.classList.add('my-card-container', 'col-6', 'col-sm-4', 'col-lg-3');
         
         let cardContent = document.createElement("div");
         cardContent.classList.add('my-card');
         cardContent.style.backgroundImage = `url(${element.dramaImage})`;
     
         cardContent.innerHTML = element.drama;
-        cardElement.appendChild(cardContent)
-        divElement.appendChild(cardElement)
+
+        const anchorElement = document.createElement('a');
+        anchorElement.href = `cardContent.html?id=${element.id}`;
+        anchorElement.appendChild(cardContent);
+        cardElement.appendChild(anchorElement);
+        divElement.appendChild(cardElement);
+
+        cardContent.addEventListener("click", function(){
+
+        })
     }
 }
 
 
 
-main()
+main();

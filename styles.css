@@ -5,6 +5,11 @@
     body{
         font-size: 10px;
         font-family: 'Lato';
+        background-color: white;
+    }
+
+    a{
+        text-decoration: none;
     }
 
     /* navbar */
@@ -92,6 +97,7 @@
     }
 
     #searchbar{
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -126,6 +132,15 @@
         outline: none;
     }
 
+    #x-icon{
+        font-size: 10px;
+        opacity: 0.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+    }
+
     #search-button{
         display: flex;
         justify-content: center;
@@ -142,6 +157,9 @@
 
     /* autocomplete */
     #result-box{
+        position: absolute;
+        top: 100%;
+        z-index: 1;
         background-color: white;
         width: 70%;
         overflow: hidden;
@@ -163,6 +181,144 @@
     #result-box ul li:hover{
         background-color: rgba(152, 162, 150, 0.3);
     }
+
+    /* generate cards */
+    #drama-cards{
+        box-sizing: border-box;
+        margin: 50px 10%;
+    }
+
+    .my-card-container{
+        padding: 0px 6px !important;
+    }
+
+    .my-card{
+        display: flex;
+        align-items: flex-end;
+        background-color: grey;
+        height: 200px;
+        margin-bottom: 20px;
+        padding: 0px 10px 10px 10px;
+        color: white;
+        font-weight: bold;
+        line-height: 13px;
+        border-radius: 10px;
+        background-size: cover; 
+        background-position: center;
+        box-shadow: inset 0px -50px 20px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+
+    .my-card:hover {
+        /* transform: scale(1.1); */
+        background-size: 120%; 
+        transition: background-size 2s;
+        cursor: pointer;
+    }
+
+    /* error alert */
+    #error-alert{
+        transform: scale(0); 
+        transform-origin: center;
+        transition: transform 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 30%;
+        left: calc((100% - 270px)/2);
+        z-index: 3;
+    }
+
+    #error-alert.visible {
+        transform: scale(1);
+      }
+
+    #error-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #B64C63;
+        background-color: white;
+        box-shadow: -1px 1px 5px 3px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        width: 240px;
+        height: 130px;
+        font-size: 12px;
+    }
+
+    #error-icon{
+        font-size: 30px;
+    }
+
+    /* cardContent.html page */
+    #content-container{
+        margin: 40px 8%;
+    }
+
+    #drama-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 8%;
+    }
+
+    #drama-image-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        width: 100%;
+    }
+
+    #drama-image{
+        width: 50%;
+        padding-top: 50%;
+        background-position: center;
+        background-size: cover; 
+        border-radius: 10px;
+        box-shadow: -1px 1px 5px 3px rgba(0,0,0,0.2);
+    }
+
+    #drama-details{
+        padding-left: 4%;
+    }
+
+    #drama-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #year{
+        display: flex;
+        justify-content: center;
+        color: grey;
+        font-weight: bold;
+        font-size: 10px;
+        margin-top: 20px;
+    }
+
+    #drama-name{
+        display: flex;
+        justify-content: center;
+        font-family: 'Days One';
+        font-size: 15px;
+        line-height: 13px;
+        margin-top: 6px;
+        margin-bottom: 16px;
+    }
+
+    #drama-synopsis{
+        margin-bottom: 16px;
+        text-align: justify;
+    }
+
+    #genre i{
+        margin-right: 1%;
+    }
 }
 
 
@@ -174,6 +330,11 @@
     body{
         font-size: 12px;
         font-family: 'Lato';
+        background-color: white;
+    }
+
+    a{
+        text-decoration: none;
     }
 
     /* navbar */
@@ -239,6 +400,7 @@
     }
 
     #searchbar{
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -273,6 +435,15 @@
         outline: none;
     }
 
+    #x-icon{
+        font-size: 12px;
+        opacity: 0.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+    }
+
     #search-button{
         display: flex;
         justify-content: center;
@@ -289,6 +460,9 @@
 
     /* autocomplete */
     #result-box{
+        position: absolute;
+        top: 100%;
+        z-index: 1;
         background-color: white;
         width: 50%;
         overflow: hidden;
@@ -310,6 +484,132 @@
     #result-box ul li:hover{
         background-color: rgba(152, 162, 150, 0.3);
     }
+
+    /* generate cards */
+    #drama-cards{
+        box-sizing: border-box;
+        margin: 50px 8%;
+    }
+
+    .my-card-container{
+        padding: 0px 6px !important;
+    }
+
+    .my-card{
+        display: flex;
+        align-items: flex-end;
+        background-color: grey;
+        height: 300px;
+        margin-bottom: 40px;
+        padding: 0px 13px 13px 13px;
+        color: white;
+        font-weight: bold;
+        line-height: 20px;
+        border-radius: 10px;
+        background-size: cover; 
+        background-position: center;
+        box-shadow: inset 0px -50px 20px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
+
+    .my-card:hover {
+        /* transform: scale(1.1); */
+        background-size: 120%; 
+        transition: background-size 2s;
+        cursor: pointer;
+    }
+
+    /* error alert */
+    #error-alert{
+        transform: scale(0); 
+        transform-origin: center;
+        transition: transform 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 30%;
+        left: calc((100% - 270px)/2);
+        z-index: 3;
+    }
+
+    #error-alert.visible {
+        transform: scale(1); 
+      }
+
+    #error-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #B64C63;
+        background-color: white;
+        box-shadow: -1px 1px 5px 3px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        width: 270px;
+        height: 140px;
+        font-size: 14px;
+    }
+
+    #error-icon{
+        font-size: 40px;
+    }
+
+    /* cardContent.html page */
+    #content-container{
+        margin: 50px 8%;
+    }
+
+    #drama-image-container{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0px;
+        width: calc(4/12*100%);
+    }
+
+    #drama-image{
+        width: 80%;
+        padding-top: 80%;
+        background-position: center;
+        background-size: cover; 
+        border-radius: 10px;
+        box-shadow: -1px 1px 5px 3px rgba(0,0,0,0.2);
+    }
+
+    #drama-details{
+        padding-left: 4%;
+    }
+
+    #drama-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #year{
+        color: grey;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    #drama-name{
+        font-family: 'Days One';
+        font-size: 30px;
+        line-height: 30px;
+        margin-top: 6px;
+        margin-bottom: 18px;
+    }
+
+    #drama-synopsis{
+        margin-bottom: 18px;
+        text-align: justify;
+    }
+
+    #genre i{
+        margin-right: 1%;
+    }
 }
 
 
@@ -323,6 +623,11 @@
     body{
         font-size: 14px;
         font-family: 'Lato';
+        background-color: white;
+    }
+
+    a{
+        text-decoration: none;
     }
 
     /* navbar */
@@ -389,6 +694,7 @@
     }
 
     #searchbar{
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -407,7 +713,7 @@
     #search-icon{
         display: flex;
         align-items: center;
-        padding-right: 10px;
+        padding-right: 5px;
     }
     
     #search-input{
@@ -421,6 +727,15 @@
 
     #search-input input:focus{
         outline: none;
+    }
+
+    #x-icon{
+        font-size: 14px;
+        opacity: 0.5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
     }
 
     #search-button{
@@ -439,6 +754,9 @@
 
     /* autocomplete */
     #result-box{
+        position: absolute;
+        top: 100%;
+        z-index: 1;
         background-color: white;
         width: 50%;
         overflow: hidden;
@@ -464,7 +782,7 @@
     /* generate cards */
     #drama-cards{
         box-sizing: border-box;
-        margin: 50px 70px;
+        margin: 50px 8%;
     }
 
     .my-card-container{
@@ -477,7 +795,7 @@
         background-color: grey;
         height: 300px;
         margin-bottom: 40px;
-        padding: 0px 0px 15px 15px;
+        padding: 0px 15px 15px 15px;
         color: white;
         font-weight: bold;
         line-height: 20px;
@@ -490,6 +808,143 @@
     }
 
     .my-card:hover {
-        transform: scale(1.1);
+        /* transform: scale(1.1); */
+        background-size: 120%; 
+        transition: background-size 2s;
+        cursor: pointer;
     }
+
+    /* error alert */
+    #error-alert{
+        transform: scale(0); 
+        transform-origin: center;
+        transition: transform 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 40%;
+        left: calc((100% - 300px)/2);
+        z-index: 3;
+    }
+
+    #error-alert.visible {
+        transform: scale(1);
+      }
+
+    #error-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #B64C63;
+        background-color: white;
+        box-shadow: -1px 1px 5px 3px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        width: 300px;
+        height: 150px;
+        font-size: 16px;
+    }
+
+    #error-icon{
+        font-size: 50px;
+    }
+
+    /* cardContent.html page */
+    #drama-content{
+        margin: 50px 10%;
+    }
+
+    #drama-image-container{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0px;
+        width: calc(4/12*100%);
+    }
+
+    #drama-image{
+        width: 80%;
+        padding-top: 80%;
+        background-position: center;
+        background-size: cover; 
+        border-radius: 10px;
+        box-shadow: -1px 1px 5px 3px rgba(0,0,0,0.2);
+    }
+
+    #drama-details{
+        padding-left: 5%;
+    }
+
+    #drama-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #year{
+        color: grey;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    #drama-name{
+        font-family: 'Days One';
+        font-size: 35px;
+        line-height: 30px;
+        margin-top: 8px;
+        margin-bottom: 20px;
+    }
+
+    #drama-synopsis{
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    #genre i{
+        margin-right: 1%;
+    }
+
+    /* tab */
+    #tab{
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 20px;
+        gap: 6%;
+    }
+
+    #location-list-tab i,
+    #map-tab i{
+        padding-right: 6px;
+    }
+
+    #location-list-tab{
+        border-bottom: 2px solid black;
+        padding: 0px 1px 5px 1px;
+    }
+    
+    
+    #map-tab{
+        padding: 0px 1px 5px 1px;
+    }
+
+    #location-list-tab:hover,
+    #map-tab:hover{
+        color: #636363;
+        cursor: pointer;
+        border-bottom: 2px solid #636363;
+    }
+
+    /* tab container */
+    #tab-container{
+        margin: 30px 6%;
+    }
+
+    .location-image{
+        width: 80px;
+        height: 80px;
+        background-size: contain;
+    }
+
 }
