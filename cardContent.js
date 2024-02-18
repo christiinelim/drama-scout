@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async function(){
 
     document.querySelector("#map-tab").addEventListener("click", function(){
         document.querySelector("#map-tab").style.borderBottom = "2px solid black";
-        document.querySelector("#location-list-tab").style.borderBottom = "none"
+        document.querySelector("#location-list-tab").style.borderBottom = "none";
     })
 
 
@@ -78,26 +78,26 @@ function displayCardContentPage(data){
 // generate location list
 function renderLocation(data){
     divElement = document.createElement("div");
+    divElement.classList.add("row");
 
     for (let location of data.location){
         let childElement = document.createElement("div");
 
-
         childElement.innerHTML = `
-            <div class="row">
-                <div class="location-image-container col-2">
+            <div class="item-container">
+                <div class="location-image-container">
                     <div class="location-image"></div>
                 </div>
 
-                <div class="location-exact col-2">
-                    <div class="location-name">${location.name}</div>
-                    <div class="location-province">${location.province}, ${location.area}</div>
-                </div>
-
-                <div class="col-8 row">
-                    <div class="location-description col-11">${location.description}</div>
-
-                    <div class="location-website col-1"><a href=${location.website}></a></div>
+                <div class="rest-contatiner">
+                    <div class="location-description-container row">
+                        <div class="location-exact col-12 col-md-4">
+                            <div class="location-name">${location.name}</div>
+                            <div class="location-province">${location.province}, ${location.area}</div>
+                        </div>
+                        <div class="location-description col-12 col-md-8">${location.description}</div>
+                    </div>
+                    <div class="location-website"><a href=${location.website}></a></div>
                 </div>
             </div>
         `
@@ -113,7 +113,6 @@ function renderLocation(data){
         divElement.appendChild(childElement);
 
     }
-    console.log(divElement);
 
     return divElement
 }

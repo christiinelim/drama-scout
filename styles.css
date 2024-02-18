@@ -283,10 +283,6 @@
     }
 
     #drama-details{
-        padding-left: 4%;
-    }
-
-    #drama-details{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -318,6 +314,99 @@
 
     #genre i{
         margin-right: 1%;
+    }
+
+    /* tab */
+    #tab{
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 16px;
+        gap: 5%;
+        margin-top: 40px;
+    }
+
+    #location-list-tab i,
+    #map-tab i{
+        padding-right: 6px;
+    }
+
+    #location-list-tab{
+        border-bottom: 2px solid black;
+        padding: 0px 1px 5px 1px;
+    }
+    
+    
+    #map-tab{
+        padding: 0px 1px 5px 1px;
+    }
+
+    #location-list-tab:hover,
+    #map-tab:hover{
+        color: #636363;
+        cursor: pointer;
+        border-bottom: 2px solid #636363;
+    }
+
+    /* tab container */
+    #tab-container{
+        margin: 30px 4%;
+    }
+
+    .item-container{
+        display: flex;
+        margin-bottom: 40px;
+    }
+
+    .location-image-container{
+        margin-right: 5%;
+    }
+
+    .location-image{
+        width: 90px;
+        height: 90px;
+        background-size: cover;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    }
+
+    .rest-contatiner{
+        display: flex;
+        width: auto;
+    }
+
+    .location-description-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .location-name{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 13px;
+    }
+
+    .location-province{
+        font-size: 8px;
+        font-style: italic;
+        margin-top: 3px;
+    }
+
+    .location-description{
+        text-align: justify;
+        margin-top: 1.5%;
+    }
+
+    .location-website{
+        margin-left: 5%;
+        display: flex;
+        align-items: center;
+    }
+
+    .location-website i{
+        color: #5f685d;
+        font-size: 14px;
     }
 }
 
@@ -579,13 +668,11 @@
     }
 
     #drama-details{
-        padding-left: 4%;
-    }
-
-    #drama-details{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-left: 4%;
+        width: calc(8/12*90%);
     }
 
     #year{
@@ -610,6 +697,98 @@
     #genre i{
         margin-right: 1%;
     }
+
+    /* tab */
+    #tab{
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 18px;
+        gap: 5%;
+        margin-top: 40px;
+    }
+
+    #location-list-tab i,
+    #map-tab i{
+        padding-right: 6px;
+    }
+
+    #location-list-tab{
+        border-bottom: 2px solid black;
+        padding: 0px 1px 5px 1px;
+    }
+    
+    
+    #map-tab{
+        padding: 0px 1px 5px 1px;
+    }
+
+    #location-list-tab:hover,
+    #map-tab:hover{
+        color: #636363;
+        cursor: pointer;
+        border-bottom: 2px solid #636363;
+    }
+
+    /* tab container */
+    #tab-container{
+        margin: 30px 4%;
+    }
+
+    .item-container{
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .location-image-container{
+        margin-right: 5%;
+    }
+
+    .location-image{
+        width: 80px;
+        height: 80px;
+        background-size: cover;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    }
+
+    .rest-contatiner{
+        display: flex;
+        width: auto;
+    }
+
+    .location-description-container{
+        display: flex;
+        align-items: center;
+    }
+
+    .location-name{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 13px;
+    }
+
+    .location-province{
+        font-size: 10px;
+        font-style: italic;
+        margin-top: 4px;
+    }
+
+    .location-description{
+        text-align: justify;
+    }
+
+    .location-website{
+        margin-left: 5%;
+        display: flex;
+        align-items: center;
+    }
+
+    .location-website i{
+        color: #5f685d;
+        font-size: 16px;
+    }
+    
 }
 
 
@@ -852,7 +1031,7 @@
 
     /* cardContent.html page */
     #drama-content{
-        margin: 50px 10%;
+        margin: 50px 8%;
     }
 
     #drama-image-container{
@@ -873,13 +1052,11 @@
     }
 
     #drama-details{
-        padding-left: 5%;
-    }
-
-    #drama-details{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-left: 5%;
+        width: calc(8/12*90%);
     }
 
     #year{
@@ -938,13 +1115,60 @@
 
     /* tab container */
     #tab-container{
-        margin: 30px 6%;
+        margin: 30px 12%;
+    }
+
+    .item-container{
+        display: flex;
+        margin-bottom: 30px;
+    }
+
+    .location-image-container{
+        margin-right: 3%;
     }
 
     .location-image{
-        width: 80px;
-        height: 80px;
-        background-size: contain;
+        width: 90px;
+        height: 90px;
+        background-size: cover;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
     }
 
+    .rest-contatiner{
+        display: flex;
+        width: auto;
+    }
+
+    .location-description-container{
+        display: flex;
+        align-items: center;
+    }
+
+    .location-name{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 15px;
+    }
+
+    .location-province{
+        font-size: 12px;
+        font-style: italic;
+        margin-top: 5px;
+    }
+
+    .location-description{
+        text-align: justify;
+    }
+
+    .location-website{
+        margin-left: 3%;
+        display: flex;
+        align-items: center;
+    }
+
+    .location-website i{
+        color: #5f685d;
+        font-size: 18px;
+    }
 }

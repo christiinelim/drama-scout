@@ -47,7 +47,7 @@
                 "website": "https://www.morningcalm.co.kr/html/main.php"
             },
             {
-                "name": "Dongdaemun Design Plaza (DDP)",
+                "name": "Dongdaemun Design Plaza",
                 "image": "image/1c.png",
                 "province": "Seoul",
                 "area": "Eulji-ro",
@@ -155,7 +155,7 @@
                 "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5512,
                 "longitude": 126.9876,
-                "description": "",
+                "description": "Renowned for its romantic ambiance and iconic silhouette, it serves as a symbol of love and a popular destination for locals and tourists alike.",
                 "openingHours": "",
                 "admissionFee": 0,
                 "website": "https://www.nseoultower.co.kr/"
@@ -168,13 +168,13 @@
                 "address": "1063 Hoban-ro, Cheongpyeong-myeon, Gapyeong-gun, Gyeonggi-do, South Korea",
                 "latitude": 37.8328,
                 "longitude": 127.7693,
-                "description": "",
+                "description": "A charming cultural village inspired by the whimsical world of French literature.  It offers visitors a delightful escape into a European-inspired oasis amidst the natural beauty of the Korean landscape.",
                 "openingHours": "",
                 "admissionFee": 0,
                 "website": "http://www.pfcamp.com/"
             },
             {
-                "name": "Dongdaemun Design Plaza (DDP)",
+                "name": "Dongdaemun Design Plaza",
                 "image": "image/1c.png",
                 "province": "Seoul",
                 "area": "Eulji-ro",
@@ -194,7 +194,7 @@
                 "address": "95 Haneulgongwon-ro, Mapo-gu, Seoul, South Korea",
                 "latitude": 37.571,
                 "longitude": 126.8824,
-                "description": "",
+                "description": "Renowned for its tranquil atmosphere and natural beauty, it provides a peaceful retreat for locals and tourists seeking solace amidst the urban bustle.",
                 "openingHours": "",
                 "admissionFee": 0,
                 "website": "nil"
@@ -360,7 +360,7 @@
                 "address": "1063 Hoban-ro, Cheongpyeong-myeon, Gapyeong-gun, Gyeonggi-do, South Korea",
                 "latitude": 37.8328,
                 "longitude": 127.7693,
-                "description": "",
+                "description": "A charming cultural village inspired by the whimsical world of French literature.  It offers visitors a delightful escape into a European-inspired oasis amidst the natural beauty of the Korean landscape.",
                 "openingHours": "",
                 "admissionFee": 0,
                 "website": "http://www.pfcamp.com/"
@@ -624,7 +624,7 @@
                 "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5512,
                 "longitude": 126.9876,
-                "description": "",
+                "description": "Renowned for its romantic ambiance and iconic silhouette, it serves as a symbol of love and a popular destination for locals and tourists alike.",
                 "openingHours": "",
                 "admissionFee": 0,
                 "website": "https://www.nseoultower.co.kr/"
@@ -725,7 +725,7 @@
                 "address": "1063 Hoban-ro, Cheongpyeong-myeon, Gapyeong-gun, Gyeonggi-do, South Korea",
                 "latitude": 37.8328,
                 "longitude": 127.7693,
-                "description": "",
+                "description": "A charming cultural village inspired by the whimsical world of French literature.  It offers visitors a delightful escape into a European-inspired oasis amidst the natural beauty of the Korean landscape.",
                 "openingHours": "",
                 "admissionFee": 0,
                 "website": "http://www.pfcamp.com/"
@@ -1419,7 +1419,7 @@
                 "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5512,
                 "longitude": 126.9876,
-                "description": "",
+                "description": "Renowned for its romantic ambiance and iconic silhouette, it serves as a symbol of love and a popular destination for locals and tourists alike.",
                 "openingHours": "",
                 "admissionFee": 0,
                 "website": "https://www.nseoultower.co.kr/"
@@ -1451,7 +1451,7 @@
                 "website": "http://english.visitseoul.net/shopping/Myeong-dong-/29"
             },
             {
-                "name": "Dongdaemun Design Plaza (DDP)",
+                "name": "Dongdaemun Design Plaza",
                 "image": "image/1c.png",
                 "province": "Seoul",
                 "area": "Eulji-ro",
@@ -1565,7 +1565,7 @@
                 "website": "nil"
             },
             {
-                "name": "Dongdaemun Design Plaza (DDP)",
+                "name": "Dongdaemun Design Plaza",
                 "image": "image/1c.png",
                 "province": "Seoul",
                 "area": "Eulji-ro",
@@ -2572,7 +2572,7 @@
                 "address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
                 "latitude": 37.5512,
                 "longitude": 126.9876,
-                "description": "",
+                "description": "Renowned for its romantic ambiance and iconic silhouette, it serves as a symbol of love and a popular destination for locals and tourists alike.",
                 "openingHours": "",
                 "admissionFee": 0,
                 "website": "https://www.nseoultower.co.kr/"
