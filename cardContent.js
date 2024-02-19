@@ -31,16 +31,66 @@ document.addEventListener("DOMContentLoaded", async function(){
     
     // tab
     document.querySelector("#location-list-tab").addEventListener("click", function(){
+        // reset location list
+        resetLocationList(data[id]);
+
         document.querySelector("#location-list-tab").style.borderBottom = "2px solid black";
-        document.querySelector("#map-tab").style.borderBottom = ""
+        document.querySelector("#map-tab").style.borderBottom = "";
+
+        // changing tab container
+        document.querySelector("#map").style.display = "none";
+
+        document.querySelector("#tab-container").style.removeProperty("position");
+
+        const listElement = document.querySelector("#location-list");
+        listElement.classList.remove("shrink");
+        listElement.classList.remove("close");
+
+        document.querySelector("#location-nav").classList.remove("location-nav-class");
+        document.querySelector("#nav-icon").style.display = "none";
     });
 
     document.querySelector("#map-tab").addEventListener("click", function(){
         document.querySelector("#map-tab").style.borderBottom = "2px solid black";
         document.querySelector("#location-list-tab").style.borderBottom = "none";
+
+        // changing tab container
+        document.querySelector("#map").style.display = "flex";
+        document.querySelector("#tab-container").style.position = "relative";
+        document.querySelector("#location-list").classList.add("shrink");
+        document.querySelector("#location-nav").classList.add("location-nav-class");
+        document.querySelector("#nav-icon").style.display = "flex";  
+
+        renderMapNav(data[id]);
     })
 
+    // nav arrow
+    document.querySelector("#nav-icon").addEventListener("click", function(){
+        if (document.querySelector("#nav-icon").innerHTML == `<i class="bi bi-caret-left-fill"></i>`){
+            document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-right-fill"></i>`;
+            document.querySelector("#location-list").classList.add("close");
+        } else{
+            document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-left-fill"></i>`;
+            document.querySelector("#location-list").classList.remove("close");
+        }
+    })
 
+    // map
+    const map = L.map("map");
+    map.setView([37.5519, 126.9918], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(map);
+    let seoulIcon = L.icon({
+        iconUrl: 'image/map/seoul-icon.png',
+        iconSize: [15, 35],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+    });
+    let seoulMarker = L.marker([37.5519, 126.9918], {icon: seoulIcon});
+    seoulMarker.addTo(map);
+    seoulMarker.bindPopup(`<h4>Seoul</h4>`);
+
+    // plot markers of location on map
+    displayDramaMarkers(map, data[id]);
 })
 
 
@@ -65,8 +115,11 @@ function displayCardContentPage(data){
             <div id="location-list-tab"><i class="bi bi-geo"></i>Location List</div>
             <div id="map-tab"><i class="bi bi-map"></i>Map</div>
         </div>
-        <div id="tab-container"> 
-            <div id="location-list"></div>
+        <div id="tab-container">
+            <div id="location-nav">
+                <div id="location-list"></div>
+                <div id="nav-icon"><i class="bi bi-caret-left-fill"></i></div>
+            </div> 
             <div id="map"></div>
         </div>
     `
@@ -116,3 +169,85 @@ function renderLocation(data){
 
     return divElement
 }
+
+// reset location list
+function resetLocationList(data){
+    document.querySelector("#location-list").innerHTML = ``;
+    let locationLists = renderLocation(data);
+    document.querySelector("#location-list").appendChild(locationLists);
+}
+
+function renderMapNav(data){
+    document.querySelector("#location-list").innerHTML = ``;
+    divElement = document.createElement("div");
+    divElement.innerHTML = `
+            <div id="mapnav-tab" class="row">
+                <div id="mapnav-location-tab" class="mapnav-tab-item col-6">Location</div>
+                <div id="mapnav-search-tab" class="mapnav-tab-item col-6">Search</div>
+            </div>
+    `
+
+    for (let location of data.location){
+        let childElement = document.createElement("div");
+        childElement.classList.add("mapnav-container")
+
+        childElement.innerHTML = `
+            <div class="mapnav-item-container row">
+                <div class="mapnav-rest-contatiner col-9">
+                    <div class="mapnav-location-description-container row">
+                        <div class="mapnav-location-name">${location.name}</div>
+                        <div class="mapnav-location-address">${location.address}</div>
+                        <div class="mapnav-province-website">
+                            <div class="mapnav-location-province">${location.province}, ${location.area}</div>
+                            <div class="mapnav-location-website"><a href=${location.website}></a></div>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mapnav-location-image-container col-3">
+                    <div class="mapnav-location-image"></div>
+                </div>
+            </div>
+        `
+
+        if (location.website != "nil"){
+            childElement.querySelector("a").innerHTML = `<i class="bi bi-link-45deg"></i>`;
+        } else{
+            childElement.querySelector("a").innerHTML = `<i class="bi bi-exclamation-circle"></i>`
+        };
+
+        childElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(${location.image})`
+
+        divElement.appendChild(childElement);
+
+    }
+
+    document.querySelector("#location-list").appendChild(divElement);
+}
+
+// plot markers of location on map
+function displayDramaMarkers(map, data){
+    let provinceLayers = {};
+    const provinceGroup = L.layerGroup();
+    
+    for (let element of data.location){
+        let locationIcon = L.icon({
+            iconUrl: 'image/map/drama-location-icon.png',
+            iconSize: [40, 40],
+            iconAnchor: [22, 94],
+            popupAnchor: [-3, -76],
+        });
+        let locationMarker = L.marker([element.latitude, element.longitude], {icon: locationIcon});
+        locationMarker.bindPopup(`<h4>${element.name}</h4>
+                                    <p>${element.address}</p>`);
+
+        if (!provinceLayers[element.province]) {
+            provinceLayers[element.province] = L.layerGroup().addTo(map);
+        } 
+        
+        locationMarker.addTo(provinceLayers[element.province]);
+        
+    }
+
+    L.control.layers(null, provinceLayers).addTo(map);
+};
