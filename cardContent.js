@@ -62,38 +62,22 @@ document.addEventListener("DOMContentLoaded", async function(){
         document.querySelector("#nav-icon").style.display = "flex";  
 
         // create nav tab
-        document.querySelector("#location-list").innerHTML = ``;
-        divElement = document.createElement("div");
-        divElement.innerHTML = `
-            <div id="mapnav-tab" class="row">
-                <div id="mapnav-location-tab" class="mapnav-tab-item active-tab col-6">Location</div>
-                <div id="mapnav-search-tab" class="mapnav-tab-item col-6">Search</div>
-            </div>
-            <div id="mapnav-container">
-            </div>
-        `
-        document.querySelector("#location-list").appendChild(divElement)
+        document.querySelector("#mapnav-tab").style.display = "flex";
 
         renderLocationNav(map, data[id]);
 
+        // clicking on nav-location
         document.querySelector("#mapnav-location-tab").addEventListener("click", function(){
-            document.querySelector("#mapnav-location-tab").classList.add("active-tab");
-            document.querySelector("#mapnav-location-tab").classList.remove("inactive-tab");
-            document.querySelector("#mapnav-search-tab").classList.add("inactive-tab");
-            document.querySelector("#mapnav-search-tab").classList.remove("active-tab");
-
-            renderLocationNav(map, data[id]);
+            navLocationEventListener(map, data[id]);
         })
 
+        // clicking on nav-search
         document.querySelector("#mapnav-search-tab").addEventListener("click", function(){
-            document.querySelector("#mapnav-search-tab").classList.add("active-tab");
-            document.querySelector("#mapnav-search-tab").classList.remove("inactive-tab");
-            document.querySelector("#mapnav-location-tab").classList.add("inactive-tab");
-            document.querySelector("#mapnav-location-tab").classList.remove("active-tab");
-
-            renderSearchNav(map, data[id]);
+            navSearchEventListener(map, data[id]);
         })
-    })
+    });
+
+    
 
     // nav arrow
     document.querySelector("#nav-icon").addEventListener("click", function(){
@@ -127,33 +111,11 @@ document.addEventListener("DOMContentLoaded", async function(){
 
 // card content page
 function displayCardContentPage(data){
-    let divElement = document.querySelector("#content-container");
-    divElement.innerHTML = ``;
+    document.querySelector("#year").innerHTML = data.year;
+    document.querySelector("#drama-name").innerHTML = data.drama;
+    document.querySelector("#drama-synopsis").innerHTML = data.synopsis;
+    document.querySelector("#genre").innerHTML = `<i class="bi bi-tags-fill"></i>${data.genre}`;
 
-    divElement.innerHTML = `
-        <div id="drama-content" class="row">
-            <div id="drama-image-container" class="col-12 col-md-4">
-                <div id="drama-image"></div>
-            </div>
-            <div id="drama-details" class="col-12 col-md-8">
-                <div id="year">${data.year}</div>
-                <div id="drama-name">${data.drama}</div>
-                <div id="drama-synopsis">${data.synopsis}</div>
-                <div id="genre"><i class="bi bi-tags-fill"></i>${data.genre}</div>
-            </div>
-        </div>
-        <div id="tab">
-            <div id="location-list-tab"><i class="bi bi-geo"></i>Location List</div>
-            <div id="map-tab"><i class="bi bi-map"></i>Map</div>
-        </div>
-        <div id="tab-container">
-            <div id="location-nav">
-                <div id="location-list"></div>
-                <div id="nav-icon"><i class="bi bi-caret-left-fill"></i></div>
-            </div> 
-            <div id="map"></div>
-        </div>
-    `
     document.querySelector("#drama-image").style.backgroundImage = `url(${data.dramaImage})`;
     let locationLists = renderLocation(data);
     document.querySelector("#location-list").appendChild(locationLists);
@@ -203,14 +165,43 @@ function renderLocation(data){
 
 // reset location list
 function resetLocationList(data){
-    document.querySelector("#location-list").innerHTML = ``;
+    document.querySelector("#location-list").innerHTML = `
+        <div>
+            <div id="mapnav-tab" class="row">
+                <div id="mapnav-location-tab" class="mapnav-tab-item active-tab col-6">Location</div>
+                <div id="mapnav-search-tab" class="mapnav-tab-item col-6">Search</div>
+            </div>
+            <div id="mapnav-container">
+            </div>
+        </div>
+    `;
     let locationLists = renderLocation(data);
     document.querySelector("#location-list").appendChild(locationLists);
 }
 
 function renderLocationNav(map, data){
-    const divElement = document.querySelector("#mapnav-container");
-    divElement.innerHTML = ``;
+    document.querySelector("#location-list").innerHTML = `
+        <div>
+            <div id="mapnav-tab" class="row">
+                <div id="mapnav-location-tab" class="mapnav-tab-item active-tab col-6">Location</div>
+                <div id="mapnav-search-tab" class="mapnav-tab-item col-6">Search</div>
+            </div>
+            <div id="mapnav-container">
+            </div>
+        </div>    
+    `;
+
+    document.querySelector("#mapnav-location-tab").addEventListener("click", function(){
+        navLocationEventListener(map, data);
+    })
+
+    // clicking on nav-search
+    document.querySelector("#mapnav-search-tab").addEventListener("click", function(){
+        navSearchEventListener(map, data);
+    })
+
+    document.querySelector("#mapnav-tab").style.display = "flex";
+    divElement = document.querySelector("#mapnav-container");
     
     for (let location of data.location){
         let childElement = document.createElement("div");
@@ -254,6 +245,15 @@ function renderLocationNav(map, data){
 }
 
 function renderSearchNav(map, data){
+    document.querySelector("#mapnav-location-tab").addEventListener("click", function(){
+        navLocationEventListener(map, data);
+    })
+
+    // clicking on nav-search
+    document.querySelector("#mapnav-search-tab").addEventListener("click", function(){
+        navSearchEventListener(map, data);
+    })
+    
     divElement = document.querySelector("#mapnav-container");
     divElement.innerHTML = ``;
 
@@ -274,6 +274,30 @@ function renderSearchNav(map, data){
             <div class="search-category">
                 <div id="shopping-pic" class="search-category-icon"></div>
                 <div class="search-category-name">Shopping</div>
+            </div>
+        </div>
+
+        <div id="select-location-container">
+            <div id="select-location-icon"><i class="bi bi-geo-alt"></i></div>
+            <div id="select-location-dropdown">
+                <select id="select-location" class="">
+                    <option value="seoul">Seoul</option>
+                    <option value="busan">Busan</option>
+                    <option value="daegu">Daegu</option>
+                    <option value="incheon">Incheon</option>
+                    <option value="gwangju">Gwangju</option>
+                    <option value="daejeon">Daejeon</option>
+                    <option value="ulsan">Ulsan</option>
+                    <option value="gyeonggido">Gyeonggi-do</option>
+                    <option value="gangwondo">Gangwon-do</option>
+                    <option value="chungcheongbukdo">Chungcheongbuk-do</option>
+                    <option value="chungcheongnamdo">Chungcheongnam-do</option>
+                    <option value="jeollabukdo">Jeollabuk-do</option>
+                    <option value="jeollanamdo">Jeollanam-do</option>
+                    <option value="gyeongsangbukdo">Gyeongsangbuk-do</option>
+                    <option value="gyeongsangnamdo">Gyeongsangnam-do</option>
+                    <option value="jejudo">Jeju-do</option> 
+                </select>
             </div>
         </div>
 
@@ -333,6 +357,26 @@ function changeIcon(divElement, activeClass, inactiveArray){
     }
 }
 
+// nav location event listener
+function navLocationEventListener(map, data){
+    document.querySelector("#mapnav-location-tab").classList.add("active-tab");
+    document.querySelector("#mapnav-location-tab").classList.remove("inactive-tab");
+    document.querySelector("#mapnav-search-tab").classList.add("inactive-tab");
+    document.querySelector("#mapnav-search-tab").classList.remove("active-tab");
+
+    renderLocationNav(map, data);
+}
+
+// nav search event listener
+function navSearchEventListener(map, data){
+    document.querySelector("#mapnav-search-tab").classList.add("active-tab");
+    document.querySelector("#mapnav-search-tab").classList.remove("inactive-tab");
+    document.querySelector("#mapnav-location-tab").classList.add("inactive-tab");
+    document.querySelector("#mapnav-location-tab").classList.remove("active-tab");
+
+    renderSearchNav(map, data);
+}
+            
 // plot markers of location on map
 function displayDramaMarkers(map, data){
     let provinceLayers = {};
