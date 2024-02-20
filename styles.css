@@ -126,6 +126,7 @@
     #search-input input{
         width: 95%;
         border: none;
+        background-color: #f6f6f7;
     }
 
     #search-input input:focus{
@@ -485,11 +486,6 @@
         margin: 30px 40px 10px 40px;
     }
 
-    #mapnav-location-tab{
-        background-color: #f2f2f2;
-        color: #5f685d;
-    }
-
     .mapnav-tab-item{
         display: flex;
         justify-content: center;
@@ -507,6 +503,15 @@
         cursor: pointer;
     }
 
+    .active-tab {
+        background-color: #f2f2f2;
+        color: #5f685d;
+    }
+    
+    .inactive-tab {
+        background-color: #98A296;
+        color: white;
+    }
     
     .mapnav-item-container{
         padding: 15px 20px;
@@ -553,6 +558,140 @@
         display: flex;
         align-items: center;
         padding: 0px;
+    }
+
+    /* location nav */
+    /* category icons */
+    #attractions-pic{
+        background-image: url(image/map/attractions-unselected.png);
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+    }
+
+    #attractions-pic:hover{
+        cursor: pointer;
+        background-image: url(image/map/attractions-selected.png);
+    }
+
+    .attractions-pic-active{
+        background-image: url(image/map/attractions-selected.png) !important;
+    }
+
+    #art-pic{
+        background-image: url(image/map/art-unselected.png);
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+    }
+
+    #art-pic:hover{
+        cursor: pointer;
+        background-image: url(image/map/art-selected.png);
+    }
+
+    .art-pic-active{
+        background-image: url(image/map/art-selected.png) !important;
+    }
+
+    #food-pic{
+        background-image: url(image/map/food-unselected.png);
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+    }
+
+    #food-pic:hover{
+        cursor: pointer;
+        background-image: url(image/map/food-selected.png);
+    }
+
+    .food-pic-active{
+        background-image: url(image/map/food-selected.png) !important;
+    }
+
+    #shopping-pic{
+        background-image: url(image/map/shopping-unselected.png);
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+    }
+
+    #shopping-pic:hover{
+        cursor: pointer;
+        background-image: url(image/map/shopping-selected.png);
+    }
+
+    .shopping-pic-active{
+        background-image: url(image/map/shopping-selected.png) !important;
+    }
+
+    #search-category-container{
+        display: flex;
+        justify-content: center;
+        margin: 40px 0px 20px 0px;
+        gap: 5%;
+    }
+
+    .search-category{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: grey;
+        font-size: 10px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    /* search bar */
+    #mapnav-searchbar-border{
+        margin: 20px 15px;
+        border: 1px solid lightgrey;
+        border-radius: 999px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #mapnav-searchbar-border:hover{
+        box-shadow: -1px 1px 4px 2px rgba(0,0,0,0.2);
+    }
+
+    #mapnav-search-input{
+        width: 73%;
+    }
+
+    #mapnav-search-input input{
+        width: 100%;
+        border: none;
+    }
+
+    #mapnav-search-input input::-webkit-input-placeholder {
+        font-style: italic;
+    }
+
+    #mapnav-search-input input:focus{
+        outline: none;
+    }
+
+    #mapnav-x-icon{
+        display: flex;
+        justify-content: flex-end;
+        color: #696666;
+    }
+
+    #mapnav-search-icon:hover,
+    #mapnav-x-icon:hover{
+        cursor: pointer;
+        color: #5f685d;
+        -webkit-text-stroke: 1px;
+    }
+
+    #mapnav-search-icon{
+        display: flex;
+        justify-content: flex-end;
+        color: #696666;
     }
 }
 
@@ -664,6 +803,7 @@
     #search-input input{
         width: 95%;
         border: none;
+        background-color: #f6f6f7;
     }
 
     #search-input input:focus{
@@ -1011,11 +1151,6 @@
         margin: 30px 50px 10px 50px;
     }
 
-    #mapnav-location-tab{
-        background-color: #f2f2f2;
-        color: #5f685d;
-    }
-
     .mapnav-tab-item{
         display: flex;
         justify-content: center;
@@ -1033,6 +1168,15 @@
         cursor: pointer;
     }
 
+    .active-tab {
+        background-color: #f2f2f2;
+        color: #5f685d;
+    }
+    
+    .inactive-tab {
+        background-color: #98A296;
+        color: white;
+    }
     
     .mapnav-item-container{
         padding: 20px 30px;
@@ -1079,6 +1223,140 @@
         display: flex;
         align-items: center;
         padding: 0px;
+    }
+
+    /* location nav */
+    /* category icons */
+    #attractions-pic{
+        background-image: url(image/map/attractions-unselected.png);
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+    }
+
+    #attractions-pic:hover{
+        cursor: pointer;
+        background-image: url(image/map/attractions-selected.png);
+    }
+
+    .attractions-pic-active{
+        background-image: url(image/map/attractions-selected.png) !important;
+    }
+
+    #art-pic{
+        background-image: url(image/map/art-unselected.png);
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+    }
+
+    #art-pic:hover{
+        cursor: pointer;
+        background-image: url(image/map/art-selected.png);
+    }
+
+    .art-pic-active{
+        background-image: url(image/map/art-selected.png) !important;
+    }
+
+    #food-pic{
+        background-image: url(image/map/food-unselected.png);
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+    }
+
+    #food-pic:hover{
+        cursor: pointer;
+        background-image: url(image/map/food-selected.png);
+    }
+
+    .food-pic-active{
+        background-image: url(image/map/food-selected.png) !important;
+    }
+
+    #shopping-pic{
+        background-image: url(image/map/shopping-unselected.png);
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+    }
+
+    #shopping-pic:hover{
+        cursor: pointer;
+        background-image: url(image/map/shopping-selected.png);
+    }
+
+    .shopping-pic-active{
+        background-image: url(image/map/shopping-selected.png) !important;
+    }
+
+    #search-category-container{
+        display: flex;
+        justify-content: center;
+        margin: 50px 0px 20px 0px;
+        gap: 7%;
+    }
+
+    .search-category{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: grey;
+        font-size: 10px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    /* search bar */
+    #mapnav-searchbar-border{
+        margin: 20px 20px;
+        border: 1px solid lightgrey;
+        border-radius: 999px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #mapnav-searchbar-border:hover{
+        box-shadow: -1px 1px 4px 2px rgba(0,0,0,0.2);
+    }
+
+    #mapnav-search-input{
+        width: 75%;
+    }
+
+    #mapnav-search-input input{
+        width: 100%;
+        border: none;
+    }
+
+    #mapnav-search-input input::-webkit-input-placeholder {
+        font-style: italic;
+    }
+
+    #mapnav-search-input input:focus{
+        outline: none;
+    }
+
+    #mapnav-x-icon{
+        display: flex;
+        justify-content: flex-end;
+        color: #696666;
+    }
+
+    #mapnav-search-icon:hover,
+    #mapnav-x-icon:hover{
+        cursor: pointer;
+        color: #5f685d;
+        -webkit-text-stroke: 1px;
+    }
+
+    #mapnav-search-icon{
+        display: flex;
+        justify-content: flex-end;
+        color: #696666;
     }
 }
 
@@ -1193,6 +1471,7 @@
     #search-input input{
         width: 95%;
         border: none;
+        background-color: #f6f6f7;
     }
 
     #search-input input:focus{
@@ -1539,11 +1818,6 @@
         margin: 30px 40px 20px 40px;
     }
 
-    #mapnav-location-tab{
-        background-color: #f2f2f2;
-        color: #5f685d;
-    }
-
     .mapnav-tab-item{
         display: flex;
         justify-content: center;
@@ -1561,6 +1835,15 @@
         cursor: pointer;
     }
 
+    .active-tab {
+        background-color: #f2f2f2;
+        color: #5f685d;
+    }
+    
+    .inactive-tab {
+        background-color: #98A296;
+        color: white;
+    }
     
     .mapnav-item-container{
         padding: 20px 30px;
@@ -1608,4 +1891,139 @@
         align-items: center;
         padding: 0px;
     }
+
+    /* location nav */
+    /* category icons */
+    #attractions-pic{
+        background-image: url(image/map/attractions-unselected.png);
+        width: 55px;
+        height: 55px;
+        background-size: contain;
+    }
+
+    #attractions-pic:hover{
+        cursor: pointer;
+        background-image: url(image/map/attractions-selected.png);
+    }
+
+    .attractions-pic-active{
+        background-image: url(image/map/attractions-selected.png) !important;
+    }
+
+    #art-pic{
+        background-image: url(image/map/art-unselected.png);
+        width: 55px;
+        height: 55px;
+        background-size: contain;
+    }
+
+    #art-pic:hover{
+        cursor: pointer;
+        background-image: url(image/map/art-selected.png);
+    }
+
+    .art-pic-active{
+        background-image: url(image/map/art-selected.png) !important;
+    }
+
+    #food-pic{
+        background-image: url(image/map/food-unselected.png);
+        width: 55px;
+        height: 55px;
+        background-size: contain;
+    }
+
+    #food-pic:hover{
+        cursor: pointer;
+        background-image: url(image/map/food-selected.png);
+    }
+
+    .food-pic-active{
+        background-image: url(image/map/food-selected.png) !important;
+    }
+
+    #shopping-pic{
+        background-image: url(image/map/shopping-unselected.png);
+        width: 55px;
+        height: 55px;
+        background-size: contain;
+    }
+
+    #shopping-pic:hover{
+        cursor: pointer;
+        background-image: url(image/map/shopping-selected.png);
+    }
+
+    .shopping-pic-active{
+        background-image: url(image/map/shopping-selected.png) !important;
+    }
+
+    #search-category-container{
+        display: flex;
+        justify-content: center;
+        margin: 60px 0px 20px 0px;
+        gap: 7%;
+    }
+
+    .search-category{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: grey;
+        font-size: 10px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    /* search bar */
+    #mapnav-searchbar-border{
+        margin: 0px 20px;
+        border: 1px solid lightgrey;
+        border-radius: 999px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #mapnav-searchbar-border:hover{
+        box-shadow: -1px 1px 4px 2px rgba(0,0,0,0.2);
+    }
+
+    #mapnav-search-input{
+        width: 75%;
+    }
+
+    #mapnav-search-input input{
+        width: 100%;
+        border: none;
+    }
+
+    #mapnav-search-input input::-webkit-input-placeholder {
+        font-style: italic;
+    }
+
+    #mapnav-search-input input:focus{
+        outline: none;
+    }
+
+    #mapnav-x-icon{
+        display: flex;
+        justify-content: flex-end;
+        color: #696666;
+    }
+
+    #mapnav-search-icon:hover,
+    #mapnav-x-icon:hover{
+        cursor: pointer;
+        color: #5f685d;
+        -webkit-text-stroke: 1px;
+    }
+
+    #mapnav-search-icon{
+        display: flex;
+        justify-content: flex-end;
+        color: #696666;
+    }
+
 }

@@ -61,7 +61,38 @@ document.addEventListener("DOMContentLoaded", async function(){
         document.querySelector("#location-nav").classList.add("location-nav-class");
         document.querySelector("#nav-icon").style.display = "flex";  
 
-        renderMapNav(data[id]);
+        // create nav tab
+        document.querySelector("#location-list").innerHTML = ``;
+        divElement = document.createElement("div");
+        divElement.innerHTML = `
+            <div id="mapnav-tab" class="row">
+                <div id="mapnav-location-tab" class="mapnav-tab-item active-tab col-6">Location</div>
+                <div id="mapnav-search-tab" class="mapnav-tab-item col-6">Search</div>
+            </div>
+            <div id="mapnav-container">
+            </div>
+        `
+        document.querySelector("#location-list").appendChild(divElement)
+
+        renderLocationNav(map, data[id]);
+
+        document.querySelector("#mapnav-location-tab").addEventListener("click", function(){
+            document.querySelector("#mapnav-location-tab").classList.add("active-tab");
+            document.querySelector("#mapnav-location-tab").classList.remove("inactive-tab");
+            document.querySelector("#mapnav-search-tab").classList.add("inactive-tab");
+            document.querySelector("#mapnav-search-tab").classList.remove("active-tab");
+
+            renderLocationNav(map, data[id]);
+        })
+
+        document.querySelector("#mapnav-search-tab").addEventListener("click", function(){
+            document.querySelector("#mapnav-search-tab").classList.add("active-tab");
+            document.querySelector("#mapnav-search-tab").classList.remove("inactive-tab");
+            document.querySelector("#mapnav-location-tab").classList.add("inactive-tab");
+            document.querySelector("#mapnav-location-tab").classList.remove("active-tab");
+
+            renderSearchNav(map, data[id]);
+        })
     })
 
     // nav arrow
@@ -73,7 +104,7 @@ document.addEventListener("DOMContentLoaded", async function(){
             document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-left-fill"></i>`;
             document.querySelector("#location-list").classList.remove("close");
         }
-    })
+    });
 
     // map
     const map = L.map("map");
@@ -177,19 +208,12 @@ function resetLocationList(data){
     document.querySelector("#location-list").appendChild(locationLists);
 }
 
-function renderMapNav(data){
-    document.querySelector("#location-list").innerHTML = ``;
-    divElement = document.createElement("div");
-    divElement.innerHTML = `
-            <div id="mapnav-tab" class="row">
-                <div id="mapnav-location-tab" class="mapnav-tab-item col-6">Location</div>
-                <div id="mapnav-search-tab" class="mapnav-tab-item col-6">Search</div>
-            </div>
-    `
-
+function renderLocationNav(map, data){
+    const divElement = document.querySelector("#mapnav-container");
+    divElement.innerHTML = ``;
+    
     for (let location of data.location){
         let childElement = document.createElement("div");
-        childElement.classList.add("mapnav-container")
 
         childElement.innerHTML = `
             <div class="mapnav-item-container row">
@@ -219,10 +243,94 @@ function renderMapNav(data){
         childElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(${location.image})`
 
         divElement.appendChild(childElement);
+        childElement.querySelector(".mapnav-item-container").addEventListener("click", function(){
+            map.flyTo([location.latitude, location.longitude], 16);
+            document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-right-fill"></i>`;
+            document.querySelector("#location-list").classList.add("close");
+        })
 
     }
+    
+}
 
-    document.querySelector("#location-list").appendChild(divElement);
+function renderSearchNav(map, data){
+    divElement = document.querySelector("#mapnav-container");
+    divElement.innerHTML = ``;
+
+    divElement.innerHTML = `
+        <div id="search-category-container">
+            <div class="search-category">
+                <div id="attractions-pic" class="search-category-icon attractions-pic-active"></div>
+                <div class="search-category-name">Attractions</div>
+            </div>
+            <div class="search-category">
+                <div id="art-pic" class="search-category-icon"></div>
+                <div class="search-category-name">Art</div>
+            </div>
+            <div class="search-category">
+                <div id="food-pic" class="search-category-icon"></div>
+                <div class="search-category-name">Food</div>
+            </div>
+            <div class="search-category">
+                <div id="shopping-pic" class="search-category-icon"></div>
+                <div class="search-category-name">Shopping</div>
+            </div>
+        </div>
+
+        <div id="mapnav-searchbar">
+            <div id="mapnav-searchbar-border" class="row">
+                <div id="mapnav-search-input" class="col-9">
+                    <input id="input-text" type="text" placeholder="Search a place"/>
+                </div>
+                <div id="mapnav-x-icon" class="col-2">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+                <div id="mapnav-search-icon" class="col-1">
+                    <i class="bi bi-search"></i>
+                </div>
+            </div>
+            <div id="mapnav-result-box">
+                <ul id="mapnav-result-box-list"> 
+                </ul>
+            </div>
+        </div>
+        <div id="error-alert">
+            <div id="error-content">
+                <div id="error-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                <div id="error-text">Please give an input</div>
+            </div>
+        </div>
+    `;
+
+    document.querySelector("#attractions-pic").addEventListener("click", function(){
+        const divElement = document.querySelector("#attractions-pic");
+        changeIcon(divElement, "attractions", ["art", "food", "shopping"]);
+    });
+
+    document.querySelector("#art-pic").addEventListener("click", function(){
+        const divElement = document.querySelector("#art-pic");
+        changeIcon(divElement, "art", ["attractions", "food", "shopping"]);
+    });
+
+    document.querySelector("#food-pic").addEventListener("click", function(){
+        const divElement = document.querySelector("#food-pic");
+        changeIcon(divElement, "food", ["attractions", "art", "shopping"]);
+    });
+
+    document.querySelector("#shopping-pic").addEventListener("click", function(){
+        const divElement = document.querySelector("#shopping-pic");
+        changeIcon(divElement, "shopping", ["attractions", "art", "food"]);
+    })
+    
+}
+
+// change icon of nav on click
+function changeIcon(divElement, activeClass, inactiveArray){
+    divElement.classList.add(`${activeClass}-pic-active`);
+
+    for (let category of inactiveArray){
+        document.querySelector(`#${category}-pic`).classList.remove(`${category}-pic-active`);
+    }
 }
 
 // plot markers of location on map
@@ -251,3 +359,4 @@ function displayDramaMarkers(map, data){
 
     L.control.layers(null, provinceLayers).addTo(map);
 };
+
