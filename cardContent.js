@@ -1,3 +1,5 @@
+let sessionToken = `acbehdoandduurrbofjsowmeomd` + Math.floor(Math.random() * 100000);
+
 document.addEventListener("DOMContentLoaded", async function(){
     // data set
     const data = await loadData();
@@ -103,9 +105,6 @@ document.addEventListener("DOMContentLoaded", async function(){
     let seoulMarker = L.marker([37.5519, 126.9918], {icon: seoulIcon});
     seoulMarker.addTo(map);
     seoulMarker.bindPopup(`<h4>Seoul</h4>`);
-
-    // plot markers of location on map
-    displayDramaMarkers(map, data[id]);
 })
 
 
@@ -180,6 +179,7 @@ function resetLocationList(data){
 }
 
 function renderLocationNav(map, data){
+
     document.querySelector("#location-list").innerHTML = `
         <div>
             <div id="mapnav-tab" class="row">
@@ -202,6 +202,10 @@ function renderLocationNav(map, data){
 
     document.querySelector("#mapnav-tab").style.display = "flex";
     divElement = document.querySelector("#mapnav-container");
+
+    // for plotting markers
+    let provinceLayers = {};
+    const provinceGroup = L.layerGroup();
     
     for (let location of data.location){
         let childElement = document.createElement("div");
@@ -234,13 +238,31 @@ function renderLocationNav(map, data){
         childElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(${location.image})`
 
         divElement.appendChild(childElement);
+
+        // plot location icon
+        let locationIcon = L.icon({
+            iconUrl: 'image/map/drama-location-icon.png',
+            iconSize: [40, 40],
+            iconAnchor: [22, 94],
+            popupAnchor: [-3, -76],
+        });
+        let locationMarker = L.marker([location.latitude, location.longitude], {icon: locationIcon});
+        locationMarker.bindPopup(`<h4>${location.name}</h4>
+                                    <p>${location.address}</p>`);
+
+        if (!provinceLayers[location.province]) {
+            provinceLayers[location.province] = L.layerGroup().addTo(map);
+        } 
+        
+        locationMarker.addTo(provinceLayers[location.province]);
+
         childElement.querySelector(".mapnav-item-container").addEventListener("click", function(){
-            map.flyTo([location.latitude, location.longitude], 16);
-            document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-right-fill"></i>`;
-            document.querySelector("#location-list").classList.add("close");
+            onSearchItemClick(map, location.latitude, location.longitude, locationMarker);
         })
 
     }
+
+    L.control.layers(null, provinceLayers).addTo(map);
     
 }
 
@@ -259,6 +281,7 @@ function renderSearchNav(map, data){
 
     divElement.innerHTML = `
         <div id="search-category-container">
+            <div id="selected-category">attractions</div>
             <div class="search-category">
                 <div id="attractions-pic" class="search-category-icon attractions-pic-active"></div>
                 <div class="search-category-name">Attractions</div>
@@ -280,7 +303,9 @@ function renderSearchNav(map, data){
         <div id="select-location-container">
             <div id="select-location-icon"><i class="bi bi-geo-alt"></i></div>
             <div id="select-location-dropdown">
-                <select id="select-location" class="">
+                <select id="select-location">
+                    <option value="centre">Centre of Map</option>
+                    <option value="southkorea">South Korea</option>
                     <option value="seoul">Seoul</option>
                     <option value="busan">Busan</option>
                     <option value="daegu">Daegu</option>
@@ -307,15 +332,17 @@ function renderSearchNav(map, data){
                     <input id="input-text" type="text" placeholder="Search a place"/>
                 </div>
                 <div id="mapnav-x-icon" class="col-2">
-                    <i class="bi bi-x-lg"></i>
+                    <i id="mapnav-x-i" class="bi bi-x-lg"></i>
                 </div>
                 <div id="mapnav-search-icon" class="col-1">
                     <i class="bi bi-search"></i>
                 </div>
             </div>
-            <div id="mapnav-result-box">
-                <ul id="mapnav-result-box-list"> 
+            <div id="mapnav-search-suggestion">
+                <ul id="mapnav-search-suggestion-list"> 
                 </ul>
+            </div>
+            <div id="mapnav-result-box">
             </div>
         </div>
         <div id="error-alert">
@@ -329,23 +356,138 @@ function renderSearchNav(map, data){
     document.querySelector("#attractions-pic").addEventListener("click", function(){
         const divElement = document.querySelector("#attractions-pic");
         changeIcon(divElement, "attractions", ["art", "food", "shopping"]);
+        document.querySelector("#selected-category").innerHTML = "attractions";
     });
 
     document.querySelector("#art-pic").addEventListener("click", function(){
         const divElement = document.querySelector("#art-pic");
         changeIcon(divElement, "art", ["attractions", "food", "shopping"]);
+        document.querySelector("#selected-category").innerHTML = "art";
     });
 
     document.querySelector("#food-pic").addEventListener("click", function(){
         const divElement = document.querySelector("#food-pic");
         changeIcon(divElement, "food", ["attractions", "art", "shopping"]);
+        document.querySelector("#selected-category").innerHTML = "food";
     });
 
     document.querySelector("#shopping-pic").addEventListener("click", function(){
         const divElement = document.querySelector("#shopping-pic");
         changeIcon(divElement, "shopping", ["attractions", "art", "food"]);
+        document.querySelector("#selected-category").innerHTML = "shopping";
+    })
+
+    // x icon
+    document.querySelector("#mapnav-x-i").addEventListener("click", function(){
+        document.querySelector("#input-text").value = ``;
+    })
+
+    // autocomplete search
+    document.querySelector("#input-text").addEventListener("keyup", async function(){
+        const latLngSearchLocation = document.querySelector("#select-location").value;
+        const searchTerm = document.querySelector("#input-text").value;
+        let searchLatLng = null;
+
+        if (latLngSearchLocation == "centre"){
+            const centerPoint = map.getBounds().getCenter();
+            const searchLatLng = centerPoint.lat + "," + centerPoint.lng;
+        } else {
+            const provinceLatLng = loadProvinceLatLng();
+            const searchLatLng = provinceLatLng[latLngSearchLocation];    
+        }
+
+        const suggestion = await searchTermAutocomplete(searchTerm, searchLatLng, sessionToken);
+        getAutocompleteResults(suggestion);
+       
     })
     
+    // search icon
+    document.querySelector("#mapnav-search-icon").addEventListener("click", async function(){
+        const searchTerm = document.querySelector("#input-text").value;
+        const selectedSearchCategory = document.querySelector("#selected-category").innerHTML;
+        const searchCategoryID = loadSearchCategoryID();
+        const searchCategory = searchCategoryID[selectedSearchCategory];
+
+        if (searchTerm == ""){
+            document.querySelector("#error-text").innerHTML = "Please give an input";
+            document.querySelector("#error-alert").classList.add("visible");
+            setTimeout(function(){
+                document.querySelector("#error-alert").classList.remove("visible");
+            }, 1500);
+        } else {
+            const latLngSearchLocation = document.querySelector("#select-location").value;
+            const resultBoxDiv = document.querySelector("#mapnav-result-box");
+            resultBoxDiv.innerHTML = ``;
+            let data = null;
+
+            if (latLngSearchLocation == "centre"){
+                const centerPoint = map.getBounds().getCenter();
+                const searchLatLng = centerPoint.lat + "," + centerPoint.lng;
+                data = await search(searchTerm, searchLatLng, searchCategory);
+            } else {
+                const provinceLatLng = loadProvinceLatLng();
+                const searchLatLng = provinceLatLng[latLngSearchLocation];
+                data = await search(searchTerm, searchLatLng, searchCategory);      
+            }
+
+            if (data.results.length != 0){
+                for (let d of data.results){
+                    divElement = document.createElement("div");
+                    divElement.innerHTML = `
+                        <div class="mapnav-item-container row">
+                            <div class="mapnav-rest-contatiner col-9">
+                                <div class="mapnav-location-description-container row">
+                                    <div class="mapnav-location-name">${d.name}</div>
+                                    <div class="mapnav-location-address">${d.location.formatted_address}</div>
+                                    <div class="mapnav-province-website">
+                                        <div class="mapnav-location-province">${d.location.region}, ${d.location.post_town} (${d.closed_bucket.match(/[A-Z][a-z]+|[0-9]+/g).join(" ")})</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mapnav-location-image-container col-3">
+                                <div class="mapnav-location-image"></div>
+                            </div>
+                        </div>
+                    `
+                    resultBoxDiv.appendChild(divElement);
+
+                    const imageResult = await getPhoto(d.fsq_id);
+                    if (imageResult.length != 0){
+                        const imageURL = `${imageResult[0].prefix}80x80${imageResult[0].suffix}`;
+                        divElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(${imageURL})`;
+                    } else {
+                        divElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(image/map/no-image.png))`;
+                    }
+
+                    // plot markers
+                    let locationIcon = L.icon({
+                        iconUrl: `image/map/${selectedSearchCategory}-marker.png`,
+                        iconSize: [40, 40],
+                        iconAnchor: [22, 94],
+                        popupAnchor: [-3, -76],
+                    });
+                    let locationMarker = L.marker([d.geocodes.main.latitude, d.geocodes.main.longitude], {icon: locationIcon});
+                    locationMarker.bindPopup(`<h4>${d.name}</h4>
+                                                <p>${d.location.formatted_address}</p>`);
+                    locationMarker.addTo(map);
+
+                    divElement.querySelector(".mapnav-item-container").addEventListener("click", function(){
+                        onSearchItemClick(map, d.geocodes.main.latitude, d.geocodes.main.longitude, locationMarker);
+                    })
+                }
+            } else{
+                document.querySelector("#error-text").innerHTML = "Sorry no match found";
+                document.querySelector("#error-alert").classList.add("visible");
+                setTimeout(function(){
+                    document.querySelector("#error-alert").classList.remove("visible");
+                }, 1500);
+            }
+
+        }
+
+        sessionToken = `acbehdoandduurrbofjsowmeomd` + Math.floor(Math.random() * 100000);
+    })
 }
 
 // change icon of nav on click
@@ -376,31 +518,24 @@ function navSearchEventListener(map, data){
 
     renderSearchNav(map, data);
 }
-            
-// plot markers of location on map
-function displayDramaMarkers(map, data){
-    let provinceLayers = {};
-    const provinceGroup = L.layerGroup();
-    
-    for (let element of data.location){
-        let locationIcon = L.icon({
-            iconUrl: 'image/map/drama-location-icon.png',
-            iconSize: [40, 40],
-            iconAnchor: [22, 94],
-            popupAnchor: [-3, -76],
-        });
-        let locationMarker = L.marker([element.latitude, element.longitude], {icon: locationIcon});
-        locationMarker.bindPopup(`<h4>${element.name}</h4>
-                                    <p>${element.address}</p>`);
 
-        if (!provinceLayers[element.province]) {
-            provinceLayers[element.province] = L.layerGroup().addTo(map);
-        } 
-        
-        locationMarker.addTo(provinceLayers[element.province]);
-        
+// search item click
+function onSearchItemClick(map, lat, lng, locationMarker){
+    map.flyTo([lat, lng], 16);
+    locationMarker.openPopup();
+    document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-right-fill"></i>`;
+    document.querySelector("#location-list").classList.add("close");
+}
+
+// autocomplete results
+function getAutocompleteResults(suggestion){
+    document.querySelector("#mapnav-search-suggestion").style.height = "auto";
+    parentElement = document.querySelector("#mapnav-search-suggestion-list");
+    parentElement.innerHTML = ``;
+
+    for (let s of suggestion.results){
+        childElement = document.createElement("li");
+        childElement.innerHTML = `${s.place.name}`;
+        parentElement.appendChild(childElement);
     }
-
-    L.control.layers(null, provinceLayers).addTo(map);
-};
-
+}
