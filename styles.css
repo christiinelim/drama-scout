@@ -88,6 +88,32 @@
         color: #5f685d;
     }
 
+    /* back to top */
+    #back-to-top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #98A296;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.25);
+        transition: transform 0.3s ease;
+    }
+
+    #back-to-top:hover{
+        transform: translateY(-3px);
+        cursor: pointer;
+    }
+
+    #back-to-top a{
+        text-decoration: none;
+        color: white;
+    }
+
     /* searchbar */
     #search-cta{
         font-family: 'Days One';
@@ -650,13 +676,14 @@
 
     /* search bar */
     #mapnav-searchbar{
+        position: relative;
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 
     #mapnav-searchbar-border{
-        margin: 10px 15px;
+        margin: 10px 15px 0px 15px;
         border: 2px solid #98A296;
         border-radius: 999px;
         height: 30px;
@@ -742,6 +769,34 @@
     #select-location:focus{
         outline: none;
     }
+
+    /* autocomplete for map search */
+    #mapnav-search-suggestion{
+        position: absolute;
+        top: 100%;
+        background-color: white;
+        overflow: auto;
+        height: 0px;
+        border-radius: 0px 0px 10px 10px;
+        margin: 0px 15px;
+        width: 89.3%;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    #mapnav-search-suggestion ul{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #mapnav-search-suggestion ul li{
+        list-style: none;
+        padding: 12px 30px 12px 30px;
+    }
+
+    #mapnav-search-suggestion ul li:hover{
+        cursor: pointer;
+        background-color: rgba(152, 162, 150, 0.3);
+    } 
 }
 
 
@@ -812,6 +867,32 @@
         background-color: #f2f2f2;
         border-radius: 999px;
         color: #5f685d;
+    }
+
+    /* back to top */
+    #back-to-top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        background-color: #98A296;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.25);
+        transition: transform 0.3s ease;
+    }
+
+    #back-to-top:hover{
+        transform: translateY(-3px);
+        cursor: pointer;
+    }
+
+    #back-to-top a{
+        text-decoration: none;
+        color: white;
     }
 
     /* searchbar */
@@ -1363,8 +1444,12 @@
     }
 
     /* search bar */
+    #mapnav-searchbar{
+        position: relative;
+    }
+
     #mapnav-searchbar-border{
-        margin: 10px 20px;
+        margin: 10px 20px 0px 20px;
         border: 2px solid #98A296;
         border-radius: 999px;
         height: 35px;
@@ -1442,6 +1527,34 @@
     #select-location:focus{
         outline: none;
     }
+
+    /* autocomplete for map search */
+    #mapnav-search-suggestion{
+        position: absolute;
+        top: 100%;
+        background-color: white;
+        overflow: auto;
+        height: 0px;
+        border-radius: 0px 0px 10px 10px;
+        margin: 0px 20px;
+        width: 90%;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    #mapnav-search-suggestion ul{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #mapnav-search-suggestion ul li{
+        list-style: none;
+        padding: 12px 30px 12px 30px;
+    }
+
+    #mapnav-search-suggestion ul li:hover{
+        cursor: pointer;
+        background-color: rgba(152, 162, 150, 0.3);
+    } 
 }
 
 
@@ -1516,6 +1629,31 @@
         color: #5f685d;
     }
 
+    /* back to top */
+    #back-to-top{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #98A296;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.25);
+        transition: transform 0.3s ease;
+    }
+
+    #back-to-top:hover{
+        transform: translateY(-3px);
+        cursor: pointer;
+    }
+
+    #back-to-top a{
+        text-decoration: none;
+        color: white;
+    }
 
     /* searchbar */
     #search-cta{
@@ -2065,6 +2203,10 @@
     }
 
     /* search bar */
+    #mapnav-searchbar{
+        position: relative;
+    }
+    
     #mapnav-searchbar-border{
         margin: 0px 20px;
         border: 2px solid #98A296;
@@ -2149,12 +2291,12 @@
     #mapnav-search-suggestion{
         position: absolute;
         top: 100%;
-        z-index: 1000000;
-        background-color: lightgray;
-        width: 50%;
-        overflow: hidden;
+        background-color: white;
+        overflow: auto;
         height: 0px;
-        margin-bottom: 20px;
+        border-radius: 0px 0px 10px 10px;
+        margin: 0px 20px;
+        width: 90%;
         border-radius: 0px 0px 10px 10px;
     }
 

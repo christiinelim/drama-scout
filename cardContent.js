@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", async function(){
             document.querySelector("#dropdown").classList.add("close");
         }
     });
-
     
     // tab
     document.querySelector("#location-list-tab").addEventListener("click", function(){
@@ -380,6 +379,8 @@ function renderSearchNav(map, data){
     // x icon
     document.querySelector("#mapnav-x-i").addEventListener("click", function(){
         document.querySelector("#input-text").value = ``;
+        resetSearchField();
+        document.querySelector("#mapnav-result-box").innerHTML = ``;
     })
 
     // autocomplete search
@@ -396,8 +397,12 @@ function renderSearchNav(map, data){
             const searchLatLng = provinceLatLng[latLngSearchLocation];    
         }
 
-        const suggestion = await searchTermAutocomplete(searchTerm, searchLatLng, sessionToken);
-        getAutocompleteResults(suggestion);
+        if (searchTerm != ""){
+            const suggestion = await searchTermAutocomplete(searchTerm, searchLatLng, sessionToken);
+            getAutocompleteResults(suggestion);
+        } else {
+            resetSearchField();
+        }
        
     })
     
@@ -530,6 +535,11 @@ function onSearchItemClick(map, lat, lng, locationMarker){
 // autocomplete results
 function getAutocompleteResults(suggestion){
     document.querySelector("#mapnav-search-suggestion").style.height = "auto";
+    document.querySelector("#mapnav-search-suggestion").style.maxHeight = "200px";
+    document.querySelector("#mapnav-search-suggestion").style.border = "1px solid lightgrey";
+    document.querySelector("#mapnav-search-suggestion").style.boxShadow = "rgba(0, 0, 0, 0.2) 0px 0px 5px 3px";
+    document.querySelector("#mapnav-searchbar-border").style.borderRadius = "10px 10px 0px 0px";
+    document.querySelector("#mapnav-searchbar-border").style.boxShadow = "rgba(0, 0, 0, 0.2) -1px -1px 5px 3px";
     parentElement = document.querySelector("#mapnav-search-suggestion-list");
     parentElement.innerHTML = ``;
 
@@ -537,5 +547,19 @@ function getAutocompleteResults(suggestion){
         childElement = document.createElement("li");
         childElement.innerHTML = `${s.place.name}`;
         parentElement.appendChild(childElement);
+
+        childElement.addEventListener("click", function(){
+            document.querySelector("#input-text").value = `${s.place.name}`;
+            resetSearchField();
+        })
     }
+}
+
+// reset search field
+function resetSearchField(){
+    document.querySelector("#mapnav-search-suggestion").style.height = "0px";
+    document.querySelector("#mapnav-search-suggestion").style.border = "none";
+    document.querySelector("#mapnav-search-suggestion").style.removeProperty("box-shadow");
+    document.querySelector("#mapnav-searchbar-border").style.borderRadius = "999px";
+    document.querySelector("#mapnav-searchbar-border").style.removeProperty("box-shadow");
 }
