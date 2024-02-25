@@ -1,4 +1,7 @@
 let sessionToken = `acbehdoandduurrbofjsowmeomd` + Math.floor(Math.random() * 100000);
+let controlLayers = L.control.layers();
+let searchLayers = {};
+const groupedLayerControl = L.control.groupedLayers();
 
 document.addEventListener("DOMContentLoaded", async function(){
     // data set
@@ -10,6 +13,20 @@ document.addEventListener("DOMContentLoaded", async function(){
     const id = Number(urlParams.get('id'));
 
     displayCardContentPage(data[id]);
+
+    // map
+    const map = L.map("map");
+    map.setView([37.5519, 126.9918], 13);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(map);
+    let seoulIcon = L.icon({
+        iconUrl: 'image/map/seoul-icon.png',
+        iconSize: [15, 35],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+    });
+    let seoulMarker = L.marker([37.5519, 126.9918], {icon: seoulIcon});
+    seoulMarker.addTo(map);
+    seoulMarker.bindPopup(`<h4>Seoul</h4>`);
 
     // navbar small
     document.querySelector("#menu-button-click").addEventListener("click", function(){
@@ -90,20 +107,6 @@ document.addEventListener("DOMContentLoaded", async function(){
             document.querySelector("#location-list").classList.remove("close");
         }
     });
-
-    // map
-    const map = L.map("map");
-    map.setView([37.5519, 126.9918], 13);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(map);
-    let seoulIcon = L.icon({
-        iconUrl: 'image/map/seoul-icon.png',
-        iconSize: [15, 35],
-        iconAnchor: [22, 94],
-        popupAnchor: [-3, -76],
-    });
-    let seoulMarker = L.marker([37.5519, 126.9918], {icon: seoulIcon});
-    seoulMarker.addTo(map);
-    seoulMarker.bindPopup(`<h4>Seoul</h4>`);
 })
 
 
@@ -178,7 +181,6 @@ function resetLocationList(data){
 }
 
 function renderLocationNav(map, data){
-
     document.querySelector("#location-list").innerHTML = `
         <div>
             <div id="mapnav-tab" class="row">
@@ -204,7 +206,6 @@ function renderLocationNav(map, data){
 
     // for plotting markers
     let provinceLayers = {};
-    const provinceGroup = L.layerGroup();
     
     for (let location of data.location){
         let childElement = document.createElement("div");
@@ -246,8 +247,28 @@ function renderLocationNav(map, data){
             popupAnchor: [-3, -76],
         });
         let locationMarker = L.marker([location.latitude, location.longitude], {icon: locationIcon});
-        locationMarker.bindPopup(`<h4>${location.name}</h4>
-                                    <p>${location.address}</p>`);
+
+
+        // customizing popup
+        const customPopup = `
+            <div id="popup-tab">
+                <div id="popup-information" class="popup-tab-icon popup-tab-active"><i class="bi bi-info-circle"></i>INFO</div>
+                <div id="popup-weather" class="popup-tab-icon"><i class="bi bi-cloud"></i>WEATHER</div>
+            </div>
+            <div id="popup-content">
+                <h6>${location.name}</h6>
+                <p>${location.address}</p>
+            </div>
+            `;
+
+        const customOptions =
+            {
+                'maxWidth': '150px',
+                'width': '150px',
+                'className' : 'popupCustom'
+            };
+
+        locationMarker.bindPopup(customPopup, customOptions);
 
         if (!provinceLayers[location.province]) {
             provinceLayers[location.province] = L.layerGroup().addTo(map);
@@ -258,11 +279,15 @@ function renderLocationNav(map, data){
         childElement.querySelector(".mapnav-item-container").addEventListener("click", function(){
             onSearchItemClick(map, location.latitude, location.longitude, locationMarker);
         })
-
     }
 
-    L.control.layers(null, provinceLayers).addTo(map);
-    
+    for (let province in provinceLayers) {
+        if (provinceLayers.hasOwnProperty(province)) {
+            groupedLayerControl.addOverlay(provinceLayers[province], province, "Drama Locations");
+        }
+    }
+
+    groupedLayerControl.addTo(map);
 }
 
 function renderSearchNav(map, data){
@@ -280,7 +305,7 @@ function renderSearchNav(map, data){
 
     divElement.innerHTML = `
         <div id="search-category-container">
-            <div id="selected-category">attractions</div>
+            <div id="selected-category">Attractions</div>
             <div class="search-category">
                 <div id="attractions-pic" class="search-category-icon attractions-pic-active"></div>
                 <div class="search-category-name">Attractions</div>
@@ -355,25 +380,25 @@ function renderSearchNav(map, data){
     document.querySelector("#attractions-pic").addEventListener("click", function(){
         const divElement = document.querySelector("#attractions-pic");
         changeIcon(divElement, "attractions", ["art", "food", "shopping"]);
-        document.querySelector("#selected-category").innerHTML = "attractions";
+        document.querySelector("#selected-category").innerHTML = "Attractions";
     });
 
     document.querySelector("#art-pic").addEventListener("click", function(){
         const divElement = document.querySelector("#art-pic");
         changeIcon(divElement, "art", ["attractions", "food", "shopping"]);
-        document.querySelector("#selected-category").innerHTML = "art";
+        document.querySelector("#selected-category").innerHTML = "Art";
     });
 
     document.querySelector("#food-pic").addEventListener("click", function(){
         const divElement = document.querySelector("#food-pic");
         changeIcon(divElement, "food", ["attractions", "art", "shopping"]);
-        document.querySelector("#selected-category").innerHTML = "food";
+        document.querySelector("#selected-category").innerHTML = "Food";
     });
 
     document.querySelector("#shopping-pic").addEventListener("click", function(){
         const divElement = document.querySelector("#shopping-pic");
         changeIcon(divElement, "shopping", ["attractions", "art", "food"]);
-        document.querySelector("#selected-category").innerHTML = "shopping";
+        document.querySelector("#selected-category").innerHTML = "Shopping";
     })
 
     // x icon
@@ -384,6 +409,7 @@ function renderSearchNav(map, data){
     })
 
     // autocomplete search
+    /*
     document.querySelector("#input-text").addEventListener("keyup", async function(){
         const latLngSearchLocation = document.querySelector("#select-location").value;
         const searchTerm = document.querySelector("#input-text").value;
@@ -404,7 +430,8 @@ function renderSearchNav(map, data){
             resetSearchField();
         }
        
-    })
+    }) 
+    */
     
     // search icon
     document.querySelector("#mapnav-search-icon").addEventListener("click", async function(){
@@ -475,12 +502,24 @@ function renderSearchNav(map, data){
                     let locationMarker = L.marker([d.geocodes.main.latitude, d.geocodes.main.longitude], {icon: locationIcon});
                     locationMarker.bindPopup(`<h4>${d.name}</h4>
                                                 <p>${d.location.formatted_address}</p>`);
-                    locationMarker.addTo(map);
+
+                    if (!searchLayers[selectedSearchCategory]) {
+                        searchLayers[selectedSearchCategory] = L.layerGroup().addTo(map);
+                    } 
+                    
+                    locationMarker.addTo(searchLayers[selectedSearchCategory]);
 
                     divElement.querySelector(".mapnav-item-container").addEventListener("click", function(){
                         onSearchItemClick(map, d.geocodes.main.latitude, d.geocodes.main.longitude, locationMarker);
                     })
                 }
+
+                if (searchLayers.hasOwnProperty(selectedSearchCategory)) {
+                    groupedLayerControl.addOverlay(searchLayers[selectedSearchCategory], selectedSearchCategory, "Search");
+                }
+                
+                groupedLayerControl.addTo(map);
+
             } else{
                 document.querySelector("#error-text").innerHTML = "Sorry no match found";
                 document.querySelector("#error-alert").classList.add("visible");
@@ -526,7 +565,8 @@ function navSearchEventListener(map, data){
 
 // search item click
 function onSearchItemClick(map, lat, lng, locationMarker){
-    map.flyTo([lat, lng], 16);
+    const adjustedLat = lat + 0.002;
+    map.flyTo([adjustedLat, lng], 16);
     locationMarker.openPopup();
     document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-right-fill"></i>`;
     document.querySelector("#location-list").classList.add("close");

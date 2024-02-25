@@ -48,7 +48,7 @@ async function searchTermAutocomplete(searchTerm, latLng, sessionToken){
             ll: latLng,
             radius: 5000,
             session_token: sessionToken,
-            limit: 20
+            limit: 10
         },
         headers: {
             accept: 'application/json',
@@ -101,10 +101,10 @@ function loadProvinceLatLng(){
 
 function loadSearchCategoryID(){
     const searchCategoryID = {
-        "attractions": "16000",
-        "art": "10000",
-        "food": "13000",
-        "shopping": "17000",
+        "Attractions": "16000",
+        "Art": "10000",
+        "Food": "13000",
+        "Shopping": "17000",
     }
 
     return searchCategoryID

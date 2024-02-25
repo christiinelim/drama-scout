@@ -2314,4 +2314,42 @@
         cursor: pointer;
         background-color: rgba(152, 162, 150, 0.3);
     } 
+
+
+    /* customize popup */
+    #popup-tab{
+        display: flex;
+        justify-content: center;
+        border-bottom: 0.5px solid #5f685d;
+        box-shadow: 0 5px 2px -4px rgba(0,0,0, 0.25);
+        font-weight: bold;
+        font-size: 13px;
+    }
+
+    .popup-tab-active{
+        border-bottom: 1px solid #5f685d !important;
+        color: #5f685d !important;
+    }
+
+    .popup-tab-icon{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .popup-tab-icon i{
+        margin-right: 5px;
+    }
+    
+    .popupCustom {
+        margin-bottom: 35px;
+    }
+
+    .popupCustom .leaflet-popup-content-wrapper {
+        min-width: 230px;
+        max-width: 230px;
+        min-height: 280px; 
+        max-height: 280px; 
+        overflow-y: auto; 
+    }
 }
