@@ -192,83 +192,34 @@ function renderLocationNav(map, data){
         </div>    
     `;
 
-    document.querySelector("#mapnav-location-tab").addEventListener("click", function(){
-        navLocationEventListener(map, data);
-    })
+    document.querySelector("#mapnav-tab").addEventListener("click", function(event) {
 
-    // clicking on nav-search
-    document.querySelector("#mapnav-search-tab").addEventListener("click", function(){
-        navSearchEventListener(map, data);
-    })
+        
+        const target = event.target;
+        if (target.id == "mapnav-location-tab") {
+            navLocationEventListener(map, data);
+        } else if (target.id == "mapnav-search-tab") {
+            navSearchEventListener(map, data);
+        }
+    });
 
+    // display tabs container
     document.querySelector("#mapnav-tab").style.display = "flex";
-    divElement = document.querySelector("#mapnav-container");
+
+    renderMapNavItems(map, data);
+}
+
+function renderMapNavItems(map, data){
+    const divElement = document.querySelector("#mapnav-container");
 
     // for plotting markers
     let provinceLayers = {};
     
     for (let location of data.location){
-        let childElement = document.createElement("div");
-
-        childElement.innerHTML = `
-            <div class="mapnav-item-container row">
-                <div class="mapnav-rest-contatiner col-9">
-                    <div class="mapnav-location-description-container row">
-                        <div class="mapnav-location-name">${location.name}</div>
-                        <div class="mapnav-location-address">${location.address}</div>
-                        <div class="mapnav-province-website">
-                            <div class="mapnav-location-province">${location.province}, ${location.area}</div>
-                            <div class="mapnav-location-website"><a href=${location.website}></a></div>    
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mapnav-location-image-container col-3">
-                    <div class="mapnav-location-image"></div>
-                </div>
-            </div>
-        `
-
-        if (location.website != "nil"){
-            childElement.querySelector("a").innerHTML = `<i class="bi bi-link-45deg"></i>`;
-        } else{
-            childElement.querySelector("a").innerHTML = `<i class="bi bi-exclamation-circle"></i>`
-        };
-
-        childElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(${location.image})`
-
+        const childElement = createMapNavItem(location);
         divElement.appendChild(childElement);
 
-        // plot location icon
-        let locationIcon = L.icon({
-            iconUrl: 'image/map/drama-location-icon.png',
-            iconSize: [40, 40],
-            iconAnchor: [22, 94],
-            popupAnchor: [-3, -76],
-        });
-        let locationMarker = L.marker([location.latitude, location.longitude], {icon: locationIcon});
-
-
-        // customizing popup
-        const customPopup = `
-            <div id="popup-tab">
-                <div id="popup-information" class="popup-tab-icon popup-tab-active"><i class="bi bi-info-circle"></i>INFO</div>
-                <div id="popup-weather" class="popup-tab-icon"><i class="bi bi-cloud"></i>WEATHER</div>
-            </div>
-            <div id="popup-content">
-                <h6>${location.name}</h6>
-                <p>${location.address}</p>
-            </div>
-            `;
-
-        const customOptions =
-            {
-                'maxWidth': '150px',
-                'width': '150px',
-                'className' : 'popupCustom'
-            };
-
-        locationMarker.bindPopup(customPopup, customOptions);
+        const locationMarker = createLocationMarker(location, "drama-location-icon.png", "drama");
 
         if (!provinceLayers[location.province]) {
             provinceLayers[location.province] = L.layerGroup().addTo(map);
@@ -288,7 +239,149 @@ function renderLocationNav(map, data){
     }
 
     groupedLayerControl.addTo(map);
+
+    // add popup event listener
+    document.addEventListener("click", async function(event) {
+        if (event.target && event.target.id.startsWith("popup-")) {
+            const parentDiv = event.target.parentNode.parentNode;
+            const contentDiv = parentDiv.querySelector("#popup-content");
+            const informationDiv = contentDiv.querySelector(".information-content");
+            const weatherDiv = contentDiv.querySelector(".weather-content");
+
+
+            togglePopupActiveTab(event);
+            
+            // show the info of location
+            if (event.target.id == "popup-information"){
+                informationDiv.style.display = "block";
+                weatherDiv.style.display = "none"
+            } else { // show the weather
+                weatherDiv.style.display = "flex";
+                informationDiv.style.display = "none";
+
+                // get weather data
+                const lat = contentDiv.querySelector(".location-lat-lng").querySelector(".lat").innerHTML;
+                const lng = contentDiv.querySelector(".location-lat-lng").querySelector(".lng").innerHTML;
+                const data = await getWeather(lat, lng);
+                weatherURL = await getWeatherPhoto(data);
+
+                weatherDiv.querySelector(".weather-summary").innerHTML = `${data.weather[0].description.toUpperCase()}`;
+                weatherDiv.querySelector(".weather-icon").style.backgroundImage = `url(${weatherURL})`;
+                weatherDiv.querySelector(".weather-temperature").innerHTML = `${data.main.temp}°C`;
+                weatherDiv.querySelector(".weather-humidity").innerHTML = `Humidity: ${data.main.humidity}%`;
+                weatherDiv.querySelector(".weather-speed").innerHTML = `Wind: ${data.wind.speed}km/h`;
+            }
+        }
+    });
 }
+
+function createMapNavItem(location){
+    let childElement = document.createElement("div");
+
+    childElement.innerHTML = `
+        <div class="mapnav-item-container row">
+            <div class="mapnav-rest-contatiner col-9">
+                <div class="mapnav-location-description-container row">
+                    <div class="mapnav-location-name">${location.name}</div>
+                    <div class="mapnav-location-address">${location.address}</div>
+                    <div class="mapnav-province-website">
+                        <div class="mapnav-location-province">${location.province}, ${location.area}</div>
+                        <div class="mapnav-location-website"><a href=${location.website}></a></div>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="mapnav-location-image-container col-3">
+                <div class="mapnav-location-image"></div>
+            </div>
+        </div>
+    `
+
+    if (location.website != "nil"){
+        childElement.querySelector("a").innerHTML = `<i class="bi bi-link-45deg"></i>`;
+    } else{
+        childElement.querySelector("a").innerHTML = `<i class="bi bi-exclamation-circle"></i>`
+    };
+
+    childElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(${location.image})`;
+
+    return childElement
+}
+
+function createLocationMarker(d, url, type){
+    let locationMarker = null;
+
+    // plot location icon
+    let locationIcon = L.icon({
+        iconUrl: `image/map/${url}`,
+        iconSize: [40, 40],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+    });
+
+    if (type == "drama"){
+        locationMarker = L.marker([d.latitude, d.longitude], {icon: locationIcon});
+
+        createCustomPopup(d.latitude, d.longitude, d.name, d.address, locationMarker);
+    } else {
+        locationMarker = L.marker([d.geocodes.main.latitude, d.geocodes.main.longitude], {icon: locationIcon});
+        createCustomPopup(d.geocodes.main.latitude, d.geocodes.main.longitude, d.name, d.location.formatted_address, locationMarker);
+    }
+
+    return locationMarker;
+}
+
+function createCustomPopup(lat, lng, name, address, locationMarker){
+    // customizing popup
+    const customPopup = `
+        <div id="popup-tab">
+            <div id="popup-information" class="popup-tab-div popup-tab-active"><i class="bi bi-info-circle"></i>INFO</div>
+            <div id="popup-weather" class="popup-tab-div"><i class="bi bi-cloud"></i>WEATHER</div>
+        </div>
+        <div id="popup-content">
+            <div class="location-lat-lng">
+                <div class="lat">${lat}</div>
+                <div class="lng">${lng}</div>
+            </div>
+            <div class="information-content">
+                <h6>${name}</h6>
+                <p>${address}</p>
+            </div>
+            <div class="weather-content">
+                <div class="weather-summary"></div>
+                <div class="weather-icon-div"><div class="weather-icon"></div></div>
+                <div class="weather-temperature"></div>
+                <div class="weather-humidity"></div>
+                <div class="weather-speed"></div>
+            </div>
+        </div>
+        `;
+
+    const customOptions =
+        {
+            'maxWidth': '150px',
+            'width': '150px',
+            'className' : 'popupCustom'
+        };
+
+    locationMarker.bindPopup(customPopup, customOptions);
+}
+
+function togglePopupActiveTab(event){
+    // add active class style to clicked popup
+    event.target.classList.toggle("popup-tab-active");
+
+    // remove from other tab
+    const otherPopupTabId = event.target.id == "popup-information" ? "popup-weather" : "popup-information";
+    const otherPopupTab = document.getElementById(otherPopupTabId);
+    otherPopupTab.classList.remove("popup-tab-active");
+}
+
+
+
+
+
+
 
 function renderSearchNav(map, data){
     document.querySelector("#mapnav-location-tab").addEventListener("click", function(){
@@ -447,6 +540,7 @@ function renderSearchNav(map, data){
                 document.querySelector("#error-alert").classList.remove("visible");
             }, 1500);
         } else {
+            resetSearchField();
             const latLngSearchLocation = document.querySelector("#select-location").value;
             const resultBoxDiv = document.querySelector("#mapnav-result-box");
             resultBoxDiv.innerHTML = ``;
@@ -493,15 +587,7 @@ function renderSearchNav(map, data){
                     }
 
                     // plot markers
-                    let locationIcon = L.icon({
-                        iconUrl: `image/map/${selectedSearchCategory}-marker.png`,
-                        iconSize: [40, 40],
-                        iconAnchor: [22, 94],
-                        popupAnchor: [-3, -76],
-                    });
-                    let locationMarker = L.marker([d.geocodes.main.latitude, d.geocodes.main.longitude], {icon: locationIcon});
-                    locationMarker.bindPopup(`<h4>${d.name}</h4>
-                                                <p>${d.location.formatted_address}</p>`);
+                    const locationMarker = createLocationMarker(d, `${selectedSearchCategory}-marker.png`, "search");
 
                     if (!searchLayers[selectedSearchCategory]) {
                         searchLayers[selectedSearchCategory] = L.layerGroup().addTo(map);

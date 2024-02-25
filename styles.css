@@ -797,6 +797,80 @@
         cursor: pointer;
         background-color: rgba(152, 162, 150, 0.3);
     } 
+
+    /* customize popup */
+    #popup-tab{
+        display: flex;
+        justify-content: center;
+        border-bottom: 0.5px solid #5f685d;
+        box-shadow: 0 5px 2px -4px rgba(0,0,0, 0.25);
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+    .popup-tab-active{
+        border-bottom: 1px solid #5f685d !important;
+        color: #5f685d !important;
+    }
+
+    .popup-tab-div{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .popup-tab-div:hover{
+        cursor: pointer;
+        border-bottom: 1px solid #5f685d !important;
+        color: #5f685d !important;
+    }
+
+    .popup-tab-div i{
+        margin-right: 5px;
+    }
+    
+    .popupCustom {
+        margin-bottom: 35px;
+    }
+
+    .popupCustom .leaflet-popup-content-wrapper {
+        min-width: 210px;
+        max-width: 210px;
+        min-height: 240px; 
+        max-height: 240px; 
+        overflow-y: auto; 
+    }
+
+    .location-lat-lng{
+        display: none;
+    }
+
+    /* weather */
+    .weather-content{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 11%;
+    }
+
+    .weather-summary{
+        font-weight: bolder;
+        font-size: 16px;
+        font-style: italic;
+    }
+
+    .weather-icon{
+        width: 80px;
+        height: 80px;
+        background-size: cover;
+    }
+    
+    .weather-temperature{
+        font-size: 25px;
+        font-weight: bolder;
+        color: #77B1E6;
+    }
 }
 
 
@@ -1555,6 +1629,80 @@
         cursor: pointer;
         background-color: rgba(152, 162, 150, 0.3);
     } 
+
+    /* customize popup */
+    #popup-tab{
+        display: flex;
+        justify-content: center;
+        border-bottom: 0.5px solid #5f685d;
+        box-shadow: 0 5px 2px -4px rgba(0,0,0, 0.25);
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .popup-tab-active{
+        border-bottom: 1px solid #5f685d !important;
+        color: #5f685d !important;
+    }
+
+    .popup-tab-div{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .popup-tab-div:hover{
+        cursor: pointer;
+        border-bottom: 1px solid #5f685d !important;
+        color: #5f685d !important;
+    }
+
+    .popup-tab-div i{
+        margin-right: 5px;
+    }
+    
+    .popupCustom {
+        margin-bottom: 35px;
+    }
+
+    .popupCustom .leaflet-popup-content-wrapper {
+        min-width: 220px;
+        max-width: 220px;
+        min-height: 250px; 
+        max-height: 250px; 
+        overflow-y: auto; 
+    }
+
+    .location-lat-lng{
+        display: none;
+    }
+
+    /* weather */
+    .weather-content{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8%;
+    }
+
+    .weather-summary{
+        font-weight: bolder;
+        font-size: 18px;
+        font-style: italic;
+    }
+
+    .weather-icon{
+        width: 90px;
+        height: 90px;
+        background-size: cover;
+    }
+    
+    .weather-temperature{
+        font-size: 27px;
+        font-weight: bolder;
+        color: #77B1E6;
+    }
 }
 
 
@@ -2331,13 +2479,19 @@
         color: #5f685d !important;
     }
 
-    .popup-tab-icon{
+    .popup-tab-div{
         display: flex;
         justify-content: center;
         width: 50%;
     }
 
-    .popup-tab-icon i{
+    .popup-tab-div:hover{
+        cursor: pointer;
+        border-bottom: 1px solid #5f685d !important;
+        color: #5f685d !important;
+    }
+
+    .popup-tab-div i{
         margin-right: 5px;
     }
     
@@ -2351,5 +2505,36 @@
         min-height: 280px; 
         max-height: 280px; 
         overflow-y: auto; 
+    }
+
+    .location-lat-lng{
+        display: none;
+    }
+
+    /* weather */
+    .weather-content{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 12%;
+    }
+
+    .weather-summary{
+        font-weight: bolder;
+        font-size: 20px;
+        font-style: italic;
+    }
+
+    .weather-icon{
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+    }
+    
+    .weather-temperature{
+        font-size: 30px;
+        font-weight: bolder;
+        color: #77B1E6;
     }
 }

@@ -1,3 +1,11 @@
+// API FOR FOURSQUARE
+const BASE_API_URL = "https://api.foursquare.com/v3";
+const API_KEY = 'fsq3qbdKT0pS0uYQ6cGARCBFMJ0TnnmHdk9HjRdzizuWVRs=';
+
+// API FOR OPENWEATHER
+const WEATHER_BASE_API_URL = "https://api.openweathermap.org/data/2.5/weather?";
+const WEATHER_API_KEY = 'c679cfa59cc8581fbfa19f29b87913c7';
+
 async function loadData(){
     const response = await axios.get("data.json");
     return response.data
@@ -13,11 +21,6 @@ function loadDrama(data){
 
     return dramaList
 }
-
-
-const BASE_API_URL = "https://api.foursquare.com/v3";
-const API_KEY = 'fsq3qbdKT0pS0uYQ6cGARCBFMJ0TnnmHdk9HjRdzizuWVRs=';
-
 
 // search result
 async function search(searchTerm, latLng, category){
@@ -58,7 +61,6 @@ async function searchTermAutocomplete(searchTerm, latLng, sessionToken){
 
     return response.data
 }
-
 
 // photo of search result
 async function getPhoto(fsqID){
@@ -108,4 +110,19 @@ function loadSearchCategoryID(){
     }
 
     return searchCategoryID
+}
+
+
+// get weather data
+async function getWeather(lat, lng){
+    const response = await axios.get(`${WEATHER_BASE_API_URL}lat=${lat}&lon=${lng}&appid=${WEATHER_API_KEY}&units=metric`);
+
+    return response.data
+}
+
+// get weather photo
+function getWeatherPhoto(data){
+    const icon = data.weather[0].icon;
+    const iconURL = `https://openweathermap.org/img/wn/${icon}@2x.png`
+    return iconURL;
 }
