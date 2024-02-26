@@ -322,7 +322,7 @@ function createLocationMarker(d, url, type){
     if (type == "drama"){
         locationMarker = L.marker([d.latitude, d.longitude], {icon: locationIcon});
 
-        createCustomPopup(d.latitude, d.longitude, d.name, d.address, locationMarker);
+        createCustomPopup(d.latitude, d.longitude, d.image, d.name, d.address, locationMarker);
     } else {
         locationMarker = L.marker([d.geocodes.main.latitude, d.geocodes.main.longitude], {icon: locationIcon});
         createCustomPopup(d.geocodes.main.latitude, d.geocodes.main.longitude, d.name, d.location.formatted_address, locationMarker);
@@ -331,7 +331,7 @@ function createLocationMarker(d, url, type){
     return locationMarker;
 }
 
-function createCustomPopup(lat, lng, name, address, locationMarker){
+function createCustomPopup(lat, lng, image, name, address, locationMarker){
     // customizing popup
     const customPopup = `
         <div id="popup-tab">
@@ -344,8 +344,36 @@ function createCustomPopup(lat, lng, name, address, locationMarker){
                 <div class="lng">${lng}</div>
             </div>
             <div class="information-content">
-                <h6>${name}</h6>
-                <p>${address}</p>
+                <div class="info-image"></div>
+                <div class="info-name">${name}</div>
+                <div class="info-button">
+                    <div class="button-item">
+                        <div class="button-item-icon"><i class="bi bi-signpost-2"></i></div>
+                        <div class="button-item-text">Directions</div>
+                    </div> 
+                    <div class="button-item">
+                        <div class="button-item-icon"><i class="bi bi-link-45deg"></i></div>
+                        <div class="button-item-text">Website</div>
+                    </div>
+                    <div class="button-item">
+                        <div class="button-item-icon"><i class="bi bi-bookmarks"></i></div>
+                        <div class="button-item-text">Save</div>
+                    </div>
+                </div>
+                <div class="info-description">
+                    <div class="description-item">
+                        <div class="description-icon"><i class="bi bi-tags"></i></div>
+                        <div>Mountain</div>
+                    </div> 
+                    <div class="description-item">
+                        <div class="description-icon"><i class="bi bi-geo-alt"></i></div>
+                        <div>${address}</div>
+                    </div>
+                    <div class="description-item">
+                        <div class="description-icon"><i class="bi bi-clock-history"></i></div>
+                        <div>Open</div>
+                    </div>
+                </div>
             </div>
             <div class="weather-content">
                 <div class="weather-summary"></div>
@@ -364,6 +392,7 @@ function createCustomPopup(lat, lng, name, address, locationMarker){
             'className' : 'popupCustom'
         };
 
+    
     locationMarker.bindPopup(customPopup, customOptions);
 }
 
@@ -651,7 +680,7 @@ function navSearchEventListener(map, data){
 
 // search item click
 function onSearchItemClick(map, lat, lng, locationMarker){
-    const adjustedLat = lat + 0.002;
+    const adjustedLat = lat + 0.003;
     map.flyTo([adjustedLat, lng], 16);
     locationMarker.openPopup();
     document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-right-fill"></i>`;
