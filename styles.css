@@ -569,8 +569,38 @@
         font-size: 8px;
     }
 
+    .location-website{
+        position: relative;
+    }
+
+    .location-no-website{
+        display: none;
+        position: absolute;
+        left: -40px;
+        top: 15px;
+        width: 93px;
+        background-color: #d3d3d3;
+        font-size: 9px;
+        padding: 2px 5px;
+    }
+
     .mapnav-location-website i{
         color: #5f685d;
+    }
+
+    .mapnav-location-website{
+        position: relative;
+    }
+
+    .mapnav-no-website{
+        display: none;
+        position: absolute;
+        left: 15px;
+        top: 0px;
+        width: 83px;
+        background-color: #d3d3d3;
+        font-size: 8px;
+        padding: 2px 5px;
     }
 
     .mapnav-location-image{
@@ -834,10 +864,10 @@
     }
 
     .popupCustom .leaflet-popup-content-wrapper {
-        min-width: 210px;
-        max-width: 210px;
-        min-height: 240px; 
-        max-height: 240px; 
+        min-width: 220px;
+        max-width: 220px;
+        min-height: 340px; 
+        max-height: 340px; 
         overflow-y: auto; 
     }
 
@@ -851,25 +881,123 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 11%;
+        height: 305px;
     }
 
     .weather-summary{
         font-weight: bolder;
-        font-size: 16px;
+        font-size: 17px;
         font-style: italic;
     }
 
     .weather-icon{
-        width: 80px;
-        height: 80px;
+        width: 140px;
+        height: 140px;
         background-size: cover;
     }
     
     .weather-temperature{
-        font-size: 25px;
+        font-size: 24px;
         font-weight: bolder;
         color: #77B1E6;
+        margin-bottom: 20px;
+    }
+
+    /* information content */
+    .information-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-image{
+        width: 100%;
+        height: 120px;
+        margin: 10px 0px 5px 0px;
+    }
+
+    .info-image img{
+        max-width: 100%; 
+        max-height: 120px;
+        min-width: 100%; 
+        min-height: 120px;
+        
+    }
+
+    .info-name{
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .info-button{
+        display: flex;
+        justify-content: center;
+        gap: 15%;
+        margin-bottom: 20px;
+    }
+
+    .button-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-item-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #5f685d;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 2px;
+        color: #5f685d;
+    }
+
+    .button-item-icon:hover{
+        cursor: pointer;
+        background-color: rgba(95,104,93,0.5);
+        border: none;
+        color: white;
+    }
+
+    .button-no-website-icon:hover{
+        cursor: auto;
+        background-color: transparent;
+        border: 1px solid #5f685d;
+        color: #5f685d;
+    }
+
+    .button-item-icon a:hover{
+        color: white;
+    }
+
+    .button-item-icon a{
+        text-decoration: none;
+        color: #5f685d;
+    }
+
+    .button-item-icon a i{
+        font-size: 16px
+    }
+
+    .button-item-text{
+        font-size: 8px;
+        font-style: italic;
+        color: #5f685d;
+        font-weight: 500;
+    }
+
+    .description-item{
+        display: flex;
+        margin-bottom: 5px;
+    }
+
+    .description-icon{
+        margin-right: 10px
+    }
+
+    .description-text{
+        font-size: 10px;
     }
 }
 
@@ -1324,6 +1452,21 @@
     }
 
     .location-website{
+        position: relative;
+    }
+
+    .location-no-website{
+        display: none;
+        position: absolute;
+        left: -10px;
+        top: 8px;
+        width: 102px;
+        background-color: #d3d3d3;
+        font-size: 10px;
+        padding: 2px 5px;
+    }
+
+    .location-website{
         margin-left: 5%;
         display: flex;
         align-items: center;
@@ -1414,6 +1557,21 @@
 
     .mapnav-location-website i{
         color: #5f685d;
+    }
+
+    .mapnav-location-website{
+        position: relative;
+    }
+
+    .mapnav-no-website{
+        display: none;
+        position: absolute;
+        left: 20px;
+        top: 0px;
+        width: 103px;
+        background-color: #d3d3d3;
+        font-size: 10px;
+        padding: 2px 5px;
     }
 
     .mapnav-location-image{
@@ -1666,10 +1824,10 @@
     }
 
     .popupCustom .leaflet-popup-content-wrapper {
-        min-width: 220px;
-        max-width: 220px;
-        min-height: 250px; 
-        max-height: 250px; 
+        min-width: 225px;
+        max-width: 225px;
+        min-height: 360px; 
+        max-height: 360px; 
         overflow-y: auto; 
     }
 
@@ -1683,18 +1841,18 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 8%;
+        height: 320px;
     }
 
     .weather-summary{
         font-weight: bolder;
-        font-size: 18px;
+        font-size: 17px;
         font-style: italic;
     }
 
     .weather-icon{
-        width: 90px;
-        height: 90px;
+        width: 150px;
+        height: 150px;
         background-size: cover;
     }
     
@@ -1702,6 +1860,104 @@
         font-size: 27px;
         font-weight: bolder;
         color: #77B1E6;
+        margin-bottom: 20px;
+    }
+
+    /* information content */
+    .information-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-image{
+        width: 100%;
+        height: 120px;
+        margin: 10px 0px 5px 0px;
+    }
+
+    .info-image img{
+        max-width: 100%; 
+        max-height: 120px;
+        min-width: 100%; 
+        min-height: 120px;
+        
+    }
+
+    .info-name{
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+
+    .info-button{
+        display: flex;
+        justify-content: center;
+        gap: 15%;
+        margin-bottom: 20px;
+    }
+
+    .button-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-item-icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #5f685d;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-bottom: 2px;
+        color: #5f685d;
+    }
+
+    .button-item-icon:hover{
+        cursor: pointer;
+        background-color: rgba(95,104,93,0.5);
+        border: none;
+        color: white;
+    }
+
+    .button-no-website-icon:hover{
+        cursor: auto;
+        background-color: transparent;
+        border: 1px solid #5f685d;
+        color: #5f685d;
+    }
+
+    .button-item-icon a:hover{
+        color: white;
+    }
+
+    .button-item-icon a{
+        text-decoration: none;
+        color: #5f685d;
+    }
+
+    .button-item-icon a i{
+        font-size: 16px
+    }
+
+    .button-item-text{
+        font-size: 9px;
+        font-style: italic;
+        color: #5f685d;
+        font-weight: 500;
+    }
+
+    .description-item{
+        display: flex;
+        margin-bottom: 5px;
+    }
+
+    .description-icon{
+        margin-right: 10px
+    }
+
+    .description-text{
+        font-size: 11px;
     }
 }
 
@@ -2157,6 +2413,21 @@
     }
 
     .location-website{
+        position: relative;
+    }
+
+    .location-no-website{
+        display: none;
+        position: absolute;
+        left: -30px;
+        top: 5px;
+        width: 119px;
+        background-color: #d3d3d3;
+        font-size: 12px;
+        padding: 2px 5px;
+    }
+
+    .location-website{
         margin-left: 3%;
         display: flex;
         align-items: center;
@@ -2247,6 +2518,21 @@
 
     .mapnav-location-website i{
         color: #5f685d;
+    }
+
+    .mapnav-location-website{
+        position: relative;
+    }
+
+    .mapnav-no-website{
+        display: none;
+        position: absolute;
+        left: 23px;
+        top: 0px;
+        width: 120px;
+        background-color: #d3d3d3;
+        font-size: 12px;
+        padding: 2px 5px;
     }
 
     .mapnav-location-image{
@@ -2500,10 +2786,10 @@
     }
 
     .popupCustom .leaflet-popup-content-wrapper {
-        min-width: 240px;
-        max-width: 240px;
-        min-height: 350px; 
-        max-height: 350px; 
+        min-width: 250px;
+        max-width: 250px;
+        min-height: 380px; 
+        max-height: 380px; 
         overflow-y: auto; 
     }
 
@@ -2517,7 +2803,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 12%;
+        height: 340px;
     }
 
     .weather-summary{
@@ -2527,8 +2813,8 @@
     }
 
     .weather-icon{
-        width: 100px;
-        height: 100px;
+        width: 180px;
+        height: 180px;
         background-size: cover;
     }
     
@@ -2536,8 +2822,8 @@
         font-size: 30px;
         font-weight: bolder;
         color: #77B1E6;
+        margin-bottom: 20px;
     }
-
 
     /* information content */
     .information-content{
@@ -2546,14 +2832,22 @@
     }
 
     .info-image{
-        width: 230px;
-        height: 130px;
-        background-size: cover;
+        width: 100%;
+        height: 140px;
+        margin: 10px 0px 6px 0px;
+    }
+
+    .info-image img{
+        max-width: 100%; 
+        max-height: 140px;
+        min-width: 100%; 
+        min-height: 140px;
+        
     }
 
     .info-name{
         font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
 
     .info-button{
@@ -2573,16 +2867,46 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1.5px solid #5f685d;
+        border: 1px solid #5f685d;
         border-radius: 50%;
         width: 30px;
         height: 30px;
         margin-bottom: 2px;
+        color: #5f685d;
+    }
+
+    .button-item-icon:hover{
+        cursor: pointer;
+        background-color: rgba(95,104,93,0.5);
+        border: none;
+        color: white;
+    }
+
+    .button-no-website-icon:hover{
+        cursor: auto;
+        background-color: transparent;
+        border: 1px solid #5f685d;
+        color: #5f685d;
+    }
+
+    .button-item-icon a:hover{
+        color: white;
+    }
+
+    .button-item-icon a{
+        text-decoration: none;
+        color: #5f685d;
+    }
+
+    .button-item-icon a i{
+        font-size: 16px
     }
 
     .button-item-text{
         font-size: 10px;
         font-style: italic;
+        color: #5f685d;
+        font-weight: 500;
     }
 
     .description-item{
@@ -2592,5 +2916,9 @@
 
     .description-icon{
         margin-right: 10px
+    }
+
+    .description-text{
+        font-size: 12px;
     }
 }

@@ -152,7 +152,15 @@ function renderLocation(data){
         if (location.website != "nil"){
             childElement.querySelector("a").innerHTML = `<i class="bi bi-link-45deg"></i>`;
         } else{
-            childElement.querySelector("a").innerHTML = `<i class="bi bi-exclamation-circle"></i>`
+            childElement.querySelector(".location-website").innerHTML = `<i class="bi bi-exclamation-circle"></i>
+                                                                            <div class="location-no-website">No website available</div>`
+            childElement.querySelector(".location-website").addEventListener("mouseover", function(){
+                childElement.querySelector(".location-no-website").style.display = "block";
+            })
+
+            childElement.querySelector(".location-website").addEventListener("mouseout", function(){
+                childElement.querySelector(".location-no-website").style.display = "none";
+            })
         };
 
         childElement.querySelector(".location-image").style.backgroundImage = `url(${location.image})`
@@ -300,7 +308,15 @@ function createMapNavItem(location){
     if (location.website != "nil"){
         childElement.querySelector("a").innerHTML = `<i class="bi bi-link-45deg"></i>`;
     } else{
-        childElement.querySelector("a").innerHTML = `<i class="bi bi-exclamation-circle"></i>`
+        childElement.querySelector(".mapnav-location-website").innerHTML = `<i class="bi bi-exclamation-circle"></i>
+                                                                            <div class="mapnav-no-website">No website available</div>`
+        childElement.querySelector(".mapnav-location-website").addEventListener("mouseover", function(){
+            childElement.querySelector(".mapnav-no-website").style.display = "block";
+        })
+
+        childElement.querySelector(".mapnav-location-website").addEventListener("mouseout", function(){
+            childElement.querySelector(".mapnav-no-website").style.display = "none";
+        })
     };
 
     childElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(${location.image})`;
@@ -321,17 +337,54 @@ function createLocationMarker(d, url, type){
 
     if (type == "drama"){
         locationMarker = L.marker([d.latitude, d.longitude], {icon: locationIcon});
-
-        createCustomPopup(d.latitude, d.longitude, d.image, d.name, d.address, locationMarker);
+        const data = {
+            "lat": d.latitude,
+            "lng": d.longitude,
+            "image": d.image,
+            "name": d.name,
+            "website": d.website,
+            "category": "Drama Filming Location",
+            "address": d.address,
+            "open": "Very Likely Open"
+        }
+        createCustomPopup(data, locationMarker);
     } else {
         locationMarker = L.marker([d.geocodes.main.latitude, d.geocodes.main.longitude], {icon: locationIcon});
-        createCustomPopup(d.geocodes.main.latitude, d.geocodes.main.longitude, d.name, d.location.formatted_address, locationMarker);
+        const data = {
+            "lat": d.geocodes.main.latitude,
+            "lng": d.geocodes.main.longitude,
+            "image": d.image,
+            "name": d.name,
+            "website": "nil",
+            "category": d.categories[0].name,
+            "address": d.location.formatted_address,
+            "open": d.closed_bucket.match(/[A-Z][a-z]+|[0-9]+/g).join(" ")
+        }
+        createCustomPopup(data, locationMarker);
     }
 
     return locationMarker;
 }
 
-function createCustomPopup(lat, lng, image, name, address, locationMarker){
+function createCustomPopup(data, locationMarker){
+    // got website
+    let websiteDiv = ``;
+    if (data.website != "nil"){
+        websiteDiv =    `<div class="button-item">
+                            <div class="button-item-icon">
+                                <a href="${data.website}"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                            <div class="button-item-text">Website</div>
+                        </div>`
+    } else {
+        websiteDiv =    `<div class="button-item">
+                            <div class="button-item-icon button-no-website-icon">
+                                <i class="bi bi-exclamation-lg"></i>
+                            </div>
+                            <div class="button-item-text">No Website</div>
+                        </div>`;
+    }
+
     // customizing popup
     const customPopup = `
         <div id="popup-tab">
@@ -340,21 +393,18 @@ function createCustomPopup(lat, lng, image, name, address, locationMarker){
         </div>
         <div id="popup-content">
             <div class="location-lat-lng">
-                <div class="lat">${lat}</div>
-                <div class="lng">${lng}</div>
+                <div class="lat">${data.lat}</div>
+                <div class="lng">${data.lng}</div>
             </div>
             <div class="information-content">
-                <div class="info-image"></div>
-                <div class="info-name">${name}</div>
+                <div class="info-image"><img src="${data.image}"/></div>
+                <div class="info-name">${data.name}</div>
                 <div class="info-button">
                     <div class="button-item">
                         <div class="button-item-icon"><i class="bi bi-signpost-2"></i></div>
                         <div class="button-item-text">Directions</div>
                     </div> 
-                    <div class="button-item">
-                        <div class="button-item-icon"><i class="bi bi-link-45deg"></i></div>
-                        <div class="button-item-text">Website</div>
-                    </div>
+                    ${websiteDiv}
                     <div class="button-item">
                         <div class="button-item-icon"><i class="bi bi-bookmarks"></i></div>
                         <div class="button-item-text">Save</div>
@@ -363,15 +413,15 @@ function createCustomPopup(lat, lng, image, name, address, locationMarker){
                 <div class="info-description">
                     <div class="description-item">
                         <div class="description-icon"><i class="bi bi-tags"></i></div>
-                        <div>Mountain</div>
+                        <div class="description-text">${data.category}</div>
                     </div> 
                     <div class="description-item">
                         <div class="description-icon"><i class="bi bi-geo-alt"></i></div>
-                        <div>${address}</div>
+                        <div class="description-text">${data.address}</div>
                     </div>
                     <div class="description-item">
                         <div class="description-icon"><i class="bi bi-clock-history"></i></div>
-                        <div>Open</div>
+                        <div class="description-text">${data.open}</div>
                     </div>
                 </div>
             </div>
@@ -608,12 +658,18 @@ function renderSearchNav(map, data){
                     resultBoxDiv.appendChild(divElement);
 
                     const imageResult = await getPhoto(d.fsq_id);
+                    let imageURL = "image/map/no-image.png";
                     if (imageResult.length != 0){
-                        const imageURL = `${imageResult[0].prefix}80x80${imageResult[0].suffix}`;
+                        imageURL = `${imageResult[0].prefix}80x80${imageResult[0].suffix}`;
                         divElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(${imageURL})`;
+                        imageURL = `${imageResult[0].prefix}225x140${imageResult[0].suffix}`;
                     } else {
-                        divElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(image/map/no-image.png))`;
+                        divElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(${imageURL})`;
+                        imageURL = "image/map/no-image-landscape.png";
                     }
+
+                    // adding image result to d object
+                    d.image = imageURL
 
                     // plot markers
                     const locationMarker = createLocationMarker(d, `${selectedSearchCategory}-marker.png`, "search");
@@ -680,7 +736,7 @@ function navSearchEventListener(map, data){
 
 // search item click
 function onSearchItemClick(map, lat, lng, locationMarker){
-    const adjustedLat = lat + 0.003;
+    const adjustedLat = lat + 0.004;
     map.flyTo([adjustedLat, lng], 16);
     locationMarker.openPopup();
     document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-right-fill"></i>`;
