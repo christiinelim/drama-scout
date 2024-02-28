@@ -2942,4 +2942,36 @@
         border-radius: 5% !important;
     }
 
+    /* remove layer button */
+     /*
+    .search-category-label{
+        display: flex !important;
+        justify-content: space-between;
+    }
+
+    .search-category-label span{
+        width: 90%;
+        padding-left: 3px;
+    }
+
+    .remove-layer-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .remove-layer-btn {
+        font-size: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border: 1.5px solid #98A296;
+        padding: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        color: #98A296;
+    }
+    */
 }

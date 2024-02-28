@@ -638,6 +638,107 @@ function renderSearchNav(map, data){
             }
 
             if (data.results.length != 0){
+                let layerExists = true;
+                if (!searchLayers[selectedSearchCategory]) {
+                    searchLayers[selectedSearchCategory] = L.layerGroup().addTo(map);
+                    layerExists = false;
+                }
+
+                for (let d of data.results){
+                    divElement = document.createElement("div");
+                    divElement.innerHTML = `
+                        <div class="mapnav-item-container row">
+                            <div class="mapnav-rest-contatiner col-9">
+                                <div class="mapnav-location-description-container row">
+                                    <div class="mapnav-location-name">${d.name}</div>
+                                    <div class="mapnav-location-address">${d.location.formatted_address}</div>
+                                    <div class="mapnav-province-website">
+                                        <div class="mapnav-location-province">${d.location.region}, ${d.location.post_town} (${d.closed_bucket.match(/[A-Z][a-z]+|[0-9]+/g).join(" ")})</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mapnav-location-image-container col-3">
+                                <div class="mapnav-location-image"></div>
+                            </div>
+                        </div>
+                    `
+                    resultBoxDiv.appendChild(divElement);
+
+                    const imageResult = await getPhoto(d.fsq_id);
+                    let imageURL = "image/map/no-image.png";
+                    if (imageResult.length != 0){
+                        imageURL = `${imageResult[0].prefix}80x80${imageResult[0].suffix}`;
+                        divElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(${imageURL})`;
+                        imageURL = `${imageResult[0].prefix}225x140${imageResult[0].suffix}`;
+                    } else {
+                        divElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(${imageURL})`;
+                        imageURL = "image/map/no-image-landscape.png";
+                    }
+
+                    // adding image result to d object
+                    d.image = imageURL
+
+                    // plot markers
+                    const locationMarker = createLocationMarker(d, `${selectedSearchCategory}-marker.png`, "search");
+                    
+                    locationMarker.addTo(searchLayers[selectedSearchCategory]);
+
+                    divElement.querySelector(".mapnav-item-container").addEventListener("click", function(){
+                        onSearchItemClick(map, d.geocodes.main.latitude, d.geocodes.main.longitude, locationMarker);
+                    })
+                }
+
+                // add  layer to the groupedLayerControl if new
+                if (!layerExists) {
+                    groupedLayerControl.addOverlay(searchLayers[selectedSearchCategory], selectedSearchCategory, "Search");
+                    const lastLabel = document.querySelector('#leaflet-control-layers-group-1 label:last-child');
+                    // removeLayerButton(map, searchLayers, selectedSearchCategory, lastLabel);
+                }
+
+            } else{
+                document.querySelector("#error-text").innerHTML = "Sorry no match found";
+                document.querySelector("#error-alert").classList.add("visible");
+                setTimeout(function(){
+                    document.querySelector("#error-alert").classList.remove("visible");
+                }, 1500);
+            }
+        }
+
+        sessionToken = `acbehdoandduurrbofjsowmeomd` + Math.floor(Math.random() * 100000);
+    })
+
+    /*
+    document.querySelector("#mapnav-search-icon").addEventListener("click", async function(){
+        const searchTerm = document.querySelector("#input-text").value;
+        const selectedSearchCategory = document.querySelector("#selected-category").innerHTML;
+        const searchCategoryID = loadSearchCategoryID();
+        const searchCategory = searchCategoryID[selectedSearchCategory];
+
+        if (searchTerm == ""){
+            document.querySelector("#error-text").innerHTML = "Please give an input";
+            document.querySelector("#error-alert").classList.add("visible");
+            setTimeout(function(){
+                document.querySelector("#error-alert").classList.remove("visible");
+            }, 1500);
+        } else {
+            resetSearchField();
+            const latLngSearchLocation = document.querySelector("#select-location").value;
+            const resultBoxDiv = document.querySelector("#mapnav-result-box");
+            resultBoxDiv.innerHTML = ``;
+            let data = null;
+
+            if (latLngSearchLocation == "centre"){
+                const centerPoint = map.getBounds().getCenter();
+                const searchLatLng = centerPoint.lat + "," + centerPoint.lng;
+                data = await search(searchTerm, searchLatLng, searchCategory);
+            } else {
+                const provinceLatLng = loadProvinceLatLng();
+                const searchLatLng = provinceLatLng[latLngSearchLocation];
+                data = await search(searchTerm, searchLatLng, searchCategory);      
+            }
+
+            if (data.results.length != 0){
                 if (!searchLayers[selectedSearchCategory]) {
                     searchLayers[selectedSearchCategory] = L.layerGroup().addTo(map);
                 }
@@ -687,9 +788,6 @@ function renderSearchNav(map, data){
                     })
                 }
 
-                console.log("Selected Search Category:", selectedSearchCategory);
-                console.log("Layers in groupedLayerControl:", groupedLayerControl._layers);
-
                 let layerExists = false;
 
                 for (let layer of groupedLayerControl._layers) {
@@ -702,12 +800,30 @@ function renderSearchNav(map, data){
                 // add  layer to the groupedLayerControl if new
                 if (!layerExists) {
                     groupedLayerControl.addOverlay(searchLayers[selectedSearchCategory], selectedSearchCategory, "Search");
-                    console.log("if");
                 } else {
                     map.removeControl(groupedLayerControl);
                     groupedLayerControl.addTo(map);
-                    console.log("else");
                 }
+
+                // const checkboxes = document.querySelectorAll('.leaflet-control-layers-selector');
+                // console.log(checkboxes)
+
+                // checkboxes.forEach(checkbox => {
+                //     const label = checkbox.parentNode;
+                //     const button = document.createElement('button');
+                //     button.className = 'remove-layer-btn';
+                //     button.textContent = 'X';
+                //     label.appendChild(button);
+                
+                //     button.addEventListener('click', function(event) {
+                //         event.preventDefault(); // Prevent the default behavior of the button
+                //         const button = event.target;
+                //         const label = button.parentNode;
+                //         const checkbox = label.querySelector('.leaflet-control-layers-selector');
+                //         checkbox.checked = false;
+                //         label.parentNode.removeChild(label); // Remove the entire label
+                //     });
+                // });
 
             } else{
                 document.querySelector("#error-text").innerHTML = "Sorry no match found";
@@ -716,12 +832,75 @@ function renderSearchNav(map, data){
                     document.querySelector("#error-alert").classList.remove("visible");
                 }, 1500);
             }
-
         }
 
         sessionToken = `acbehdoandduurrbofjsowmeomd` + Math.floor(Math.random() * 100000);
     })
+    */
 }
+
+// toggle layer remove search layer
+/*
+function removeLayerButton(map, searchLayers, selectedSearchCategory, lastLabel) {
+    const checkbox = lastLabel.querySelector('.leaflet-control-layers-selector');
+    const label = checkbox.parentNode;
+    const buttonDiv = document.createElement('div');
+    buttonDiv.className = "remove-layer-div";
+    const button = document.createElement('button');
+    button.className = "remove-layer-btn";
+    button.textContent = 'X';
+    buttonDiv.appendChild(button);
+    label.appendChild(buttonDiv);
+
+    label.classList.add("search-category-label");
+
+    button.addEventListener('click', function(event) {
+        event.preventDefault();
+        // const clickedButton = event.target;
+        // const buttonDiv = clickedButton.parentNode;
+        // const label = buttonDiv.parentNode;
+        // const checkbox = label.querySelector('.leaflet-control-layers-selector');
+
+        // // Check if the category layer exists in searchLayers
+        // if (searchLayers[selectedSearchCategory]) {
+        //     // Remove only the markers associated with the selected category layer
+        //     searchLayers[selectedSearchCategory].clearLayers();
+        //     delete searchLayers[selectedSearchCategory];
+        // }
+
+        // // Remove the label
+        // label.parentNode.removeChild(label);
+        alert("hello")
+    });
+
+    // Toggle visibility of markers when checkbox is checked/unchecked
+    checkbox.addEventListener('change', function(event) {
+        const isChecked = event.target.checked;
+        const selectedCategoryLayer = searchLayers[selectedSearchCategory];
+        if (isChecked && selectedCategoryLayer) {
+            // Add the layer back to the map
+            selectedCategoryLayer.addTo(map);
+        } else {
+            // Remove the layer from the map
+            if (selectedCategoryLayer) {
+                map.removeLayer(selectedCategoryLayer);
+            }
+        }
+    });
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 // change icon of nav on click
 function changeIcon(divElement, activeClass, inactiveArray){
