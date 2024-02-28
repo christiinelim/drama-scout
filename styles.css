@@ -686,7 +686,7 @@
     #search-category-container{
         display: flex;
         justify-content: center;
-        margin: 40px 0px 20px 0px;
+        margin: 40px 0px 30px 0px;
         gap: 5%;
     }
 
@@ -998,6 +998,131 @@
 
     .description-text{
         font-size: 10px;
+    }
+
+    /* toggle map search layer */
+    .leaflet-touch .leaflet-control-layers{
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 50%;
+        border: none !important;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    }
+    .leaflet-touch .leaflet-control-layers-toggle{
+        border-radius: 50% !important;
+    }
+
+    .leaflet-retina .leaflet-control-layers-toggle{
+        background-image: url(image/toggle-layer/toggle-image.png) !important;
+        background-size: 16px 16px !important;
+        width: 35px;
+        height: 35px;
+    }
+
+    .leaflet-control-layers-expanded{
+        border-radius: 5% !important;
+    }
+
+
+
+
+    /* wishlist */
+    #wishlist-container{
+        position: relative;
+        margin: 30px 40px;
+    }
+
+    #wishlist-map{
+        display: flex;
+        height: 600px;
+        border-radius: 10px;
+        border: 0.5px solid lightgrey;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    }
+
+    #wishlist-nav{
+        display: flex;
+        position: absolute;
+        z-index: 10000;
+        top: 0;
+    }
+
+    #wishlist-list{
+        background-color: white;
+        box-shadow: 1px 0px 4px 0px rgba(0,0,0,0.2);
+        height: 600px;
+        width: 280px;
+        overflow: auto;
+        border-radius: 10px 0px 10px 10px;
+        padding: 0px;
+        transition: width 1s ease-out;
+    }
+
+    #wishlist-nav-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        background-color: #98A296;
+        color: white;
+        width: 20px;
+        height: 20px;
+        border-radius: 0px 5px 5px 0px;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    }
+
+    #wishlist-nav-icon:hover{
+        cursor: pointer;
+        background-color: #f2f2f2;
+        color: #98A296;
+    }
+
+    #wishlist-tab{
+        display: flex;
+        background-color: #98A296;
+        height: 30px;
+        border-radius: 999px;
+        justify-content: center;
+        align-items: center;
+        padding: 3.5px;
+        justify-content: space-between;
+        margin: 30px 40px 10px 40px;
+    }
+
+    .wishlist-tab-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        border-radius: 999px;
+        font-weight: bold;
+        width: 49%;
+        color: white;
+    }
+
+    .wishlist-tab-item:hover{
+        background-color: #f2f2f2;
+        color: #5f685d;
+        cursor: pointer;
+    }
+
+    .wishlist-active-tab {
+        background-color: #f2f2f2;
+        color: #5f685d;
+    }
+    
+    .wishlist-inactive-tab {
+        background-color: #98A296;
+        color: white;
+    }
+
+    #wishlistnav-container{
+        display: none;
+    }
+
+    #wishlistnav-inner-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -1958,6 +2083,124 @@
 
     .description-text{
         font-size: 11px;
+    }
+
+    /* toggle map search layer */
+    .leaflet-touch .leaflet-control-layers{
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 50%;
+        border: none !important;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    }
+    .leaflet-touch .leaflet-control-layers-toggle{
+        border-radius: 50% !important;
+    }
+
+    .leaflet-retina .leaflet-control-layers-toggle{
+        background-image: url(image/toggle-layer/toggle-image.png) !important;
+        background-size: 18px 18px !important;
+        width: 40px;
+        height: 40px;
+    }
+
+    .leaflet-control-layers-expanded{
+        border-radius: 5% !important;
+    }
+
+
+
+    /* wishlist */
+    #wishlist-container{
+        position: relative;
+        margin: 30px 40px;
+    }
+
+    #wishlist-map{
+        display: flex;
+        height: 600px;
+        border-radius: 10px;
+        border: 0.5px solid lightgrey;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    }
+
+    #wishlist-nav{
+        display: flex;
+        position: absolute;
+        z-index: 10000;
+        top: 0;
+    }
+
+    #wishlist-list{
+        background-color: white;
+        box-shadow: 1px 0px 4px 0px rgba(0,0,0,0.2);
+        height: 600px;
+        width: 400px;
+        overflow: auto;
+        border-radius: 10px 0px 10px 10px;
+        padding: 0px;
+        transition: width 1s ease-out;
+    }
+
+    #wishlist-nav-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        background-color: #98A296;
+        color: white;
+        width: 25px;
+        height: 25px;
+        border-radius: 0px 5px 5px 0px;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    }
+
+    #wishlist-nav-icon:hover{
+        cursor: pointer;
+        background-color: #f2f2f2;
+        color: #98A296;
+    }
+
+    #wishlist-tab{
+        display: flex;
+        background-color: #98A296;
+        height: 35px;
+        border-radius: 999px;
+        justify-content: center;
+        align-items: center;
+        padding: 3.5px;
+        justify-content: space-between;
+        margin: 30px 50px 10px 50px;
+    }
+
+    .wishlist-tab-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        border-radius: 999px;
+        font-weight: bold;
+        width: 49%;
+        color: white;
+    }
+
+    .wishlist-tab-item:hover{
+        background-color: #f2f2f2;
+        color: #5f685d;
+        cursor: pointer;
+    }
+
+    .wishlist-active-tab {
+        background-color: #f2f2f2;
+        color: #5f685d;
+    }
+    
+    .wishlist-inactive-tab {
+        background-color: #98A296;
+        color: white;
+    }
+
+    #wishlistnav-container{
+        display: none;
     }
 }
 
@@ -2974,4 +3217,100 @@
         color: #98A296;
     }
     */
+
+
+
+    /* wishlist */
+    #wishlist-container{
+        position: relative;
+        margin: 30px 40px;
+    }
+
+    #wishlist-map{
+        display: flex;
+        height: 600px;
+        border-radius: 10px;
+        border: 0.5px solid lightgrey;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    }
+
+    #wishlist-nav{
+        display: flex;
+        position: absolute;
+        z-index: 10000;
+        top: 0;
+    }
+
+    #wishlist-list{
+        background-color: white;
+        box-shadow: 1px 0px 4px 0px rgba(0,0,0,0.2);
+        height: 600px;
+        width: 400px;
+        overflow: auto;
+        border-radius: 10px 0px 10px 10px;
+        padding: 0px;
+        transition: width 1s ease-out;
+    }
+
+    #wishlist-nav-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        background-color: #98A296;
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 0px 5px 5px 0px;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    }
+
+    #wishlist-nav-icon:hover{
+        cursor: pointer;
+        background-color: #f2f2f2;
+        color: #98A296;
+    }
+
+    #wishlist-tab{
+        display: flex;
+        background-color: #98A296;
+        height: 40px;
+        border-radius: 999px;
+        justify-content: center;
+        align-items: center;
+        padding: 3.5px;
+        justify-content: space-between;
+        margin: 30px 40px 20px 40px;
+    }
+
+    .wishlist-tab-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        border-radius: 999px;
+        font-weight: bold;
+        width: 49%;
+        color: white;
+    }
+
+    .wishlist-tab-item:hover{
+        background-color: #f2f2f2;
+        color: #5f685d;
+        cursor: pointer;
+    }
+
+    .wishlist-active-tab {
+        background-color: #f2f2f2;
+        color: #5f685d;
+    }
+    
+    .wishlist-inactive-tab {
+        background-color: #98A296;
+        color: white;
+    }
+
+    #wishlistnav-container{
+        display: none;
+    }
 }
