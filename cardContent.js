@@ -217,6 +217,7 @@ function renderLocationNav(map, data){
     renderMapNavItems(map, data);
 }
 
+
 function renderMapNavItems(map, data){
     const divElement = document.querySelector("#mapnav-container");
 
@@ -282,6 +283,7 @@ function renderMapNavItems(map, data){
         }
     });
 }
+
 
 function createMapNavItem(location){
     let childElement = document.createElement("div");
@@ -636,6 +638,10 @@ function renderSearchNav(map, data){
             }
 
             if (data.results.length != 0){
+                if (!searchLayers[selectedSearchCategory]) {
+                    searchLayers[selectedSearchCategory] = L.layerGroup().addTo(map);
+                }
+
                 for (let d of data.results){
                     divElement = document.createElement("div");
                     divElement.innerHTML = `
@@ -673,10 +679,6 @@ function renderSearchNav(map, data){
 
                     // plot markers
                     const locationMarker = createLocationMarker(d, `${selectedSearchCategory}-marker.png`, "search");
-
-                    if (!searchLayers[selectedSearchCategory]) {
-                        searchLayers[selectedSearchCategory] = L.layerGroup().addTo(map);
-                    } 
                     
                     locationMarker.addTo(searchLayers[selectedSearchCategory]);
 
@@ -685,11 +687,27 @@ function renderSearchNav(map, data){
                     })
                 }
 
-                if (searchLayers.hasOwnProperty(selectedSearchCategory)) {
-                    groupedLayerControl.addOverlay(searchLayers[selectedSearchCategory], selectedSearchCategory, "Search");
+                console.log("Selected Search Category:", selectedSearchCategory);
+                console.log("Layers in groupedLayerControl:", groupedLayerControl._layers);
+
+                let layerExists = false;
+
+                for (let layer of groupedLayerControl._layers) {
+                    if (layer.name === selectedSearchCategory) {
+                        layerExists = true;
+                        break; 
+                    }
                 }
-                
-                groupedLayerControl.addTo(map);
+
+                // add  layer to the groupedLayerControl if new
+                if (!layerExists) {
+                    groupedLayerControl.addOverlay(searchLayers[selectedSearchCategory], selectedSearchCategory, "Search");
+                    console.log("if");
+                } else {
+                    map.removeControl(groupedLayerControl);
+                    groupedLayerControl.addTo(map);
+                    console.log("else");
+                }
 
             } else{
                 document.querySelector("#error-text").innerHTML = "Sorry no match found";

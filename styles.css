@@ -2921,4 +2921,25 @@
     .description-text{
         font-size: 12px;
     }
+
+    /* toggle map search layer */
+    .leaflet-touch .leaflet-control-layers{
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 50%;
+        border: none !important;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    }
+    .leaflet-touch .leaflet-control-layers-toggle{
+        border-radius: 50% !important;
+    }
+
+    .leaflet-retina .leaflet-control-layers-toggle{
+        background-image: url(image/toggle-layer/toggle-image.png) !important;
+        background-size: 20px 20px !important;
+    }
+
+    .leaflet-control-layers-expanded{
+        border-radius: 5% !important;
+    }
+
 }
