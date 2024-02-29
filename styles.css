@@ -709,7 +709,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 280px;
     }
 
     #mapnav-searchbar-border{
@@ -768,7 +768,11 @@
     }
 
     /* select location */
-    #mapnav-container{
+    #mapnav-search-container{
+        display: none;
+    }
+
+    #mapnav-small-container{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1857,6 +1861,10 @@
     }
 
     /* select location */
+    #mapnav-search-container{
+        display: none;
+    }
+
     #select-location-container{
         position: relative;
         display: flex;
@@ -2936,6 +2944,10 @@
     }
 
     /* select location */
+    #mapnav-search-container{
+        display: none;
+    }
+    
     #select-location-container{
         position: relative;
         display: flex;

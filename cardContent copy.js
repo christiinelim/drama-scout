@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", async function(){
     document.querySelector("#location-list-tab").addEventListener("click", function(){
         // reset location list
         resetLocationList(data[id]);
-        document.querySelector("#mapnav-search-container").style.display = "none"
 
         document.querySelector("#location-list-tab").style.borderBottom = "2px solid black";
         document.querySelector("#map-tab").style.borderBottom = "";
@@ -60,13 +59,24 @@ document.addEventListener("DOMContentLoaded", async function(){
     });
 
     document.querySelector("#map-tab").addEventListener("click", function(){
-        mapnavList();
+        document.querySelector("#map-tab").style.borderBottom = "2px solid black";
+        document.querySelector("#location-list-tab").style.borderBottom = "none";
 
-        renderMapNavItems(map, data[id]);
+        // changing tab container
+        document.querySelector("#map").style.display = "flex";
+        document.querySelector("#tab-container").style.position = "relative";
+        document.querySelector("#location-list").classList.add("shrink");
+        document.querySelector("#location-nav").classList.add("location-nav-class");
+        document.querySelector("#nav-icon").style.display = "flex";  
+
+        // create nav tab
+        document.querySelector("#mapnav-tab").style.display = "flex";
+
+        renderLocationNav(map, data[id]);
 
         // clicking on nav-location
         document.querySelector("#mapnav-location-tab").addEventListener("click", function(){
-            navLocationEventListener();
+            navLocationEventListener(map, data[id]);
         })
 
         // clicking on nav-search
@@ -74,6 +84,8 @@ document.addEventListener("DOMContentLoaded", async function(){
             navSearchEventListener(map, data[id]);
         })
     });
+
+    
 
     // nav arrow
     document.querySelector("#nav-icon").addEventListener("click", function(){
@@ -85,8 +97,8 @@ document.addEventListener("DOMContentLoaded", async function(){
             document.querySelector("#location-list").classList.remove("close");
         }
     });
-    
 })
+
 
 // card content page
 function displayCardContentPage(data){
@@ -96,13 +108,12 @@ function displayCardContentPage(data){
     document.querySelector("#genre").innerHTML = `<i class="bi bi-tags-fill"></i>${data.genre}`;
 
     document.querySelector("#drama-image").style.backgroundImage = `url(${data.dramaImage})`;
-    renderLocation(data);
+    let locationLists = renderLocation(data);
+    document.querySelector("#location-list").appendChild(locationLists);
 }
 
 // generate location list
 function renderLocation(data){
-    parentElement = document.querySelector("#location-list-tab-container");
-    parentElement.innerHTML = ``;
     divElement = document.createElement("div");
     divElement.classList.add("row");
 
@@ -148,124 +159,57 @@ function renderLocation(data){
 
     }
 
-    parentElement.appendChild(divElement)
+    return divElement
 }
 
 // reset location list
 function resetLocationList(data){
-    document.querySelector("#location-list-tab-container").style.display = "block";
-    document.querySelector("#map-tab-container"). style.display = "none";
-    
-    document.querySelector("#map-tab-container").innerHTML = `
-        <div id="mapnav-tab" class="row">
-            <div id="mapnav-location-tab" class="mapnav-tab-item active-tab col-6">Location</div>
-            <div id="mapnav-search-tab" class="mapnav-tab-item col-6">Search</div>
-        </div>
-        <div id="mapnav-container">
-            <div id="mapnav-location-container">
-
+    document.querySelector("#location-list").innerHTML = `
+        <div>
+            <div id="mapnav-tab" class="row">
+                <div id="mapnav-location-tab" class="mapnav-tab-item active-tab col-6">Location</div>
+                <div id="mapnav-search-tab" class="mapnav-tab-item col-6">Search</div>
             </div>
-            <div id="mapnav-search-container">
-                <div id="search-category-container">
-                    <div id="selected-category">Attractions</div>
-                    <div class="search-category">
-                        <div id="attractions-pic" class="search-category-icon attractions-pic-active"></div>
-                        <div class="search-category-name">Attractions</div>
-                    </div>
-                    <div class="search-category">
-                        <div id="art-pic" class="search-category-icon"></div>
-                        <div class="search-category-name">Art</div>
-                    </div>
-                    <div class="search-category">
-                        <div id="food-pic" class="search-category-icon"></div>
-                        <div class="search-category-name">Food</div>
-                    </div>
-                    <div class="search-category">
-                        <div id="shopping-pic" class="search-category-icon"></div>
-                        <div class="search-category-name">Shopping</div>
-                    </div>
-                </div>
-        
-                <div id="select-location-container">
-                    <div id="select-location-icon"><i class="bi bi-geo-alt"></i></div>
-                    <div id="select-location-dropdown">
-                        <select id="select-location">
-                            <option value="centre">Centre of Map</option>
-                            <option value="southkorea">South Korea</option>
-                            <option value="seoul">Seoul</option>
-                            <option value="busan">Busan</option>
-                            <option value="daegu">Daegu</option>
-                            <option value="incheon">Incheon</option>
-                            <option value="gwangju">Gwangju</option>
-                            <option value="daejeon">Daejeon</option>
-                            <option value="ulsan">Ulsan</option>
-                            <option value="gyeonggido">Gyeonggi-do</option>
-                            <option value="gangwondo">Gangwon-do</option>
-                            <option value="chungcheongbukdo">Chungcheongbuk-do</option>
-                            <option value="chungcheongnamdo">Chungcheongnam-do</option>
-                            <option value="jeollabukdo">Jeollabuk-do</option>
-                            <option value="jeollanamdo">Jeollanam-do</option>
-                            <option value="gyeongsangbukdo">Gyeongsangbuk-do</option>
-                            <option value="gyeongsangnamdo">Gyeongsangnam-do</option>
-                            <option value="jejudo">Jeju-do</option> 
-                        </select>
-                    </div>
-                </div>
-        
-                <div id="mapnav-searchbar">
-                    <div id="mapnav-searchbar-border" class="row">
-                        <div id="mapnav-search-input" class="col-9">
-                            <input id="input-text" type="text" placeholder="Search a place"/>
-                        </div>
-                        <div id="mapnav-x-icon" class="col-2">
-                            <i id="mapnav-x-i" class="bi bi-x-lg"></i>
-                        </div>
-                        <div id="mapnav-search-icon" class="col-1">
-                            <i class="bi bi-search"></i>
-                        </div>
-                    </div>
-                    <div id="mapnav-search-suggestion">
-                        <ul id="mapnav-search-suggestion-list"> 
-                        </ul>
-                    </div>
-                    <div id="mapnav-result-box">
-                    </div>
-                </div>
-                <div id="error-alert">
-                    <div id="error-content">
-                        <div id="error-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
-                        <div id="error-text">Please give an input</div>
-                    </div>
-                </div>
+            <div id="mapnav-container">
             </div>
         </div>
-    `
+    `;
+    let locationLists = renderLocation(data);
+    document.querySelector("#location-list").appendChild(locationLists);
 }
 
-// show mapnav 
-function mapnavList(){
-    // hide location list tab container 
-    document.querySelector("#location-list-tab-container").style.display = "none";
-    document.querySelector("#map-tab-container"). style.display = "block";
+function renderLocationNav(map, data){
+    document.querySelector("#location-list").innerHTML = `
+        <div>
+            <div id="mapnav-tab" class="row">
+                <div id="mapnav-location-tab" class="mapnav-tab-item active-tab col-6">Location</div>
+                <div id="mapnav-search-tab" class="mapnav-tab-item col-6">Search</div>
+            </div>
+            <div id="mapnav-container">
+            </div>
+        </div>    
+    `;
 
-    document.querySelector("#map-tab").style.borderBottom = "2px solid black";
-    document.querySelector("#location-list-tab").style.borderBottom = "none";
+    document.querySelector("#mapnav-tab").addEventListener("click", function(event) {
 
-    // changing tab container
-    document.querySelector("#map").style.display = "flex";
-    document.querySelector("#tab-container").style.position = "relative";
-    document.querySelector("#location-list").classList.add("shrink");
-    document.querySelector("#location-nav").classList.add("location-nav-class");
-    document.querySelector("#nav-icon").style.display = "flex";  
+        
+        const target = event.target;
+        if (target.id == "mapnav-location-tab") {
+            navLocationEventListener(map, data);
+        } else if (target.id == "mapnav-search-tab") {
+            navSearchEventListener(map, data);
+        }
+    });
 
-    // create nav tab
+    // display tabs container
     document.querySelector("#mapnav-tab").style.display = "flex";
+
+    renderMapNavItems(map, data);
 }
 
-// show location list in nav
+
 function renderMapNavItems(map, data){
-    const divElement = document.querySelector("#mapnav-location-container");
-    divElement.innerHTML = ``;
+    const divElement = document.querySelector("#mapnav-container");
 
     // for plotting markers
     let provinceLayers = {};
@@ -330,7 +274,7 @@ function renderMapNavItems(map, data){
     });
 }
 
-// create individual row of location data
+
 function createMapNavItem(location){
     let childElement = document.createElement("div");
 
@@ -372,7 +316,6 @@ function createMapNavItem(location){
     return childElement
 }
 
-// create location markers
 function createLocationMarker(d, url, type){
     let locationMarker = null;
 
@@ -415,7 +358,6 @@ function createLocationMarker(d, url, type){
     return locationMarker;
 }
 
-// create custom popup for each location marker
 function createCustomPopup(data, locationMarker){
     // got website
     let websiteDiv = ``;
@@ -496,41 +438,22 @@ function createCustomPopup(data, locationMarker){
     locationMarker.bindPopup(customPopup, customOptions);
 }
 
-// search item click
-function onSearchItemClick(map, lat, lng, locationMarker){
-    const adjustedLat = lat + 0.004;
-    map.flyTo([adjustedLat, lng], 16);
-    locationMarker.openPopup();
-    document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-right-fill"></i>`;
-    document.querySelector("#location-list").classList.add("close");
-}
+function togglePopupActiveTab(event){
+    // add active class style to clicked popup
+    event.target.classList.toggle("popup-tab-active");
 
-// nav search event listener
-function navSearchEventListener(map, data){
-    document.querySelector("#mapnav-search-tab").classList.add("active-tab");
-    document.querySelector("#mapnav-search-tab").classList.remove("inactive-tab");
-    document.querySelector("#mapnav-location-tab").classList.add("inactive-tab");
-    document.querySelector("#mapnav-location-tab").classList.remove("active-tab");
-
-    document.querySelector("#mapnav-location-container").style.display = "none";
-    document.querySelector("#mapnav-search-container").style.display = "block";
-
-    renderSearchNav(map, data);
-}
-
-// nav location event listener
-function navLocationEventListener(){
-    document.querySelector("#mapnav-location-tab").classList.add("active-tab");
-    document.querySelector("#mapnav-location-tab").classList.remove("inactive-tab");
-    document.querySelector("#mapnav-search-tab").classList.add("inactive-tab");
-    document.querySelector("#mapnav-search-tab").classList.remove("active-tab");
-
-    document.querySelector("#mapnav-location-container").style.display = "block";
-    document.querySelector("#mapnav-search-container").style.display = "none";
+    // remove from other tab
+    const otherPopupTabId = event.target.id == "popup-information" ? "popup-weather" : "popup-information";
+    const otherPopupTab = document.getElementById(otherPopupTabId);
+    otherPopupTab.classList.remove("popup-tab-active");
 }
 
 
-// search tab get results
+
+
+
+
+
 function renderSearchNav(map, data){
     document.querySelector("#mapnav-location-tab").addEventListener("click", function(){
         navLocationEventListener(map, data);
@@ -539,9 +462,84 @@ function renderSearchNav(map, data){
     // clicking on nav-search
     document.querySelector("#mapnav-search-tab").addEventListener("click", function(){
         navSearchEventListener(map, data);
-        document.querySelector("#mapnav-search-container").style.display = "block";
     })
     
+    divElement = document.querySelector("#mapnav-container");
+    divElement.innerHTML = ``;
+
+    divElement.innerHTML = `
+        <div id="search-category-container">
+            <div id="selected-category">Attractions</div>
+            <div class="search-category">
+                <div id="attractions-pic" class="search-category-icon attractions-pic-active"></div>
+                <div class="search-category-name">Attractions</div>
+            </div>
+            <div class="search-category">
+                <div id="art-pic" class="search-category-icon"></div>
+                <div class="search-category-name">Art</div>
+            </div>
+            <div class="search-category">
+                <div id="food-pic" class="search-category-icon"></div>
+                <div class="search-category-name">Food</div>
+            </div>
+            <div class="search-category">
+                <div id="shopping-pic" class="search-category-icon"></div>
+                <div class="search-category-name">Shopping</div>
+            </div>
+        </div>
+
+        <div id="select-location-container">
+            <div id="select-location-icon"><i class="bi bi-geo-alt"></i></div>
+            <div id="select-location-dropdown">
+                <select id="select-location">
+                    <option value="centre">Centre of Map</option>
+                    <option value="southkorea">South Korea</option>
+                    <option value="seoul">Seoul</option>
+                    <option value="busan">Busan</option>
+                    <option value="daegu">Daegu</option>
+                    <option value="incheon">Incheon</option>
+                    <option value="gwangju">Gwangju</option>
+                    <option value="daejeon">Daejeon</option>
+                    <option value="ulsan">Ulsan</option>
+                    <option value="gyeonggido">Gyeonggi-do</option>
+                    <option value="gangwondo">Gangwon-do</option>
+                    <option value="chungcheongbukdo">Chungcheongbuk-do</option>
+                    <option value="chungcheongnamdo">Chungcheongnam-do</option>
+                    <option value="jeollabukdo">Jeollabuk-do</option>
+                    <option value="jeollanamdo">Jeollanam-do</option>
+                    <option value="gyeongsangbukdo">Gyeongsangbuk-do</option>
+                    <option value="gyeongsangnamdo">Gyeongsangnam-do</option>
+                    <option value="jejudo">Jeju-do</option> 
+                </select>
+            </div>
+        </div>
+
+        <div id="mapnav-searchbar">
+            <div id="mapnav-searchbar-border" class="row">
+                <div id="mapnav-search-input" class="col-9">
+                    <input id="input-text" type="text" placeholder="Search a place"/>
+                </div>
+                <div id="mapnav-x-icon" class="col-2">
+                    <i id="mapnav-x-i" class="bi bi-x-lg"></i>
+                </div>
+                <div id="mapnav-search-icon" class="col-1">
+                    <i class="bi bi-search"></i>
+                </div>
+            </div>
+            <div id="mapnav-search-suggestion">
+                <ul id="mapnav-search-suggestion-list"> 
+                </ul>
+            </div>
+            <div id="mapnav-result-box">
+            </div>
+        </div>
+        <div id="error-alert">
+            <div id="error-content">
+                <div id="error-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                <div id="error-text">Please give an input</div>
+            </div>
+        </div>
+    `;
 
     document.querySelector("#attractions-pic").addEventListener("click", function(){
         const divElement = document.querySelector("#attractions-pic");
@@ -699,6 +697,226 @@ function renderSearchNav(map, data){
 
         sessionToken = `acbehdoandduurrbofjsowmeomd` + Math.floor(Math.random() * 100000);
     })
+
+    /*
+    document.querySelector("#mapnav-search-icon").addEventListener("click", async function(){
+        const searchTerm = document.querySelector("#input-text").value;
+        const selectedSearchCategory = document.querySelector("#selected-category").innerHTML;
+        const searchCategoryID = loadSearchCategoryID();
+        const searchCategory = searchCategoryID[selectedSearchCategory];
+
+        if (searchTerm == ""){
+            document.querySelector("#error-text").innerHTML = "Please give an input";
+            document.querySelector("#error-alert").classList.add("visible");
+            setTimeout(function(){
+                document.querySelector("#error-alert").classList.remove("visible");
+            }, 1500);
+        } else {
+            resetSearchField();
+            const latLngSearchLocation = document.querySelector("#select-location").value;
+            const resultBoxDiv = document.querySelector("#mapnav-result-box");
+            resultBoxDiv.innerHTML = ``;
+            let data = null;
+
+            if (latLngSearchLocation == "centre"){
+                const centerPoint = map.getBounds().getCenter();
+                const searchLatLng = centerPoint.lat + "," + centerPoint.lng;
+                data = await search(searchTerm, searchLatLng, searchCategory);
+            } else {
+                const provinceLatLng = loadProvinceLatLng();
+                const searchLatLng = provinceLatLng[latLngSearchLocation];
+                data = await search(searchTerm, searchLatLng, searchCategory);      
+            }
+
+            if (data.results.length != 0){
+                if (!searchLayers[selectedSearchCategory]) {
+                    searchLayers[selectedSearchCategory] = L.layerGroup().addTo(map);
+                }
+
+                for (let d of data.results){
+                    divElement = document.createElement("div");
+                    divElement.innerHTML = `
+                        <div class="mapnav-item-container row">
+                            <div class="mapnav-rest-contatiner col-9">
+                                <div class="mapnav-location-description-container row">
+                                    <div class="mapnav-location-name">${d.name}</div>
+                                    <div class="mapnav-location-address">${d.location.formatted_address}</div>
+                                    <div class="mapnav-province-website">
+                                        <div class="mapnav-location-province">${d.location.region}, ${d.location.post_town} (${d.closed_bucket.match(/[A-Z][a-z]+|[0-9]+/g).join(" ")})</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mapnav-location-image-container col-3">
+                                <div class="mapnav-location-image"></div>
+                            </div>
+                        </div>
+                    `
+                    resultBoxDiv.appendChild(divElement);
+
+                    const imageResult = await getPhoto(d.fsq_id);
+                    let imageURL = "image/map/no-image.png";
+                    if (imageResult.length != 0){
+                        imageURL = `${imageResult[0].prefix}80x80${imageResult[0].suffix}`;
+                        divElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(${imageURL})`;
+                        imageURL = `${imageResult[0].prefix}225x140${imageResult[0].suffix}`;
+                    } else {
+                        divElement.querySelector(".mapnav-location-image").style.backgroundImage = `url(${imageURL})`;
+                        imageURL = "image/map/no-image-landscape.png";
+                    }
+
+                    // adding image result to d object
+                    d.image = imageURL
+
+                    // plot markers
+                    const locationMarker = createLocationMarker(d, `${selectedSearchCategory}-marker.png`, "search");
+                    
+                    locationMarker.addTo(searchLayers[selectedSearchCategory]);
+
+                    divElement.querySelector(".mapnav-item-container").addEventListener("click", function(){
+                        onSearchItemClick(map, d.geocodes.main.latitude, d.geocodes.main.longitude, locationMarker);
+                    })
+                }
+
+                let layerExists = false;
+
+                for (let layer of groupedLayerControl._layers) {
+                    if (layer.name === selectedSearchCategory) {
+                        layerExists = true;
+                        break; 
+                    }
+                }
+
+                // add  layer to the groupedLayerControl if new
+                if (!layerExists) {
+                    groupedLayerControl.addOverlay(searchLayers[selectedSearchCategory], selectedSearchCategory, "Search");
+                } else {
+                    map.removeControl(groupedLayerControl);
+                    groupedLayerControl.addTo(map);
+                }
+
+                // const checkboxes = document.querySelectorAll('.leaflet-control-layers-selector');
+                // console.log(checkboxes)
+
+                // checkboxes.forEach(checkbox => {
+                //     const label = checkbox.parentNode;
+                //     const button = document.createElement('button');
+                //     button.className = 'remove-layer-btn';
+                //     button.textContent = 'X';
+                //     label.appendChild(button);
+                
+                //     button.addEventListener('click', function(event) {
+                //         event.preventDefault(); // Prevent the default behavior of the button
+                //         const button = event.target;
+                //         const label = button.parentNode;
+                //         const checkbox = label.querySelector('.leaflet-control-layers-selector');
+                //         checkbox.checked = false;
+                //         label.parentNode.removeChild(label); // Remove the entire label
+                //     });
+                // });
+
+            } else{
+                document.querySelector("#error-text").innerHTML = "Sorry no match found";
+                document.querySelector("#error-alert").classList.add("visible");
+                setTimeout(function(){
+                    document.querySelector("#error-alert").classList.remove("visible");
+                }, 1500);
+            }
+        }
+
+        sessionToken = `acbehdoandduurrbofjsowmeomd` + Math.floor(Math.random() * 100000);
+    })
+    */
+}
+
+// toggle layer remove search layer
+/*
+function removeLayerButton(map, searchLayers, selectedSearchCategory, lastLabel) {
+    const checkbox = lastLabel.querySelector('.leaflet-control-layers-selector');
+    const label = checkbox.parentNode;
+    const buttonDiv = document.createElement('div');
+    buttonDiv.className = "remove-layer-div";
+    const button = document.createElement('button');
+    button.className = "remove-layer-btn";
+    button.textContent = 'X';
+    buttonDiv.appendChild(button);
+    label.appendChild(buttonDiv);
+
+    label.classList.add("search-category-label");
+
+    button.addEventListener('click', function(event) {
+        event.preventDefault();
+        // const clickedButton = event.target;
+        // const buttonDiv = clickedButton.parentNode;
+        // const label = buttonDiv.parentNode;
+        // const checkbox = label.querySelector('.leaflet-control-layers-selector');
+
+        // // Check if the category layer exists in searchLayers
+        // if (searchLayers[selectedSearchCategory]) {
+        //     // Remove only the markers associated with the selected category layer
+        //     searchLayers[selectedSearchCategory].clearLayers();
+        //     delete searchLayers[selectedSearchCategory];
+        // }
+
+        // // Remove the label
+        // label.parentNode.removeChild(label);
+        alert("hello")
+    });
+
+    // Toggle visibility of markers when checkbox is checked/unchecked
+    checkbox.addEventListener('change', function(event) {
+        const isChecked = event.target.checked;
+        const selectedCategoryLayer = searchLayers[selectedSearchCategory];
+        if (isChecked && selectedCategoryLayer) {
+            // Add the layer back to the map
+            selectedCategoryLayer.addTo(map);
+        } else {
+            // Remove the layer from the map
+            if (selectedCategoryLayer) {
+                map.removeLayer(selectedCategoryLayer);
+            }
+        }
+    });
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+// nav location event listener
+function navLocationEventListener(map, data){
+    document.querySelector("#mapnav-location-tab").classList.add("active-tab");
+    document.querySelector("#mapnav-location-tab").classList.remove("inactive-tab");
+    document.querySelector("#mapnav-search-tab").classList.add("inactive-tab");
+    document.querySelector("#mapnav-search-tab").classList.remove("active-tab");
+
+    renderLocationNav(map, data);
+}
+
+// nav search event listener
+function navSearchEventListener(map, data){
+    document.querySelector("#mapnav-search-tab").classList.add("active-tab");
+    document.querySelector("#mapnav-search-tab").classList.remove("inactive-tab");
+    document.querySelector("#mapnav-location-tab").classList.add("inactive-tab");
+    document.querySelector("#mapnav-location-tab").classList.remove("active-tab");
+
+    renderSearchNav(map, data);
+}
+
+// search item click
+function onSearchItemClick(map, lat, lng, locationMarker){
+    const adjustedLat = lat + 0.004;
+    map.flyTo([adjustedLat, lng], 16);
+    locationMarker.openPopup();
+    document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-right-fill"></i>`;
+    document.querySelector("#location-list").classList.add("close");
 }
 
 // autocomplete results
@@ -731,15 +949,4 @@ function resetSearchField(){
     document.querySelector("#mapnav-search-suggestion").style.removeProperty("box-shadow");
     document.querySelector("#mapnav-searchbar-border").style.borderRadius = "999px";
     document.querySelector("#mapnav-searchbar-border").style.removeProperty("box-shadow");
-}
-
-
-function togglePopupActiveTab(event){
-    // add active class style to clicked popup
-    event.target.classList.toggle("popup-tab-active");
-
-    // remove from other tab
-    const otherPopupTabId = event.target.id == "popup-information" ? "popup-weather" : "popup-information";
-    const otherPopupTab = document.getElementById(otherPopupTabId);
-    otherPopupTab.classList.remove("popup-tab-active");
 }

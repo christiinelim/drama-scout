@@ -60,13 +60,24 @@ document.addEventListener("DOMContentLoaded", async function(){
     });
 
     document.querySelector("#map-tab").addEventListener("click", function(){
-        mapnavList();
+        document.querySelector("#map-tab").style.borderBottom = "2px solid black";
+        document.querySelector("#location-list-tab").style.borderBottom = "none";
 
-        renderMapNavItems(map, data[id]);
+        // changing tab container
+        document.querySelector("#map").style.display = "flex";
+        document.querySelector("#tab-container").style.position = "relative";
+        document.querySelector("#location-list").classList.add("shrink");
+        document.querySelector("#location-nav").classList.add("location-nav-class");
+        document.querySelector("#nav-icon").style.display = "flex";  
+
+        // create nav tab
+        document.querySelector("#mapnav-tab").style.display = "flex";
+
+        renderLocationNav(map, data[id]);
 
         // clicking on nav-location
         document.querySelector("#mapnav-location-tab").addEventListener("click", function(){
-            navLocationEventListener();
+            navLocationEventListener(map, data[id]);
         })
 
         // clicking on nav-search
@@ -74,6 +85,8 @@ document.addEventListener("DOMContentLoaded", async function(){
             navSearchEventListener(map, data[id]);
         })
     });
+
+    
 
     // nav arrow
     document.querySelector("#nav-icon").addEventListener("click", function(){
@@ -85,8 +98,8 @@ document.addEventListener("DOMContentLoaded", async function(){
             document.querySelector("#location-list").classList.remove("close");
         }
     });
-    
 })
+
 
 // card content page
 function displayCardContentPage(data){
@@ -102,7 +115,6 @@ function displayCardContentPage(data){
 // generate location list
 function renderLocation(data){
     parentElement = document.querySelector("#location-list-tab-container");
-    parentElement.innerHTML = ``;
     divElement = document.createElement("div");
     divElement.classList.add("row");
 
@@ -154,118 +166,40 @@ function renderLocation(data){
 // reset location list
 function resetLocationList(data){
     document.querySelector("#location-list-tab-container").style.display = "block";
-    document.querySelector("#map-tab-container"). style.display = "none";
-    
-    document.querySelector("#map-tab-container").innerHTML = `
-        <div id="mapnav-tab" class="row">
-            <div id="mapnav-location-tab" class="mapnav-tab-item active-tab col-6">Location</div>
-            <div id="mapnav-search-tab" class="mapnav-tab-item col-6">Search</div>
-        </div>
-        <div id="mapnav-container">
-            <div id="mapnav-location-container">
-
-            </div>
-            <div id="mapnav-search-container">
-                <div id="search-category-container">
-                    <div id="selected-category">Attractions</div>
-                    <div class="search-category">
-                        <div id="attractions-pic" class="search-category-icon attractions-pic-active"></div>
-                        <div class="search-category-name">Attractions</div>
-                    </div>
-                    <div class="search-category">
-                        <div id="art-pic" class="search-category-icon"></div>
-                        <div class="search-category-name">Art</div>
-                    </div>
-                    <div class="search-category">
-                        <div id="food-pic" class="search-category-icon"></div>
-                        <div class="search-category-name">Food</div>
-                    </div>
-                    <div class="search-category">
-                        <div id="shopping-pic" class="search-category-icon"></div>
-                        <div class="search-category-name">Shopping</div>
-                    </div>
-                </div>
-        
-                <div id="select-location-container">
-                    <div id="select-location-icon"><i class="bi bi-geo-alt"></i></div>
-                    <div id="select-location-dropdown">
-                        <select id="select-location">
-                            <option value="centre">Centre of Map</option>
-                            <option value="southkorea">South Korea</option>
-                            <option value="seoul">Seoul</option>
-                            <option value="busan">Busan</option>
-                            <option value="daegu">Daegu</option>
-                            <option value="incheon">Incheon</option>
-                            <option value="gwangju">Gwangju</option>
-                            <option value="daejeon">Daejeon</option>
-                            <option value="ulsan">Ulsan</option>
-                            <option value="gyeonggido">Gyeonggi-do</option>
-                            <option value="gangwondo">Gangwon-do</option>
-                            <option value="chungcheongbukdo">Chungcheongbuk-do</option>
-                            <option value="chungcheongnamdo">Chungcheongnam-do</option>
-                            <option value="jeollabukdo">Jeollabuk-do</option>
-                            <option value="jeollanamdo">Jeollanam-do</option>
-                            <option value="gyeongsangbukdo">Gyeongsangbuk-do</option>
-                            <option value="gyeongsangnamdo">Gyeongsangnam-do</option>
-                            <option value="jejudo">Jeju-do</option> 
-                        </select>
-                    </div>
-                </div>
-        
-                <div id="mapnav-searchbar">
-                    <div id="mapnav-searchbar-border" class="row">
-                        <div id="mapnav-search-input" class="col-9">
-                            <input id="input-text" type="text" placeholder="Search a place"/>
-                        </div>
-                        <div id="mapnav-x-icon" class="col-2">
-                            <i id="mapnav-x-i" class="bi bi-x-lg"></i>
-                        </div>
-                        <div id="mapnav-search-icon" class="col-1">
-                            <i class="bi bi-search"></i>
-                        </div>
-                    </div>
-                    <div id="mapnav-search-suggestion">
-                        <ul id="mapnav-search-suggestion-list"> 
-                        </ul>
-                    </div>
-                    <div id="mapnav-result-box">
-                    </div>
-                </div>
-                <div id="error-alert">
-                    <div id="error-content">
-                        <div id="error-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
-                        <div id="error-text">Please give an input</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `
 }
 
-// show mapnav 
-function mapnavList(){
-    // hide location list tab container 
-    document.querySelector("#location-list-tab-container").style.display = "none";
-    document.querySelector("#map-tab-container"). style.display = "block";
+function renderLocationNav(map, data){
+    document.querySelector("#location-list").innerHTML = `
+        <div>
+            <div id="mapnav-tab" class="row">
+                <div id="mapnav-location-tab" class="mapnav-tab-item active-tab col-6">Location</div>
+                <div id="mapnav-search-tab" class="mapnav-tab-item col-6">Search</div>
+            </div>
+            <div id="mapnav-container">
+            </div>
+        </div>    
+    `;
 
-    document.querySelector("#map-tab").style.borderBottom = "2px solid black";
-    document.querySelector("#location-list-tab").style.borderBottom = "none";
+    document.querySelector("#mapnav-tab").addEventListener("click", function(event) {
 
-    // changing tab container
-    document.querySelector("#map").style.display = "flex";
-    document.querySelector("#tab-container").style.position = "relative";
-    document.querySelector("#location-list").classList.add("shrink");
-    document.querySelector("#location-nav").classList.add("location-nav-class");
-    document.querySelector("#nav-icon").style.display = "flex";  
+        
+        const target = event.target;
+        if (target.id == "mapnav-location-tab") {
+            navLocationEventListener(map, data);
+        } else if (target.id == "mapnav-search-tab") {
+            navSearchEventListener(map, data);
+        }
+    });
 
-    // create nav tab
+    // display tabs container
     document.querySelector("#mapnav-tab").style.display = "flex";
+
+    renderMapNavItems(map, data);
 }
 
-// show location list in nav
+
 function renderMapNavItems(map, data){
-    const divElement = document.querySelector("#mapnav-location-container");
-    divElement.innerHTML = ``;
+    const divElement = document.querySelector("#mapnav-container");
 
     // for plotting markers
     let provinceLayers = {};
@@ -330,7 +264,7 @@ function renderMapNavItems(map, data){
     });
 }
 
-// create individual row of location data
+
 function createMapNavItem(location){
     let childElement = document.createElement("div");
 
@@ -372,7 +306,6 @@ function createMapNavItem(location){
     return childElement
 }
 
-// create location markers
 function createLocationMarker(d, url, type){
     let locationMarker = null;
 
@@ -415,7 +348,6 @@ function createLocationMarker(d, url, type){
     return locationMarker;
 }
 
-// create custom popup for each location marker
 function createCustomPopup(data, locationMarker){
     // got website
     let websiteDiv = ``;
@@ -496,41 +428,22 @@ function createCustomPopup(data, locationMarker){
     locationMarker.bindPopup(customPopup, customOptions);
 }
 
-// search item click
-function onSearchItemClick(map, lat, lng, locationMarker){
-    const adjustedLat = lat + 0.004;
-    map.flyTo([adjustedLat, lng], 16);
-    locationMarker.openPopup();
-    document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-right-fill"></i>`;
-    document.querySelector("#location-list").classList.add("close");
-}
+function togglePopupActiveTab(event){
+    // add active class style to clicked popup
+    event.target.classList.toggle("popup-tab-active");
 
-// nav search event listener
-function navSearchEventListener(map, data){
-    document.querySelector("#mapnav-search-tab").classList.add("active-tab");
-    document.querySelector("#mapnav-search-tab").classList.remove("inactive-tab");
-    document.querySelector("#mapnav-location-tab").classList.add("inactive-tab");
-    document.querySelector("#mapnav-location-tab").classList.remove("active-tab");
-
-    document.querySelector("#mapnav-location-container").style.display = "none";
-    document.querySelector("#mapnav-search-container").style.display = "block";
-
-    renderSearchNav(map, data);
-}
-
-// nav location event listener
-function navLocationEventListener(){
-    document.querySelector("#mapnav-location-tab").classList.add("active-tab");
-    document.querySelector("#mapnav-location-tab").classList.remove("inactive-tab");
-    document.querySelector("#mapnav-search-tab").classList.add("inactive-tab");
-    document.querySelector("#mapnav-search-tab").classList.remove("active-tab");
-
-    document.querySelector("#mapnav-location-container").style.display = "block";
-    document.querySelector("#mapnav-search-container").style.display = "none";
+    // remove from other tab
+    const otherPopupTabId = event.target.id == "popup-information" ? "popup-weather" : "popup-information";
+    const otherPopupTab = document.getElementById(otherPopupTabId);
+    otherPopupTab.classList.remove("popup-tab-active");
 }
 
 
-// search tab get results
+
+
+
+
+
 function renderSearchNav(map, data){
     document.querySelector("#mapnav-location-tab").addEventListener("click", function(){
         navLocationEventListener(map, data);
@@ -541,6 +454,7 @@ function renderSearchNav(map, data){
         navSearchEventListener(map, data);
         document.querySelector("#mapnav-search-container").style.display = "block";
     })
+    
     
 
     document.querySelector("#attractions-pic").addEventListener("click", function(){
@@ -701,6 +615,96 @@ function renderSearchNav(map, data){
     })
 }
 
+// toggle layer remove search layer
+/*
+function removeLayerButton(map, searchLayers, selectedSearchCategory, lastLabel) {
+    const checkbox = lastLabel.querySelector('.leaflet-control-layers-selector');
+    const label = checkbox.parentNode;
+    const buttonDiv = document.createElement('div');
+    buttonDiv.className = "remove-layer-div";
+    const button = document.createElement('button');
+    button.className = "remove-layer-btn";
+    button.textContent = 'X';
+    buttonDiv.appendChild(button);
+    label.appendChild(buttonDiv);
+
+    label.classList.add("search-category-label");
+
+    button.addEventListener('click', function(event) {
+        event.preventDefault();
+        // const clickedButton = event.target;
+        // const buttonDiv = clickedButton.parentNode;
+        // const label = buttonDiv.parentNode;
+        // const checkbox = label.querySelector('.leaflet-control-layers-selector');
+
+        // // Check if the category layer exists in searchLayers
+        // if (searchLayers[selectedSearchCategory]) {
+        //     // Remove only the markers associated with the selected category layer
+        //     searchLayers[selectedSearchCategory].clearLayers();
+        //     delete searchLayers[selectedSearchCategory];
+        // }
+
+        // // Remove the label
+        // label.parentNode.removeChild(label);
+        alert("hello")
+    });
+
+    // Toggle visibility of markers when checkbox is checked/unchecked
+    checkbox.addEventListener('change', function(event) {
+        const isChecked = event.target.checked;
+        const selectedCategoryLayer = searchLayers[selectedSearchCategory];
+        if (isChecked && selectedCategoryLayer) {
+            // Add the layer back to the map
+            selectedCategoryLayer.addTo(map);
+        } else {
+            // Remove the layer from the map
+            if (selectedCategoryLayer) {
+                map.removeLayer(selectedCategoryLayer);
+            }
+        }
+    });
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+// nav location event listener
+function navLocationEventListener(map, data){
+    document.querySelector("#mapnav-location-tab").classList.add("active-tab");
+    document.querySelector("#mapnav-location-tab").classList.remove("inactive-tab");
+    document.querySelector("#mapnav-search-tab").classList.add("inactive-tab");
+    document.querySelector("#mapnav-search-tab").classList.remove("active-tab");
+
+    renderLocationNav(map, data);
+}
+
+// nav search event listener
+function navSearchEventListener(map, data){
+    document.querySelector("#mapnav-search-tab").classList.add("active-tab");
+    document.querySelector("#mapnav-search-tab").classList.remove("inactive-tab");
+    document.querySelector("#mapnav-location-tab").classList.add("inactive-tab");
+    document.querySelector("#mapnav-location-tab").classList.remove("active-tab");
+
+    renderSearchNav(map, data);
+}
+
+// search item click
+function onSearchItemClick(map, lat, lng, locationMarker){
+    const adjustedLat = lat + 0.004;
+    map.flyTo([adjustedLat, lng], 16);
+    locationMarker.openPopup();
+    document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-right-fill"></i>`;
+    document.querySelector("#location-list").classList.add("close");
+}
+
 // autocomplete results
 function getAutocompleteResults(suggestion){
     document.querySelector("#mapnav-search-suggestion").style.height = "auto";
@@ -731,15 +735,4 @@ function resetSearchField(){
     document.querySelector("#mapnav-search-suggestion").style.removeProperty("box-shadow");
     document.querySelector("#mapnav-searchbar-border").style.borderRadius = "999px";
     document.querySelector("#mapnav-searchbar-border").style.removeProperty("box-shadow");
-}
-
-
-function togglePopupActiveTab(event){
-    // add active class style to clicked popup
-    event.target.classList.toggle("popup-tab-active");
-
-    // remove from other tab
-    const otherPopupTabId = event.target.id == "popup-information" ? "popup-weather" : "popup-information";
-    const otherPopupTab = document.getElementById(otherPopupTabId);
-    otherPopupTab.classList.remove("popup-tab-active");
 }
