@@ -377,6 +377,10 @@
     }
 
     /* tab container */
+    #map-tab-container{
+        display: none;
+    }
+
     .location-nav-class{
         position: absolute; 
         top: 0;
@@ -1479,6 +1483,10 @@
     }
 
     /* tab container */
+    #map-tab-container{
+        display: none;
+    }
+
     .location-nav-class{
         position: absolute; 
         top: 0;
@@ -2562,6 +2570,10 @@
     }
 
     /* tab container */
+    #map-tab-container{
+        display: none;
+    }
+    
     .location-nav-class{
         position: absolute; 
         top: 0;
