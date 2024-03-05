@@ -623,7 +623,7 @@ function renderSearchNav(map, data){
         const start = document.querySelector("#input-text1").value;
         const end = document.querySelector("#input-text2").value;
         const profile = document.querySelector("#select-type").value;
-        console.log(profile)
+
         if (start == "" | end == ""){
             document.querySelector("#error-text2").innerHTML = "Please give an input";
             document.querySelector("#error-alert2").classList.add("visible");
@@ -633,21 +633,28 @@ function renderSearchNav(map, data){
         }
         else {
             const starting = await convertPlaceToLatLong(start);
+            addDirectionMarker(map, "starting-point", starting[1], starting[0]);
             const ending = await convertPlaceToLatLong(end);
+            addDirectionMarker(map, "ending-point", ending[1], ending[0]);
             const routeInformation = await loadDirections(starting, ending, profile);   
 
             document.querySelector("#direction-result").style.display = "block";
             document.querySelector("#direction-duration").innerHTML = `Duration: ${routeInformation.duration} minutes`;
             document.querySelector("#direction-distance").innerHTML = `Duration: ${routeInformation.distance} km`;
-            console.log(routeInformation)
 
             const divElement = document.querySelector("#direction-steps");
+            divElement.innerHTML = ``;
+
             for (let step of routeInformation.directions) {
                 const childElement = document.createElement('div');
                 childElement.classList.add('step-list');
+                childElement.classList.add('row');
                 childElement.innerHTML = `
-                    <div class="step-photo-container"><div class="step-photo" style="background-image: url('${step.image}')"></div></div>
-                    <div class="step-description">${step.step}</div>
+                    <div class="step-photo-container col-2"><div class="step-photo" style="background-image: url('${step.image}')"></div></div>
+                    <div class="step-description col-8">${step.step}</div>
+                    <div class="step-distance-container col-2">
+                        <div class="step-distance">${step.distance}</div>
+                    </div>
                 `;
                 divElement.appendChild(childElement);
                 childElement.querySelector(".step-photo").style.imageURL = `${step.image}`

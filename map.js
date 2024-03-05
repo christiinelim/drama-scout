@@ -20,3 +20,14 @@ function changeIcon(divElement, activeClass, inactiveArray){
         document.querySelector(`#${category}-pic`).classList.remove(`${category}-pic-active`);
     }
 }
+
+function addDirectionMarker(map, image, lat, lng){
+    let customizedIcon = L.icon({
+        iconUrl: `image/map/${image}.png`,
+        iconSize: [35, 35],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+    });
+    let newMarker = L.marker([lat, lng], {icon: customizedIcon});
+    newMarker.addTo(map);
+}

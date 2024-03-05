@@ -148,6 +148,7 @@ async function loadDirections(start, end, profile){
     const response = await axios.get(requestUrl);
     const data = response.data;
 
+    console.log(data)
     const directions = await loadSteps(data);
     const duration = Math.floor(data.routes[0].duration / 60);
     const distance = (data.routes[0].distance / 1000).toFixed(2);
@@ -164,10 +165,27 @@ async function loadDirections(start, end, profile){
 // retrieve step from result
 async function loadSteps(data) {
     const directions = [];
+    let count = 1;
     for (let step of data.routes[0].legs[0].steps) {
         const maneuver = step.maneuver;
 
-        if (maneuver.type == 'depart' || maneuver.type == 'arrive') {
+        if (maneuver.type == 'depart' ) {
+            const instructions = {
+                "step": `${count}. Starting point`,
+                "image": `image/map/starting-point.png`,
+                "distance": ''
+            }
+            directions.push(instructions);
+            count = count + 1;
+            continue;
+        } else if (maneuver.type == 'arrive'){
+            const instructions = {
+                "step": `${count}. Destination reached`,
+                "image": `image/map/ending-point.png`,
+                "distance": ''
+            }
+            directions.push(instructions);
+            count = count + 1;
             continue;
         }
         let turnDirection;
@@ -182,10 +200,13 @@ async function loadSteps(data) {
             turnDirection = 'left';
         }
 
+        const distance = Math.floor(step.distance);
+
         if (step.name) {
             const instructions = {
-              "step": `Turn ${turnDirection} at ${step.name}`,
-              "image": `image/turn-direction/${turnDirection}.png`
+              "step": `${count}. Turn ${turnDirection} at ${step.name}`,
+              "image": `image/turn-direction/${turnDirection}.png`,
+              "distance": `${distance}m`
             }
             directions.push(instructions);
         } else {
@@ -194,11 +215,13 @@ async function loadSteps(data) {
             const streetName = await loadStreetName(lat, lng);
 
             const instructions = {
-              "step": `Turn ${turnDirection} at ${streetName}`,
-              "image": `image/turn-direction/${turnDirection}.png`
+              "step": `${count}. Turn ${turnDirection} at ${streetName}`,
+              "image": `image/turn-direction/${turnDirection}.png`,
+              "distance": `${distance}m`
             }
             directions.push(instructions);
         }
+        count = count + 1;
     }
 
     return directions
