@@ -184,14 +184,17 @@
                             
                                     <div id="mapnav-searchbar">
                                         <div id="mapnav-searchbar-border" class="row">
-                                            <div id="mapnav-search-input" class="col-9">
+                                            <div id="mapnav-search-input" class="col-8">
                                                 <input id="input-text" type="text" placeholder="Search a place"/>
                                             </div>
-                                            <div id="mapnav-x-icon" class="col-2">
+                                            <div id="mapnav-x-icon" class="col-1">
                                                 <i id="mapnav-x-i" class="bi bi-x-lg"></i>
                                             </div>
                                             <div id="mapnav-search-icon" class="col-1">
                                                 <i class="bi bi-search"></i>
+                                            </div>
+                                            <div id="mapnav-direction-icon" class="col-1">
+                                                <img src="image/map/direction-icon.png"/>
                                             </div>
                                         </div>
                                         <div id="mapnav-search-suggestion">
@@ -206,6 +209,56 @@
                                             <div id="error-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
                                             <div id="error-text">Please give an input</div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="mapnav-direction-container">
+                                <div id="mapnav-direction">
+                                    <div id="mapnav-direction-x">
+                                        <i id="mapnav-direction-x-icon" class="bi bi-x-lg"></i>
+                                    </div>
+
+                                    <div id="select-type-container">
+                                        <div id="select-type-icon"><i class="bi bi-signpost-split"></i></div>
+                                        <div id="select-type-dropdown">
+                                            <select id="select-type">
+                                                <option value="foot">Foot</option>
+                                                <option value="bike">Bike</option>
+                                                <option value="car">Car</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div id="mapnav-direction-border" class="row">
+                                        <div id="mapnav-direction-input1" class="col-12">
+                                            <input id="input-text1" type="text" placeholder="Starting destination"/>
+                                        </div>
+                                    </div>
+                                    <div id="mapnav-direction-border" class="row">
+                                        <div id="mapnav-direction-input2" class="col-11">
+                                            <input id="input-text2" type="text" placeholder="Ending destination"/>
+                                        </div>
+                                        <div id="mapnav-direction-icon2" class="col-1">
+                                            <img src="image/map/direction-icon.png"/>
+                                        </div>
+                                    </div>
+                                    <div id="direction-result">
+                                        <div id="direction-header-container">
+                                            <div id="direction-header">Direction</div>
+                                            <div id="direction-description">
+                                                <div id="direction-duration">Duration: </div>
+                                                <div id="direction-distance">Distance</div>
+                                            </div>
+                                        </div>
+                                        <div id="direction-steps">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="error-alert2">
+                                    <div id="error-content2">
+                                        <div id="error-icon2"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                                        <div id="error-text2">Please give an input</div>
                                     </div>
                                 </div>
                             </div>

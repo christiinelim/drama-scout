@@ -423,6 +423,8 @@ function navSearchEventListener(map, data){
     document.querySelector("#mapnav-location-container").style.display = "none";
     document.querySelector("#mapnav-search-container").style.display = "block";
 
+    document.querySelector("#mapnav-direction-container").style.display = "none";
+
     renderSearchNav(map, data);
 }
 
@@ -603,6 +605,55 @@ function renderSearchNav(map, data){
 
         sessionToken = `acbehdoandduurrbofjsowmeomd` + Math.floor(Math.random() * 100000);
     })
+
+    // direction icon
+    document.querySelector("#mapnav-direction-icon").addEventListener("click", function(){
+        document.querySelector("#mapnav-search-container").style.display = "none";
+        document.querySelector("#mapnav-direction-container").style.display = "flex";
+    })
+
+    // direction x icon
+    document.querySelector("#mapnav-direction-x-icon").addEventListener("click", function(){
+        document.querySelector("#mapnav-search-container").style.display = "block";
+        document.querySelector("#mapnav-direction-container").style.display = "none";
+    })
+
+    // direction search icon
+    document.querySelector("#mapnav-direction-icon2").addEventListener("click", async function(){
+        const start = document.querySelector("#input-text1").value;
+        const end = document.querySelector("#input-text2").value;
+        const profile = document.querySelector("#select-type").value;
+        console.log(profile)
+        if (start == "" | end == ""){
+            document.querySelector("#error-text2").innerHTML = "Please give an input";
+            document.querySelector("#error-alert2").classList.add("visible");
+            setTimeout(function(){
+                document.querySelector("#error-alert2").classList.remove("visible");
+            }, 1500);
+        }
+        else {
+            const starting = await convertPlaceToLatLong(start);
+            const ending = await convertPlaceToLatLong(end);
+            const routeInformation = await loadDirections(starting, ending, profile);   
+
+            document.querySelector("#direction-result").style.display = "block";
+            document.querySelector("#direction-duration").innerHTML = `Duration: ${routeInformation.duration} minutes`;
+            document.querySelector("#direction-distance").innerHTML = `Duration: ${routeInformation.distance} km`;
+            console.log(routeInformation)
+
+            const divElement = document.querySelector("#direction-steps");
+            for (let step of routeInformation.directions) {
+                const childElement = document.createElement('div');
+                childElement.classList.add('step-list');
+                childElement.innerHTML = `
+                    <div class="step-photo-container"><div class="step-photo" style="background-image: url('${step.image}')"></div></div>
+                    <div class="step-description">${step.step}</div>
+                `;
+                divElement.appendChild(childElement);
+                childElement.querySelector(".step-photo").style.imageURL = `${step.image}`
+            }
+        }
+    });    
 }
 
 // autocomplete results

@@ -6,6 +6,10 @@ const API_KEY = 'fsq3qbdKT0pS0uYQ6cGARCBFMJ0TnnmHdk9HjRdzizuWVRs=';
 const WEATHER_BASE_API_URL = "https://api.openweathermap.org/data/2.5/weather?";
 const WEATHER_API_KEY = 'c679cfa59cc8581fbfa19f29b87913c7';
 
+
+// API FOR OSRM
+const OSRM_BASE_URL = "https://router.project-osrm.org/route/v1/";
+
 async function loadData(){
     const response = await axios.get("data.json");
     return response.data
@@ -125,4 +129,89 @@ function getWeatherPhoto(data){
     const icon = data.weather[0].icon;
     const iconURL = `https://openweathermap.org/img/wn/${icon}@2x.png`
     return iconURL;
+}
+
+
+// convert direction name input to lat and lng
+async function convertPlaceToLatLong(placeName) {
+    const response = await axios.get(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(placeName)}&format=json`);
+    const data = response.data;
+    const lat = data[0].lat;
+    const lng = data[0].lon;
+  
+    return([lng, lat])
+}
+
+// load direction base on start and end lat lng
+async function loadDirections(start, end, profile){
+    const requestUrl = `${OSRM_BASE_URL}/${profile}/${start};${end}?steps=true`;
+    const response = await axios.get(requestUrl);
+    const data = response.data;
+
+    const directions = await loadSteps(data);
+    const duration = Math.floor(data.routes[0].duration / 60);
+    const distance = (data.routes[0].distance / 1000).toFixed(2);
+
+    const routeInformation = {
+        "directions": directions,
+        "duration": duration,
+        "distance": distance
+    }
+    return routeInformation
+} 
+
+
+// retrieve step from result
+async function loadSteps(data) {
+    const directions = [];
+    for (let step of data.routes[0].legs[0].steps) {
+        const maneuver = step.maneuver;
+
+        if (maneuver.type == 'depart' || maneuver.type == 'arrive') {
+            continue;
+        }
+        let turnDirection;
+        const bearingBefore = maneuver.bearing_before;
+        const bearingAfter = maneuver.bearing_after;
+
+        const bearingDifference = (bearingAfter - bearingBefore + 360) % 360;
+
+        if (bearingDifference < 180) {
+            turnDirection = 'right';
+        } else {
+            turnDirection = 'left';
+        }
+
+        if (step.name) {
+            const instructions = {
+              "step": `Turn ${turnDirection} at ${step.name}`,
+              "image": `image/turn-direction/${turnDirection}.png`
+            }
+            directions.push(instructions);
+        } else {
+            const lat = step.intersections[0].location[1];
+            const lng = step.intersections[0].location[0];
+            const streetName = await loadStreetName(lat, lng);
+
+            const instructions = {
+              "step": `Turn ${turnDirection} at ${streetName}`,
+              "image": `image/turn-direction/${turnDirection}.png`
+            }
+            directions.push(instructions);
+        }
+    }
+
+    return directions
+}
+
+
+
+// retrieve streetname if name is empty in data
+async function loadStreetName(lat, lng){
+    const apiUrl = `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`;
+
+    const response = await axios.get(apiUrl);
+    const data = response.data;
+    const streetName = data.address.road;
+    return streetName
 }

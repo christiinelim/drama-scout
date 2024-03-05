@@ -3,7 +3,36 @@ const profile = "foot"; // car, bike or foot
 var start = '126.977,37.5789'; // Replace with your start point coordinates
 var end = '127.0079,37.5663';   // Replace with your end point coordinates
 
+async function convertPlaceToLatLong(placeName) {
+  const response = await axios.get(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(placeName)}&format=json`);
+  const data = response.data;
+  const lat = data[0].lat;
+  const lng = data[0].lon;
 
+  return([lng, lat])
+
+  /*
+  // Make a request to Nominatim API
+  fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(placeName)}&format=json`)
+      .then(response => response.json())
+      .then(data => {
+          // Check if the response contains any results
+          if (data && data.length > 0) {
+              // Extract lat and lng from the first result
+              const lat = data[0].lat;
+              const lon = data[0].lon;
+              // Call a function to use lat and lng with OSRM
+              useLatLongWithOSRM(lat, lon);
+          } else {
+              console.error("No results found for the given place.");
+          }
+      })
+      .catch(error => {
+          console.error("Error fetching data:", error);
+      });
+  */
+}
+convertPlaceToLatLong("Namsan Tower")
 
 async function loadDirections(start, end){
     const requestUrl = `${OSRM_BASE_URL}/${profile}/${start};${end}?steps=true`;
@@ -102,7 +131,7 @@ async function loadStreetName(lat, lng){
 }
 
 
-loadDirections(start, end);
+// loadDirections(start, end);
 
 
 
