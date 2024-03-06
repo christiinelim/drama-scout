@@ -831,6 +831,10 @@
     }
 
     /* direction search */
+    #mapnav-direction-container{
+        display: none;
+    }
+    
     #mapnav-direction{
         display: flex;
         flex-direction: column;
@@ -2165,6 +2169,10 @@
     }
 
     /* direction search */
+    #mapnav-direction-container{
+        display: none;
+    }
+
     #mapnav-direction{
         display: flex;
         flex-direction: column;
@@ -3486,6 +3494,10 @@
     }
 
     /* direction search */
+    #mapnav-direction-container{
+        display: none;
+    }
+
     #mapnav-direction{
         display: flex;
         flex-direction: column;

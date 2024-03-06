@@ -205,19 +205,19 @@ function renderMapNavItems(map, data){
 
     // add popup event listener
     document.addEventListener("click", async function(event) {
+
         if (event.target && event.target.id.startsWith("popup-")) {
             const parentDiv = event.target.parentNode.parentNode;
             const contentDiv = parentDiv.querySelector("#popup-content");
             const informationDiv = contentDiv.querySelector(".information-content");
             const weatherDiv = contentDiv.querySelector(".weather-content");
 
-
             togglePopupActiveTab(event);
             
             // show the info of location
             if (event.target.id == "popup-information"){
                 informationDiv.style.display = "block";
-                weatherDiv.style.display = "none"
+                weatherDiv.style.display = "none";
             } else { // show the weather
                 weatherDiv.style.display = "flex";
                 informationDiv.style.display = "none";
@@ -234,6 +234,20 @@ function renderMapNavItems(map, data){
                 weatherDiv.querySelector(".weather-humidity").innerHTML = `Humidity: ${data.main.humidity}%`;
                 weatherDiv.querySelector(".weather-speed").innerHTML = `Wind: ${data.wind.speed}km/h`;
             }
+        } else if (event.target && event.target.id == "direction-button"){
+            const location = event.target.parentNode.parentNode.parentNode.querySelector(".info-name").innerHTML
+
+            document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-left-fill"></i>`;
+            document.querySelector("#location-list").classList.remove("close");
+
+            // to switch to search tab
+            navSearchEventListener(map, data);
+
+            // to switch to direction tab
+            document.querySelector("#mapnav-search-container").style.display = "none";
+            document.querySelector("#mapnav-direction-container").style.display = "flex";
+            
+            document.querySelector("#input-text1").value = location;
         }
     });
 }
@@ -359,7 +373,7 @@ function createCustomPopup(data, locationMarker){
                 <div class="info-name">${data.name}</div>
                 <div class="info-button">
                     <div class="button-item">
-                        <div class="button-item-icon"><i class="bi bi-signpost-2"></i></div>
+                        <div id="direction-button" class="button-item-icon"><i class="bi bi-signpost-2"></i></div>
                         <div class="button-item-text">Directions</div>
                     </div> 
                     ${websiteDiv}
@@ -400,7 +414,6 @@ function createCustomPopup(data, locationMarker){
             'className' : 'popupCustom'
         };
 
-    
     locationMarker.bindPopup(customPopup, customOptions);
 }
 
@@ -594,6 +607,25 @@ function renderSearchNav(map, data){
                     groupedLayerControl.addOverlay(searchLayers[selectedSearchCategory], selectedSearchCategory, "Search");
                 }
 
+                // add popup event listener
+    document.addEventListener("click", async function(event) {
+
+        if (event.target && event.target.id == "direction-button"){
+            const location = event.target.parentNode.parentNode.parentNode.querySelector(".info-name").innerHTML
+
+            document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-left-fill"></i>`;
+            document.querySelector("#location-list").classList.remove("close");
+
+            // to switch to search tab
+            navSearchEventListener(map, data);
+
+            // to switch to direction tab
+            document.querySelector("#mapnav-search-container").style.display = "none";
+            document.querySelector("#mapnav-direction-container").style.display = "flex";
+            
+            document.querySelector("#input-text1").value = location;
+        }
+    });
             } else{
                 document.querySelector("#error-text").innerHTML = "Sorry no match found";
                 document.querySelector("#error-alert").classList.add("visible");
@@ -636,7 +668,33 @@ function renderSearchNav(map, data){
             addDirectionMarker(map, "starting-point", starting[1], starting[0]);
             const ending = await convertPlaceToLatLong(end);
             addDirectionMarker(map, "ending-point", ending[1], ending[0]);
-            const routeInformation = await loadDirections(starting, ending, profile);   
+            const routeInformation = await loadDirections(starting, ending, profile); 
+
+            const encoded = routeInformation.routeGeometry;
+
+            const polyline = L.Polyline.fromEncoded(encoded,{
+                color: 'red',
+                weight: 5
+            }).addTo(map);
+
+            map.fitBounds(polyline.getBounds());
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+            
 
             document.querySelector("#direction-result").style.display = "block";
             document.querySelector("#direction-duration").innerHTML = `Duration: ${routeInformation.duration} minutes`;

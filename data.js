@@ -156,7 +156,8 @@ async function loadDirections(start, end, profile){
     const routeInformation = {
         "directions": directions,
         "duration": duration,
-        "distance": distance
+        "distance": distance,
+        "routeGeometry": data.routes[0].geometry
     }
     return routeInformation
 } 
