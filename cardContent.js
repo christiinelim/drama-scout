@@ -122,7 +122,7 @@ function renderLocation(data){
                         </div>
                         <div class="location-description col-12 col-md-8">${location.description}</div>
                     </div>
-                    <div class="location-website"><a href=${location.website}></a></div>
+                    <div class="location-website"><a href=${location.website} target="_blank"></a></div>
                 </div>
             </div>
         `
@@ -264,7 +264,7 @@ function createMapNavItem(location){
                     <div class="mapnav-location-address">${location.address}</div>
                     <div class="mapnav-province-website">
                         <div class="mapnav-location-province">${location.province}, ${location.area}</div>
-                        <div class="mapnav-location-website"><a href=${location.website}></a></div>    
+                        <div class="mapnav-location-website"><a href=${location.website} target="_blank"></a></div>    
                     </div>
                 </div>
             </div>
@@ -344,7 +344,7 @@ function createCustomPopup(data, locationMarker){
     if (data.website != "nil"){
         websiteDiv =    `<div class="button-item">
                             <div class="button-item-icon">
-                                <a href="${data.website}"><i class="bi bi-link-45deg"></i></a>
+                                <a href="${data.website}" target="_blank"><i class="bi bi-link-45deg"></i></a>
                             </div>
                             <div class="button-item-text">Website</div>
                         </div>`
@@ -608,24 +608,24 @@ function renderSearchNav(map, data){
                 }
 
                 // add popup event listener
-    document.addEventListener("click", async function(event) {
+                document.addEventListener("click", async function(event) {
 
-        if (event.target && event.target.id == "direction-button"){
-            const location = event.target.parentNode.parentNode.parentNode.querySelector(".info-name").innerHTML
+                    if (event.target && event.target.id == "direction-button"){
+                        const location = event.target.parentNode.parentNode.parentNode.querySelector(".info-name").innerHTML
 
-            document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-left-fill"></i>`;
-            document.querySelector("#location-list").classList.remove("close");
+                        document.querySelector("#nav-icon").innerHTML = `<i class="bi bi-caret-left-fill"></i>`;
+                        document.querySelector("#location-list").classList.remove("close");
 
-            // to switch to search tab
-            navSearchEventListener(map, data);
+                        // to switch to search tab
+                        navSearchEventListener(map, data);
 
-            // to switch to direction tab
-            document.querySelector("#mapnav-search-container").style.display = "none";
-            document.querySelector("#mapnav-direction-container").style.display = "flex";
-            
-            document.querySelector("#input-text1").value = location;
-        }
-    });
+                        // to switch to direction tab
+                        document.querySelector("#mapnav-search-container").style.display = "none";
+                        document.querySelector("#mapnav-direction-container").style.display = "flex";
+                        
+                        document.querySelector("#input-text1").value = location;
+                    }
+                });
             } else{
                 document.querySelector("#error-text").innerHTML = "Sorry no match found";
                 document.querySelector("#error-alert").classList.add("visible");
