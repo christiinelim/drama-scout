@@ -15,7 +15,6 @@ async function loadData(){
     return response.data
 }
 
-
 function loadDrama(data){
     const dramaList = [];
 
