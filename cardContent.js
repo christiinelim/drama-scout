@@ -513,13 +513,14 @@ function renderSearchNav(map, data){
 
         if (latLngSearchLocation == "centre"){
             const centerPoint = map.getBounds().getCenter();
-            const searchLatLng = centerPoint.lat + "," + centerPoint.lng;
+            searchLatLng = centerPoint.lat + "," + centerPoint.lng;
         } else {
             const provinceLatLng = loadProvinceLatLng();
-            const searchLatLng = provinceLatLng[latLngSearchLocation];    
+            searchLatLng = provinceLatLng[latLngSearchLocation];    
         }
 
         if (searchTerm != ""){
+            console.log()
             const suggestion = await searchTermAutocomplete(searchTerm, searchLatLng, sessionToken);
             getAutocompleteResults(suggestion);
         } else {
@@ -528,6 +529,7 @@ function renderSearchNav(map, data){
        
     }) 
     */
+    
     
     // search icon
     document.querySelector("#mapnav-search-icon").addEventListener("click", async function(){
