@@ -190,8 +190,9 @@ function renderMapNavItems(map, data){
 
     // for plotting markers
     let provinceLayers = {};
-    
-    for (let location of data.location){
+    let provinceClusters = {};
+
+    for (let location of data.location) {
         const childElement = createMapNavItem(location);
         divElement.appendChild(childElement);
 
@@ -199,22 +200,32 @@ function renderMapNavItems(map, data){
 
         if (!provinceLayers[location.province]) {
             provinceLayers[location.province] = L.layerGroup().addTo(map);
-        } 
-        
-        locationMarker.addTo(provinceLayers[location.province]);
+            provinceClusters[location.province] = L.markerClusterGroup();
+            provinceClusters[location.province].addTo(map); 
+        }
 
-        childElement.querySelector(".mapnav-item-container").addEventListener("click", function(){
+        // add marker to marker cluster group
+        provinceClusters[location.province].addLayer(locationMarker);
+
+        childElement.querySelector(".mapnav-item-container").addEventListener("click", function () {
             onSearchItemClick(map, location.latitude, location.longitude, locationMarker);
-        })
+        });
     }
 
     for (let province in provinceLayers) {
         if (provinceLayers.hasOwnProperty(province)) {
-            groupedLayerControl.addOverlay(provinceLayers[province], province, "Drama Locations");
+            provinceLayers[province].addLayer(provinceClusters[province]);
+        }
+    }
+
+    for (let province in provinceLayers) {
+        if (provinceLayers.hasOwnProperty(province)) {
+            groupedLayerControl.addOverlay(provinceClusters[province], province, "Drama Locations");
         }
     }
 
     groupedLayerControl.addTo(map);
+
 
     // add popup event listener
     document.addEventListener("click", async function(event) {
@@ -563,10 +574,14 @@ function renderSearchNav(map, data){
                 data = await search(searchTerm, searchLatLng, searchCategory);      
             }
 
+            const searchClusters = {};
+
             if (data.results.length != 0){
                 let layerExists = true;
                 if (!searchLayers[selectedSearchCategory]) {
                     searchLayers[selectedSearchCategory] = L.layerGroup().addTo(map);
+                    searchClusters[selectedSearchCategory] = L.markerClusterGroup();
+                    searchClusters[selectedSearchCategory].addTo(map);
                     layerExists = false;
                 }
 
@@ -608,14 +623,17 @@ function renderSearchNav(map, data){
                     // plot markers
                     const locationMarker = createLocationMarker(d, `${selectedSearchCategory}-marker.png`, "search");
                     
-                    locationMarker.addTo(searchLayers[selectedSearchCategory]);
+                    locationMarker.addTo(searchClusters[selectedSearchCategory]);
 
                     divElement.querySelector(".mapnav-item-container").addEventListener("click", function(){
                         onSearchItemClick(map, d.geocodes.main.latitude, d.geocodes.main.longitude, locationMarker);
                     })
                 }
+                
+                // add marker cluster to layer group
+                searchLayers[selectedSearchCategory].addLayer(searchClusters[selectedSearchCategory]);
 
-                // add  layer to the groupedLayerControl if new
+                // add layer to the groupedLayerControl if new
                 if (!layerExists) {
                     groupedLayerControl.addOverlay(searchLayers[selectedSearchCategory], selectedSearchCategory, "Search");
                 }
