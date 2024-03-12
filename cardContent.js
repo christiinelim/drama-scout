@@ -34,17 +34,17 @@ document.addEventListener("DOMContentLoaded", async function(){
     // navbar small
     document.querySelector("#menu-button-click").addEventListener("click", function(){
         if (document.querySelector("#dropdown").classList.contains("close")){
-            document.querySelector("#dropdown").style.height = "0px";
-            document.querySelector("#menu-button-click").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-            </svg>`;
-            document.querySelector("#dropdown").classList.remove("close");
-        }
-        else{
             document.querySelector("#dropdown").style.height = "99vh";
             document.querySelector("#menu-button-click").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
             <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+            </svg>`;
+            document.querySelector("#dropdown").classList.remove("close");
+        }
+        else{
+            document.querySelector("#dropdown").style.height = "0px";
+            document.querySelector("#menu-button-click").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
             </svg>`;
             document.querySelector("#dropdown").classList.add("close");
         }
@@ -69,7 +69,10 @@ document.addEventListener("DOMContentLoaded", async function(){
 
         document.querySelector("#location-nav").classList.remove("location-nav-class");
         document.querySelector("#nav-icon").style.display = "none";
-    });
+
+        // hide the reset map button
+        document.querySelector("#reposition-map").style.display = "none";
+        });
 
     document.querySelector("#map-tab").addEventListener("click", function(){
         mapnavList();
@@ -99,7 +102,7 @@ function displayCardContentPage(data){
     document.querySelector("#year").innerHTML = data.year;
     document.querySelector("#drama-name").innerHTML = data.drama;
     document.querySelector("#drama-synopsis").innerHTML = data.synopsis;
-    document.querySelector("#genre").innerHTML = `<i class="bi bi-tags-fill"></i>${data.genre}`;
+    document.querySelector("#genre").innerHTML = `<i class="bi bi-tags-fill"></i>${data.genre.join(', ')}`;
 
     document.querySelector("#drama-image").style.backgroundImage = `url(${data.dramaImage})`;
     renderLocation(data);
@@ -175,6 +178,9 @@ function mapnavList(){
 
     // create nav tab
     document.querySelector("#mapnav-tab").style.display = "flex";
+
+    // unhide the reset map button
+    document.querySelector("#reposition-map").style.display = "flex";
 }
 
 // show location list in nav
@@ -386,10 +392,6 @@ function createCustomPopup(data, locationMarker){
                         <div class="button-item-text">Directions</div>
                     </div> 
                     ${websiteDiv}
-                    <div class="button-item">
-                        <div class="button-item-icon"><i class="bi bi-bookmarks"></i></div>
-                        <div class="button-item-text">Save</div>
-                    </div>
                 </div>
                 <div class="info-description">
                     <div class="description-item">
