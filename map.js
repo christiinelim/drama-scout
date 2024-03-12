@@ -11,7 +11,13 @@ function createMap(map){
     });
     let seoulMarker = L.marker([37.5519, 126.9918], {icon: seoulIcon});
     seoulMarker.addTo(map);
-    seoulMarker.bindPopup(`<h4>Seoul</h4>`);
+
+    const customOptions =
+        {
+            'className' : 'seoulCustom'
+        };
+
+    seoulMarker.bindPopup(`<h6>SEOUL</h6>`, customOptions);
 }
 
 // change icon of nav on click

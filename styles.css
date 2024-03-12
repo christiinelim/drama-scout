@@ -1115,7 +1115,8 @@
         margin-right: 5px;
     }
     
-    .popupCustom {
+    .popupCustom,
+    .seoulCustom {
         margin-bottom: -35px;
     }
 
@@ -2395,7 +2396,8 @@
         margin-right: 5px;
     }
     
-    .popupCustom {
+    .popupCustom,
+    .seoulCustom {
         margin-bottom: -35px;
     }
 
@@ -3677,7 +3679,8 @@
         margin-right: 5px;
     }
     
-    .popupCustom {
+    .popupCustom, 
+    .seoulCustom {
         margin-bottom: -30px;
     }
 
