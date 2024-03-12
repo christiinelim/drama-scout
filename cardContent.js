@@ -87,6 +87,11 @@ document.addEventListener("DOMContentLoaded", async function(){
         }
     });
     
+    // reposition map
+    document.querySelector("#reposition-map").addEventListener("click", function(){
+        map.flyTo([37.5519, 126.9918], 13);
+
+    })
 })
 
 // card content page

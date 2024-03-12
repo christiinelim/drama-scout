@@ -454,7 +454,7 @@
         display: none;
         align-items: center;
         justify-content: center;
-        z-index: 10000;
+        z-index: 800;
         background-color: #98A296;
         color: white;
         width: 20px;
@@ -1278,6 +1278,27 @@
         border-radius: 5% !important;
     }
 
+    #reposition-map{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 10px;
+        top: 60px;
+        z-index: 500;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+        width: 35px;
+        height: 35px;
+    }
+
+    #reposition-map svg{
+        color: #5F685D;
+        width: 17px;
+        height: 17px;
+    }
+
 
 
 
@@ -1808,7 +1829,7 @@
         display: none;
         align-items: center;
         justify-content: center;
-        z-index: 10000;
+        z-index: 800;
         background-color: #98A296;
         color: white;
         width: 25px;
@@ -2609,6 +2630,27 @@
         border-radius: 5% !important;
     }
 
+    #reposition-map{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 10px;
+        top: 66px;
+        z-index: 500;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+        width: 40px;
+        height: 40px;
+    }
+
+    #reposition-map svg{
+        color: #5F685D;
+        width: 18px;
+        height: 18px;
+    }
+
 
 
     /* wishlist */
@@ -3133,7 +3175,7 @@
         display: none;
         align-items: center;
         justify-content: center;
-        z-index: 10000;
+        z-index: 800;
         background-color: #98A296;
         color: white;
         width: 30px;
@@ -3933,39 +3975,24 @@
         border-radius: 5% !important;
     }
 
-    /* remove layer button */
-     /*
-    .search-category-label{
-        display: flex !important;
-        justify-content: space-between;
-    }
-
-    .search-category-label span{
-        width: 90%;
-        padding-left: 3px;
-    }
-
-    .remove-layer-div{
+    #reposition-map{
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    .remove-layer-btn {
-        font-size: 8px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        border: 1.5px solid #98A296;
-        padding: 0;
-        width: 15px;
-        height: 15px;
+        position: absolute;
+        right: 10px;
+        top: 70px;
+        z-index: 500;
+        background-color: rgba(255,255,255,0.8);
         border-radius: 50%;
-        color: #98A296;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+        width: 44px;
+        height: 44px;
     }
-    */
 
+    #reposition-map svg{
+        color: #5F685D;
+    }
 
 
     /* wishlist */
