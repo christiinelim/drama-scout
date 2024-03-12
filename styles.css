@@ -1116,7 +1116,7 @@
     }
     
     .popupCustom {
-        margin-bottom: 35px;
+        margin-bottom: -35px;
     }
 
     .popupCustom .leaflet-popup-content-wrapper {
@@ -2447,7 +2447,7 @@
     }
     
     .popupCustom {
-        margin-bottom: 35px;
+        margin-bottom: -35px;
     }
 
     .popupCustom .leaflet-popup-content-wrapper {
@@ -3773,7 +3773,7 @@
     }
     
     .popupCustom {
-        margin-bottom: 35px;
+        margin-bottom: -30px;
     }
 
     .popupCustom .leaflet-popup-content-wrapper {

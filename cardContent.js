@@ -1,5 +1,7 @@
 let sessionToken = `acbehdoandduurrbofjsowmeomd` + Math.floor(Math.random() * 100000);
 let controlLayers = L.control.layers();
+let polylineLayer = L.layerGroup();
+let directionLayer = L.layerGroup();
 let searchLayers = {};
 const groupedLayerControl = L.control.groupedLayers();
 
@@ -299,10 +301,12 @@ function createLocationMarker(d, url, type){
     let locationMarker = null;
 
     // plot location icon
+    const iconSize = [40, 40]
+    const iconAnchor = [iconSize[0] / 2, iconSize[1] / 2];
     let locationIcon = L.icon({
         iconUrl: `image/map/${url}`,
-        iconSize: [40, 40],
-        iconAnchor: [22, 94],
+        iconSize: iconSize,
+        iconAnchor: iconAnchor,
         popupAnchor: [-3, -76],
     });
 
@@ -664,18 +668,26 @@ function renderSearchNav(map, data){
             }, 1500);
         }
         else {
+            if (map.hasLayer(polylineLayer)){
+                polylineLayer.removeFrom(map);
+                polylineLayer.clearLayers();
+                directionLayer.removeFrom(map);
+                directionLayer.clearLayers();
+            }
             const starting = await convertPlaceToLatLong(start);
-            addDirectionMarker(map, "starting-point", starting[1], starting[0]);
+            addDirectionMarker(map, "starting-point", starting[1], starting[0], directionLayer);
             const ending = await convertPlaceToLatLong(end);
-            addDirectionMarker(map, "ending-point", ending[1], ending[0]);
+            addDirectionMarker(map, "ending-point", ending[1], ending[0], directionLayer);
             const routeInformation = await loadDirections(starting, ending, profile); 
 
             const encoded = routeInformation.routeGeometry;
 
             const polyline = L.Polyline.fromEncoded(encoded,{
-                color: 'red',
+                color: '#1B85E6',
                 weight: 5
-            }).addTo(map);
+            });
+
+            polylineLayer.addLayer(polyline).addTo(map);
 
             map.fitBounds(polyline.getBounds());
 
