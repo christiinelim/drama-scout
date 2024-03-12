@@ -200,10 +200,14 @@ function renderMapNavItems(map, data){
 
         if (!provinceLayers[location.province]) {
             provinceLayers[location.province] = L.layerGroup().addTo(map);
-            provinceClusters[location.province] = L.markerClusterGroup();
-            provinceClusters[location.province].addTo(map); 
+        
+            provinceClusters[location.province] = L.markerClusterGroup({
+                iconCreateFunction: createClusterIcon("image/map/drama-cluster.png")
+            });
+        
+            provinceClusters[location.province].addTo(map);
         }
-
+        
         // add marker to marker cluster group
         provinceClusters[location.province].addLayer(locationMarker);
 
@@ -580,7 +584,11 @@ function renderSearchNav(map, data){
                 let layerExists = true;
                 if (!searchLayers[selectedSearchCategory]) {
                     searchLayers[selectedSearchCategory] = L.layerGroup().addTo(map);
-                    searchClusters[selectedSearchCategory] = L.markerClusterGroup();
+                    
+                    searchClusters[selectedSearchCategory] = L.markerClusterGroup({
+                        iconCreateFunction: createClusterIcon(`image/map/${selectedSearchCategory}-cluster.png`) // Specify the image path here
+                    });
+                    
                     searchClusters[selectedSearchCategory].addTo(map);
                     layerExists = false;
                 }

@@ -23,6 +23,7 @@ function changeIcon(divElement, activeClass, inactiveArray){
     }
 }
 
+// direction icon customization
 function addDirectionMarker(map, image, lat, lng, layer){
     const iconSize = [35, 35]
     const iconAnchor = [iconSize[0] / 2, iconSize[1] / 2];
@@ -35,4 +36,17 @@ function addDirectionMarker(map, image, lat, lng, layer){
     let newMarker = L.marker([lat, lng], {icon: customizedIcon});
 
     layer.addLayer(newMarker).addTo(map);
+}
+
+
+// marker cluster icon customization
+function createClusterIcon(iconImagePath) {
+    return function (cluster) {
+        const count = cluster.getChildCount();
+        return L.divIcon({
+            className: 'custom-cluster-icon', 
+            html: `<div class="custom-cluster-icon-content"><img src="${iconImagePath}" /><span class="cluster-count">${count}</span></div>`,
+            iconSize: [40, 40]
+        });
+    };
 }
