@@ -1345,6 +1345,7 @@
     }
     
     .cluster-count {
+        color: #7D7D7D;
         font-weight: bold;
         text-align: center;
     }
@@ -2643,7 +2644,7 @@
     }
     
     .cluster-count {
-        color: black;
+        color: #7D7D7D;
         font-weight: bold;
         text-align: center;
     }
@@ -3941,7 +3942,7 @@
     }
     
     .cluster-count {
-        color: black;
+        color: #7D7D7D;
         font-weight: bold;
         text-align: center;
     }
