@@ -17,6 +17,14 @@
         display: none;
     }
 
+    #logo-small {
+        background-image: url(image/logo.png);
+        background-size: contain;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+    }
+
     #navbar-small{
         height: 40px;
         box-shadow: 0px 4px 5px rgba(0,0,0, 0.25);
@@ -35,9 +43,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 25px;
+        font-size: 20px;
         font-family: 'Pacifico';
         color: white;
+        display: flex;
+        align-items: center;
+        height: 40px;
     }
 
     #menu-button{
@@ -1353,6 +1364,14 @@
         display: none;
     }
 
+    #logo {
+        background-image: url(image/logo.png);
+        background-size: contain;
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+    }
+
     #navbar{
         height: 44px;
         box-shadow: 0px 4px 5px rgba(0,0,0, 0.25);
@@ -1371,6 +1390,8 @@
         font-family: 'Pacifico';
         padding-left: 27px;
         color: white;
+        display: flex;
+        align-items: center;
     }
 
     #nav-right{
@@ -2632,6 +2653,14 @@
     }
 
     /* navbar */
+    #logo {
+        background-image: url(image/logo.png);
+        background-size: contain;
+        width: 35px;
+        height: 35px;
+        background-repeat: no-repeat;
+    }
+
     #navbar-small{
         display: none;
     }
@@ -2654,6 +2683,8 @@
         font-family: 'Pacifico';
         padding-left: 30px;
         color: white;
+        display: flex;
+        align-items: center;
     }
 
     #nav-right{
