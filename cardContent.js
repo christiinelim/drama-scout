@@ -4,6 +4,13 @@ let polylineLayer = L.layerGroup();
 let directionLayer = L.layerGroup();
 let searchLayers = {};
 const groupedLayerControl = L.control.groupedLayers();
+const color = {
+    "drama": "#6B5241",
+    "attractions": "#628F9F",
+    "art": "#646D8D",
+    "food": "#A47955",
+    "shopping": "#CF8585"
+}
 
 document.addEventListener("DOMContentLoaded", async function(){
     // data set
@@ -214,6 +221,7 @@ function renderMapNavItems(map, data){
         childElement.querySelector(".mapnav-item-container").addEventListener("click", function () {
             onSearchItemClick(map, location.latitude, location.longitude, locationMarker);
         });
+        
     }
 
     for (let province in provinceLayers) {
