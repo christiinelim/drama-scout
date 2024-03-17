@@ -1221,7 +1221,7 @@
             },
             {
                 "name": "Seogwipo City",
-                "image": "/",
+                "image": "image/drama/12a.png",
                 "province": "Jeju Island",
                 "area": "Seogwipo",
                 "address": "Seogwipo-si, Jeju Island, South Korea",
@@ -1234,7 +1234,7 @@
             },
             {
                 "name": "Mount Hallasan",
-                "image": "/",
+                "image": "image/drama/12b.png",
                 "province": "Jeju Island",
                 "area": "Jeju-si",
                 "address": "Hallasan-ro, Jeju-si, Jeju Island, South Korea",
@@ -1247,7 +1247,7 @@
             },
             {
                 "name": "Udo Island",
-                "image": "/",
+                "image": "image/drama/12c.png",
                 "province": "Jeju Island",
                 "area": "Jeju-si",
                 "address": "Udo-ri, Jeju-si, Jeju Island, South Korea",
@@ -1260,7 +1260,7 @@
             },
             {
                 "name": "Gwaneum Temple",
-                "image": "/",
+                "image": "image/drama/12d.png",
                 "province": "Jeju Island",
                 "area": "Jeju-si",
                 "address": "58 Gwaneum-ro 14-gil, Gujwa-eup, Jeju-si, Jeju Island, South Korea",
@@ -1273,7 +1273,7 @@
             },
             {
                 "name": "Woljeongri Beach",
-                "image": "/",
+                "image": "image/drama/12e.png",
                 "province": "Jeju Island",
                 "area": "Jeju-si",
                 "address": "Woljeong-ri, Gujwa-eup, Jeju-si, Jeju Island, South Korea",
@@ -1286,7 +1286,7 @@
             },
             {
                 "name": "Saryeoni Forest Path",
-                "image": "/",
+                "image": "image/drama/12f.png",
                 "province": "Jeju Island",
                 "area": "Jeju-si",
                 "address": "Saryeoni Forest, Jeoji-ri, Jocheon-eup, Jeju-si, Jeju Island, South Korea",
@@ -1299,7 +1299,7 @@
             },
             {
                 "name": "Oedolgae Rock",
-                "image": "/",
+                "image": "image/drama/12g.png",
                 "province": "Jeju Island",
                 "area": "Seogwipo",
                 "address": "Oedolgae-ro, Seogwipo-si, Jeju Island, South Korea",
@@ -1335,7 +1335,7 @@
             },
             {
                 "name": "Cheonggyecheon Stream",
-                "image": "/",
+                "image": "image/drama/13a.png",
                 "province": "Seoul",
                 "area": "Jongno-gu",
                 "address": "Cheonggyecheon-ro, Jongno-gu, Seoul, South Korea",
@@ -1348,7 +1348,7 @@
             },
             {
                 "name": "Seoul National University",
-                "image": "/",
+                "image": "image/drama/13b.png",
                 "province": "Seoul",
                 "area": "Gwanak-gu",
                 "address": "1 Gwanak-ro, Gwanak-gu, Seoul, South Korea",
@@ -1387,7 +1387,7 @@
             },
             {
                 "name": "Myeongdong Shopping Street",
-                "image": "/",
+                "image": "image/drama/13c.png",
                 "province": "Seoul",
                 "area": "Jung-gu",
                 "address": "Myeong-dong, Jung-gu, Seoul, South Korea",
@@ -1413,7 +1413,7 @@
             },
             {
                 "name": "Hangang Park",
-                "image": "/",
+                "image": "image/drama/13d.png",
                 "province": "Seoul",
                 "area": "Various locations",
                 "address": "Hangang Park, Seoul, South Korea",
@@ -1436,7 +1436,7 @@
         "location": [
             {
                 "name": "Gyeonggi English Village (Paju Camp)",
-                "image": "/",
+                "image": "image/drama/14a.png",
                 "province": "Gyeonggi-do",
                 "area": "Paju",
                 "address": "312 Bangeojin-gil, Geumwang-eup, Paju-si, Gyeonggi-do, South Korea",
@@ -1449,7 +1449,7 @@
             },
             {
                 "name": "Jeju Island",
-                "image": "/",
+                "image": "image/drama/14b.png",
                 "province": "Jeju Province",
                 "area": "Jeju-si",
                 "address": "Jeju-do, South Korea",
@@ -1514,7 +1514,7 @@
             },
             {
                 "name": "Seoul Station",
-                "image": "/",
+                "image": "image/drama/14c.png",
                 "province": "Seoul",
                 "area": "Jung-gu",
                 "address": "405 Hangang-daero, Huam-dong, Yongsan-gu, Seoul, South Korea",
@@ -1563,7 +1563,7 @@
             },
             {
                 "name": "Ewha Womans University",
-                "image": "/",
+                "image": "image/drama/15a.png",
                 "province": "Seoul",
                 "area": "Seodaemun-gu",
                 "address": "52 Ewhayeodae-gil, Daehyeon-dong, Seodaemun-gu, Seoul, South Korea",
@@ -1576,7 +1576,7 @@
             },
             {
                 "name": "Cheonggyecheon Stream",
-                "image": "/",
+                "image": "image/drama/13a.png",
                 "province": "Seoul",
                 "area": "Jongno-gu",
                 "address": "Cheonggyecheon-ro, Jongno-gu, Seoul, South Korea",
@@ -1589,7 +1589,7 @@
             },
             {
                 "name": "Unhyeongung Palace",
-                "image": "/",
+                "image": "image/drama/15b.png",
                 "province": "Seoul",
                 "area": "Jongno-gu",
                 "address": "114-10 Unni-dong, Jongno-gu, Seoul, South Korea",
@@ -1602,7 +1602,7 @@
             },
             {
                 "name": "Jungang Market",
-                "image": "/",
+                "image": "image/drama/15c.png",
                 "province": "Seoul",
                 "area": "Jung-gu",
                 "address": "6-1 Changsin 1(il)-ga, Jongno-gu, Seoul, South Korea",
@@ -1615,7 +1615,7 @@
             },
             {
                 "name": "Gwanghwamun Square",
-                "image": "/",
+                "image": "image/drama/15d.png",
                 "province": "Seoul",
                 "area": "Jongno-gu",
                 "address": "172 Sejong-daero, Sejongno, Jongno-gu, Seoul, South Korea",
@@ -1628,7 +1628,7 @@
             },
             {
                 "name": "Songdo Central Park",
-                "image": "/",
+                "image": "image/drama/15e.png",
                 "province": "Incheon",
                 "area": "Yeonsu-gu",
                 "address": "200, Technopark-ro, Yeonsu-gu, Incheon, South Korea",
@@ -1664,7 +1664,7 @@
             },
             {
                 "name": "Bukhansanseong Fortress",
-                "image": "/",
+                "image": "image/drama/16a.png",
                 "province": "Seoul",
                 "area": "Goyang",
                 "address": "152 Beodeunaru-ro, Ukjon-ri, Jeongbalsan-dong, Ilsandong-gu, Goyang-si, Gyeonggi-do, South Korea",
@@ -1677,7 +1677,7 @@
             },
             {
                 "name": "Changdeokgung Palace",
-                "image": "/",
+                "image": "image/drama/16b.png",
                 "province": "Seoul",
                 "area": "Jongno-gu",
                 "address": "99 Yulgok-ro, Waryong-dong, Jongno-gu, Seoul, South Korea",
@@ -1703,7 +1703,7 @@
             },
             {
                 "name": "Namhansanseong Fortress",
-                "image": "/",
+                "image": "image/drama/16c.png",
                 "province": "Gyeonggi-do",
                 "area": "Gwangju",
                 "address": "188 Sannae-ri, Jeongnam-myeon, Hwaseong, Gyeonggi-do, South Korea",
@@ -1716,7 +1716,7 @@
             },
             {
                 "name": "Munhwa Broadcasting Corporation (MBC) Dramia",
-                "image": "/",
+                "image": "image/drama/16d.png",
                 "province": "Gyeonggi-do",
                 "area": "Icheon",
                 "address": "33 Hwahap-ro 2107beon-gil, Yongmun-myeon, Icheon-si, Gyeonggi-do, South Korea",
@@ -1729,7 +1729,7 @@
             },
             {
                 "name": "Haeundae Beach",
-                "image": "/",
+                "image": "image/drama/16e.png",
                 "province": "Busan",
                 "area": "Haeundae-gu",
                 "address": "264 Haeundaehaebyeon-ro, Haeundae-gu, Busan, South Korea",
@@ -1742,7 +1742,7 @@
             },
             {
                 "name": "Sangdangsanseong Fortress",
-                "image": "/",
+                "image": "image/drama/16f.png",
                 "province": "Chungcheongbuk-do",
                 "area": "Cheongju",
                 "address": "San 28-2 Sangdang-gu, Cheongju-si, Chungcheongbuk-do, South Korea",
@@ -1765,7 +1765,7 @@
         "location": [
             {
                 "name": "Gyeongju Historic Areas",
-                "image": "/",
+                "image": "image/drama/17a.png",
                 "province": "Gyeongsangbuk-do",
                 "area": "Gyeongju",
                 "address": "Gyeongju-si, Gyeongsangbuk-do, South Korea",
@@ -1778,7 +1778,7 @@
             },
             {
                 "name": "Bulguksa Temple",
-                "image": "/",
+                "image": "image/drama/17b.png",
                 "province": "Gyeongsangbuk-do",
                 "area": "Gyeongju",
                 "address": "15, Jinhyeon-dong, Gyeongju-si, Gyeongsangbuk-do, South Korea",
@@ -1791,7 +1791,7 @@
             },
             {
                 "name": "Seorabeol City",
-                "image": "/",
+                "image": "image/drama/17c.png",
                 "province": "Gyeongsangbuk-do",
                 "area": "Gyeongju",
                 "address": "Gyeongju-si, Gyeongsangbuk-do, South Korea",
@@ -1804,7 +1804,7 @@
             },
             {
                 "name": "Anapji Pond",
-                "image": "/",
+                "image": "image/drama/17d.png",
                 "province": "Gyeongsangbuk-do",
                 "area": "Gyeongju",
                 "address": "Apsin-gil, Gyeongju-si, Gyeongsangbuk-do, South Korea",
@@ -1817,7 +1817,7 @@
             },
             {
                 "name": "Sangdangsanseong Fortress",
-                "image": "/",
+                "image": "image/drama/16f.png",
                 "province": "Chungcheongbuk-do",
                 "area": "Cheongju",
                 "address": "San 28-2 Sangdang-gu, Cheongju-si, Chungcheongbuk-do, South Korea",
@@ -1830,7 +1830,7 @@
             },
             {
                 "name": "Naksansa Temple",
-                "image": "/",
+                "image": "image/drama/17e.png",
                 "province": "Gangwon-do",
                 "area": "Yangyang",
                 "address": "100 Naksansa-ro, Ganghyeon-myeon, Yangyang-gun, Gangwon-do, South Korea",
@@ -1843,7 +1843,7 @@
             },
             {
                 "name": "Samcheong-dong",
-                "image": "/",
+                "image": "image/drama/17f.png",
                 "province": "Seoul",
                 "area": "Jongno-gu",
                 "address": "Samcheong-dong, Jongno-gu, Seoul, South Korea",
@@ -1856,7 +1856,7 @@
             },
             {
                 "name": "Namhansanseong Fortress",
-                "image": "/",
+                "image": "image/drama/16c.png",
                 "province": "Gyeonggi-do",
                 "area": "Gwangju",
                 "address": "188 Sannae-ri, Jeongnam-myeon, Hwaseong, Gyeonggi-do, South Korea",
@@ -1905,7 +1905,7 @@
             },
             {
                 "name": "Seoul Baekje Museum",
-                "image": "/",
+                "image": "image/drama/18a.png",
                 "province": "Seoul",
                 "area": "Songpa-gu",
                 "address": "188-5 Jamsilbon-dong, Songpa-gu, Seoul, South Korea",
@@ -1918,7 +1918,7 @@
             },
             {
                 "name": "Seoul Forest",
-                "image": "/",
+                "image": "image/drama/18b.png",
                 "province": "Seoul",
                 "area": "Seongdong-gu",
                 "address": "273 Ttukseom-ro, Seongsu-dong 1(il)-ga, Seongdong-gu, Seoul, South Korea",
@@ -1931,7 +1931,7 @@
             },
             {
                 "name": "Changdeokgung Palace",
-                "image": "/",
+                "image": "image/drama/16b.png",
                 "province": "Seoul",
                 "area": "Jongno-gu",
                 "address": "99 Yulgok-ro, Waryong-dong, Jongno-gu, Seoul, South Korea",
@@ -1970,7 +1970,7 @@
             },
             {
                 "name": "Hapcheon Image Theme Park",
-                "image": "/",
+                "image": "image/drama/18c.png",
                 "province": "Gyeongsangnam-do",
                 "area": "Hapcheon-gun",
                 "address": "1-13 Eumseo-ro, Hapcheon-eup, Hapcheon-gun, Gyeongsangnam-do, South Korea",
@@ -1993,7 +1993,7 @@
         "location": [
             {
                 "name": "Gyerim Forest",
-                "image": "/",
+                "image": "image/drama/19a.png",
                 "province": "Gyeonggi-do",
                 "area": "Yongin",
                 "address": "269-4 Maseok-ri, Giheung-eup, Yongin-si, Gyeonggi-do, South Korea",
@@ -2005,21 +2005,8 @@
                 "website": "http://yonginforest.co.kr/"
             },
             {
-                "name": "Jumong Bridge",
-                "image": "/",
-                "province": "Gyeonggi-do",
-                "area": "Yongin",
-                "address": "Hwasan-ri, Giheung-eup, Yongin-si, Gyeonggi-do, South Korea",
-                "latitude": 37.2664,
-                "longitude": 127.1576,
-                "description": "Discover the charm of Jumong Bridge in Yongin, Gyeonggi-do, an architectural marvel spanning picturesque surroundings, inviting visitors to stroll and admire the scenic beauty.",
-                "openingHours": "",
-                "admissionFee": 0,
-                "website": "nil"
-            },
-            {
                 "name": "Korean Folk Village",
-                "image": "/",
+                "image": "image/drama/19b.png",
                 "province": "Gyeonggi-do",
                 "area": "Yongin",
                 "address": "90 Minsokchon-ro, Giheung-gu, Yongin-si, Gyeonggi-do, South Korea",
@@ -2032,7 +2019,7 @@
             },
             {
                 "name": "Paju Book City",
-                "image": "/",
+                "image": "image/drama/19c.png",
                 "province": "Gyeonggi-do",
                 "area": "Paju",
                 "address": "Gyeonggi-do, Paju-si, Tanhyeon-myeon, Unjeong-ro, South Korea",
@@ -2045,7 +2032,7 @@
             },
             {
                 "name": "Namhansanseong Fortress",
-                "image": "/",
+                "image": "image/drama/16c.png",
                 "province": "Gyeonggi-do",
                 "area": "Gwangju",
                 "address": "188 Sannae-ri, Jeongnam-myeon, Hwaseong, Gyeonggi-do, South Korea",
@@ -2058,7 +2045,7 @@
             },
             {
                 "name": "Yongin Dae Jang Geum Park",
-                "image": "/",
+                "image": "image/drama/19d.png",
                 "province": "Gyeonggi-do",
                 "area": "Icheon",
                 "address": "33 Hwahap-ro 2107beon-gil, Yongmun-myeon, Icheon-si, Gyeonggi-do, South Korea",
@@ -2071,7 +2058,7 @@
             },
             {
                 "name": "Jungang Park",
-                "image": "/",
+                "image": "image/drama/19e.png",
                 "province": "Chungcheongnam-do",
                 "area": "Asan",
                 "address": "65-5 Sinsang-dong, Asan-si, Chungcheongnam-do, South Korea",
@@ -2084,7 +2071,7 @@
             },
             {
                 "name": "Songgwangsa Temple",
-                "image": "/",
+                "image": "image/drama/19f.png",
                 "province": "Jeollanam-do",
                 "area": "Suncheon",
                 "address": "344 Songgwangsa-ro, Songgwang-myeon, Suncheon-si, Jeollanam-do, South Korea",
@@ -2133,7 +2120,7 @@
             },
             {
                 "name": "Unhyeongung Palace",
-                "image": "/",
+                "image": "image/drama/15b.png",
                 "province": "Seoul",
                 "area": "Jongno-gu",
                 "address": "114-10 Unni-dong, Jongno-gu, Seoul, South Korea",
@@ -2146,7 +2133,7 @@
             },
             {
                 "name": "Songdo Beach",
-                "image": "/",
+                "image": "image/drama/20a.png",
                 "province": "Incheon",
                 "area": "Mansu-gu",
                 "address": "123, Haean-ro, Yeongjongdo-dong, Jung-gu, Incheon, South Korea",
@@ -2159,7 +2146,7 @@
             },
             {
                 "name": "Wolmido Island",
-                "image": "/",
+                "image": "image/drama/20b.png",
                 "province": "Incheon",
                 "area": "Jung-gu",
                 "address": "36 Wolmimunhwa-ro, Jung-gu, Incheon, South Korea",
@@ -2172,7 +2159,7 @@
             },
             {
                 "name": "Naejangsan National Park",
-                "image": "/",
+                "image": "image/drama/20c.png",
                 "province": "Jeollabuk-do",
                 "area": "Jeongeup",
                 "address": "Naejang-dong, Jeongeup-si, Jeollabuk-do, South Korea",
@@ -2185,7 +2172,7 @@
             },
             {
                 "name": "Gangneung Coffee Street",
-                "image": "/",
+                "image": "image/drama/20d.png",
                 "province": "Gangwon-do",
                 "area": "Gangneung",
                 "address": "54-1, Changhae-ro 4-gil, Gangneung-si, Gangwon-do, South Korea",
@@ -2198,7 +2185,7 @@
             },
             {
                 "name": "Yongdusan Park",
-                "image": "/",
+                "image": "image/drama/20e.png",
                 "province": "Busan",
                 "area": "Jung-gu",
                 "address": "37-55 Yongdusan-gil, Jung-gu, Busan, South Korea",
@@ -2221,7 +2208,7 @@
         "location": [
             {
                 "name": "Haneol Sports University",
-                "image": "/",
+                "image": "image/drama/21a.png",
                 "province": "Gyeonggi-do",
                 "area": "Ansan",
                 "address": "15 Pungdeokcheon-ro 23beon-gil, Danwon-gu, Ansan-si, Gyeonggi-do, South Korea",
@@ -2233,21 +2220,8 @@
                 "website": "https://www.knsu.ac.kr/knsu/index.do"
             },
             {
-                "name": "Hanwool College of Physical Education",
-                "image": "/",
-                "province": "Gyeonggi-do",
-                "area": "Yangpyeong",
-                "address": "307 Daehak-ro, Baegam-myeon, Yangpyeong-gun, Gyeonggi-do, South Korea",
-                "latitude": 37.4036,
-                "longitude": 127.5523,
-                "description": "Embrace the spirit of athleticism at Hanwool College of Physical Education in Yangpyeong, Gyeonggi-do, dedicated to nurturing future leaders in sports and physical fitness through quality education and training.",
-                "openingHours": "",
-                "admissionFee": 0,
-                "website": "nil"
-            },
-            {
                 "name": "Yeouido Hangang Park",
-                "image": "/",
+                "image": "image/drama/13d.png",
                 "province": "Seoul",
                 "area": "Yeongdeungpo-gu",
                 "address": "330 Yeouidong-ro, Yeongdeungpo-gu, Seoul, South Korea",
@@ -2260,7 +2234,7 @@
             },
             {
                 "name": "Seoul Olympic Park",
-                "image": "/",
+                "image": "image/drama/21b.png",
                 "province": "Seoul",
                 "area": "Songpa-gu",
                 "address": "424 Olympic-ro, Jamsil-dong, Songpa-gu, Seoul, South Korea",
@@ -2273,7 +2247,7 @@
             },
             {
                 "name": "Sinchon",
-                "image": "/",
+                "image": "image/drama/21c.png",
                 "province": "Seoul",
                 "area": "Mapo-gu",
                 "address": "Sinchon-dong, Mapo-gu, Seoul, South Korea",
@@ -2286,7 +2260,7 @@
             },
             {
                 "name": "Changgyeonggung Palace",
-                "image": "/",
+                "image": "image/drama/21d.png",
                 "province": "Seoul",
                 "area": "Jongno-gu",
                 "address": "185 Changgyeonggung-ro, Jongno-gu, Seoul, South Korea",
@@ -2335,7 +2309,7 @@
         "location": [
             {
                 "name": "KBS Broadcasting Station",
-                "image": "/",
+                "image": "image/drama/22a.png",
                 "province": "Seoul",
                 "area": "Yeongdeungpo-gu",
                 "address": "18 Yeouido-dong, Yeongdeungpo-gu, Seoul, South Korea",
@@ -2348,7 +2322,7 @@
             },
             {
                 "name": "Sogang University",
-                "image": "/",
+                "image": "image/drama/22b.png",
                 "province": "Seoul",
                 "area": "Mapo-gu",
                 "address": "35 Baekbeom-ro (Sinsu-dong), Mapo-gu, Seoul, South Korea",
@@ -2374,7 +2348,7 @@
             },
             {
                 "name": "Garosu-gil",
-                "image": "/",
+                "image": "image/drama/22c.png",
                 "province": "Seoul",
                 "area": "Gangnam-gu",
                 "address": "Sinsa-dong, Gangnam-gu, Seoul, South Korea",
@@ -2387,7 +2361,7 @@
             },
             {
                 "name": "Itaewon",
-                "image": "/",
+                "image": "image/drama/22d.png",
                 "province": "Seoul",
                 "area": "Yongsan-gu",
                 "address": "Itaewon-dong, Yongsan-gu, Seoul, South Korea",
@@ -2400,7 +2374,7 @@
             },
             {
                 "name": "Gyeongui Line Forest Park",
-                "image": "/",
+                "image": "image/drama/22e.png",
                 "province": "Seoul",
                 "area": "Mapo-gu",
                 "address": "191-1 Seongsan-dong, Mapo-gu, Seoul, South Korea",
@@ -2413,7 +2387,7 @@
             },
             {
                 "name": "Yongin Dae Jang Geum Park",
-                "image": "/",
+                "image": "image/drama/19d.png",
                 "province": "Gyeonggi-do",
                 "area": "Icheon",
                 "address": "33 Hwahap-ro 2107beon-gil, Yongmun-myeon, Icheon-si, Gyeonggi-do, South Korea",
@@ -2426,7 +2400,7 @@
             },
             {
                 "name": "SBS Broadcasting Center",
-                "image": "/",
+                "image": "image/drama/22f.png",
                 "province": "Gyeonggi-do",
                 "area": "Goyang",
                 "address": "260 Sangam-dong, Mapo-gu, Seoul, South Korea",
@@ -2448,19 +2422,6 @@
         "synopsis": "My Sassy Girl is a romantic comedy film that tells the story of a young man who encounters a drunk and unpredictable girl on the subway platform. Despite their initial awkward encounter, they eventually develop a unique and heartwarming relationship filled with laughter, love, and unexpected adventures.",
         "location": [
             {
-                "name": "Seoul Metropolitan Subway",
-                "image": "/",
-                "province": "Seoul",
-                "area": "Various",
-                "address": "Seoul, South Korea",
-                "latitude": 37.5665,
-                "longitude": 126.978,
-                "description": "Serving various areas in Seoul, South Korea, the Seoul Metropolitan Subway is a comprehensive transportation network renowned for its efficiency and extensive coverage, providing convenient access to the city's attractions, neighborhoods, and landmarks. ",
-                "openingHours": "",
-                "admissionFee": 0,
-                "website": "https://www.seoulmetro.co.kr/"
-            },
-            {
                 "name": "Gyeongbokgung Palace",
                 "image": "image/drama/0a.png",
                 "province": "Seoul",
@@ -2475,7 +2436,7 @@
             },
             {
                 "name": "Cheonggyecheon Stream",
-                "image": "/",
+                "image": "image/drama/13a.png",
                 "province": "Seoul",
                 "area": "Jung-gu",
                 "address": "Cheonggyecheon-ro, Jongno-gu, Seoul, South Korea",
@@ -2524,7 +2485,7 @@
         "location": [
             {
                 "name": "Gongjin Village",
-                "image": "/",
+                "image": "image/drama/24a.png",
                 "province": "Gangwon-do",
                 "area": "Yangyang-gun",
                 "address": "Gongjin Village, Yangyang-gun, Gangwon-do, South Korea",
@@ -2537,7 +2498,7 @@
             },
             {
                 "name": "Jukdobong Peak",
-                "image": "/",
+                "image": "image/drama/24b.png",
                 "province": "Gangwon-do",
                 "area": "Yangyang-gun",
                 "address": "Jukdobong Peak, Yangyang-gun, Gangwon-do, South Korea",
@@ -2550,7 +2511,7 @@
             },
             {
                 "name": "Yangyang Beach",
-                "image": "/",
+                "image": "image/drama/24c.png",
                 "province": "Gangwon-do",
                 "area": "Yangyang-gun",
                 "address": "Yangyang Beach, Yangyang-gun, Gangwon-do, South Korea",
@@ -2563,7 +2524,7 @@
             },
             {
                 "name": "Seoraksan National Park",
-                "image": "/",
+                "image": "image/drama/24d.png",
                 "province": "Gangwon-do",
                 "area": "Inje",
                 "address": "Seoraksan National Park, Inje, Gangwon-do, South Korea",
@@ -2576,7 +2537,7 @@
             },
             {
                 "name": "Naksansa Temple",
-                "image": "/",
+                "image": "image/drama/17e.png",
                 "province": "Gangwon-do",
                 "area": "Yangyang-gun",
                 "address": "100 Naksansa-ro, Yangyang-eup, Yangyang-gun, Gangwon-do, South Korea",
@@ -2589,26 +2550,13 @@
             },
             {
                 "name": "Naksan Beach",
-                "image": "/",
+                "image": "image/drama/24e.png",
                 "province": "Gangwon-do",
                 "area": "Yangyang-gun",
                 "address": "Naksan Beach, Yangyang-gun, Gangwon-do, South Korea",
                 "latitude": 38.2268,
                 "longitude": 128.5402,
                 "description": "Whether you're seeking seaside relaxation, beachcombing adventures, or scenic sunset views, this coastal gem promises an unforgettable beach getaway for all who visit.",
-                "openingHours": "",
-                "admissionFee": 0,
-                "website": "nil"
-            },
-            {
-                "name": "Naksan Beach Sunrise Park",
-                "image": "/",
-                "province": "Gangwon-do",
-                "area": "Yangyang-gun",
-                "address": "Naksan Beach Sunrise Park, Yangyang-gun, Gangwon-do, South Korea",
-                "latitude": 38.2283,
-                "longitude": 128.5419,
-                "description": "With its tranquil ambiance and stunning views, it's the perfect spot to greet the morning sun and start your day anew.",
                 "openingHours": "",
                 "admissionFee": 0,
                 "website": "nil"
