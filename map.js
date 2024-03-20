@@ -56,18 +56,3 @@ function createClusterIcon(iconImagePath) {
         });
     };
 }
-
-
-// reposition map
-function onRepositionMapClick(map){
-    map.flyTo([37.5519, 126.9918], 13);
-}
-
-
-// search item click
-function onSearchItemClick(map, lat, lng, locationMarker){
-    const adjustedLat = lat + 0.004;
-    map.flyTo([adjustedLat, lng], 16);
-    locationMarker.openPopup();
-    onClosingNavArrow();
-}
