@@ -72,7 +72,7 @@ Within the drama detail page, users can navigate to the map tab, which presents 
 
 Enjoy the project below!
 
-[View Live Project](https://icons.getbootstrap.com/)
+[View Live Project](https://damascout.netlify.app/)
 
 [Back to Top](#dramascount)
 
