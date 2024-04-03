@@ -11,7 +11,7 @@ const WEATHER_API_KEY = 'c679cfa59cc8581fbfa19f29b87913c7';
 const OSRM_BASE_URL = "https://router.project-osrm.org/route/v1/";
 
 async function loadData(){
-    const response = await axios.get("data.json");
+    const response = await axios.get("data/data.json");
     return response.data
 }
 
