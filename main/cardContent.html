@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
+
+    <!-- leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- group layer plugin -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ismyrnow/leaflet-groupedlayercontrol@gh-pages/dist/leaflet.groupedlayercontrol.min.css">
+
+    <!-- marker cluster default css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" integrity="sha512-6ZCLMiYwTeli2rVh3XAPxy3YoR5fVxGdH/pz+KMCzRY2M65Emgkw00Yqmhh8qLGeYQ3LbVZGdmOX9KUjSKr0TA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- marker cluster css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" integrity="sha512-mQ77VzAakzdpWdgfL/lM1ksNy89uFgibRQANsNneSTMD/bj0Y/8+94XMwYhnbzx8eki2hrbPpDm0vD0CiT2lcg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- my css -->
+    <link href="styles.css" rel="stylesheet"/>
+    
+    <!-- icon -->
+    <link rel="icon" href="image/logo-icon.ico" type="image/x-icon">
+    <title>DramaScout</title>
+</head>
+<body>
+
+    <!-- navbar small screen -->
+    <nav id="navbar-small" class="col-12">
+        <div id="nav-stick-small" class="row">
+            <div id="left" class="col-4"></div>
+            <div id="website-name-small" class="col-4">
+                <div>
+                    <div id="logo-small"></div>
+                </div>
+                <div>DramaScout</div>
+            </div>
+            <div id="menu-button" class="col-4">
+                <button id="menu-button-click">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="dropdown" class="close">
+            <div class="navbar-items-small">
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+                    </svg>
+                    Home
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- navbar normal screen -->
+    <nav id="navbar" class="row">
+        <div id="nav-stick" class="col-12">
+            <div id="nav-left" class="col-6">
+                <div id="website-name">
+                    <div>
+                        <div id="logo"></div>
+                    </div>
+                    <div>DramaScout</div>
+                </div>
+            </div>
+            <div id="nav-right" class="col-6">
+                <div class="navbar-items">
+                    <a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+                        </svg>
+                        Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- back to top -->
+    <div id="back-to-top">
+        <a href="#"><div id="back-to-top-icon"><i class="bi bi-arrow-bar-up"></i></div></a>
+    </div>
+
+    <!-- content -->
+    <div id="content-container">
+        <div id="drama-content" class="row">
+            <div id="drama-image-container" class="col-12 col-md-4">
+                <div id="drama-image"></div>
+            </div>
+            <div id="drama-details" class="col-12 col-md-8">
+                <div id="year"></div>
+                <div id="drama-name"></div>
+                <div id="drama-synopsis"></div>
+                <div id="genre"></div>
+            </div>
+        </div>
+        <div id="tab">
+            <div id="location-list-tab"><i class="bi bi-geo"></i>Location List</div>
+            <div id="map-tab"><i class="bi bi-map"></i>Map</div>
+        </div>
+        <div id="tab-container">
+            <div id="location-nav">
+                <div id="location-list">
+                    <div id="location-list-tab-container">
+
+                    </div>
+                    <div id="map-tab-container">
+                        <div id="mapnav-tab" class="row">
+                            <div id="mapnav-location-tab" class="mapnav-tab-item active-tab col-6">Location</div>
+                            <div id="mapnav-search-tab" class="mapnav-tab-item col-6">Search</div>
+                        </div>
+                        <div id="mapnav-container">
+                            <div id="mapnav-location-container">
+
+                            </div>
+                            <div id="mapnav-search-container">
+                                <div id="mapnav-small-container">
+                                    <div id="search-category-container">
+                                        <div id="selected-category">Attractions</div>
+                                        <div class="search-category">
+                                            <div id="attractions-pic" class="search-category-icon attractions-pic-active"></div>
+                                            <div class="search-category-name">Attractions</div>
+                                        </div>
+                                        <div class="search-category">
+                                            <div id="art-pic" class="search-category-icon"></div>
+                                            <div class="search-category-name">Art</div>
+                                        </div>
+                                        <div class="search-category">
+                                            <div id="food-pic" class="search-category-icon"></div>
+                                            <div class="search-category-name">Food</div>
+                                        </div>
+                                        <div class="search-category">
+                                            <div id="shopping-pic" class="search-category-icon"></div>
+                                            <div class="search-category-name">Shopping</div>
+                                        </div>
+                                    </div>
+                            
+                                    <div id="select-location-container">
+                                        <div id="select-location-icon"><i class="bi bi-geo-alt"></i></div>
+                                        <div id="select-location-dropdown">
+                                            <select id="select-location">
+                                                <option value="centre">Centre of Map</option>
+                                                <option value="southkorea">South Korea</option>
+                                                <option value="seoul">Seoul</option>
+                                                <option value="busan">Busan</option>
+                                                <option value="daegu">Daegu</option>
+                                                <option value="incheon">Incheon</option>
+                                                <option value="gwangju">Gwangju</option>
+                                                <option value="daejeon">Daejeon</option>
+                                                <option value="ulsan">Ulsan</option>
+                                                <option value="gyeonggido">Gyeonggi-do</option>
+                                                <option value="gangwondo">Gangwon-do</option>
+                                                <option value="chungcheongbukdo">Chungcheongbuk-do</option>
+                                                <option value="chungcheongnamdo">Chungcheongnam-do</option>
+                                                <option value="jeollabukdo">Jeollabuk-do</option>
+                                                <option value="jeollanamdo">Jeollanam-do</option>
+                                                <option value="gyeongsangbukdo">Gyeongsangbuk-do</option>
+                                                <option value="gyeongsangnamdo">Gyeongsangnam-do</option>
+                                                <option value="jejudo">Jeju-do</option> 
+                                            </select>
+                                        </div>
+                                    </div>
+                            
+                                    <div id="mapnav-searchbar">
+                                        <div id="mapnav-searchbar-border" class="row">
+                                            <div id="mapnav-search-input" class="col-8">
+                                                <input id="input-text" type="text" placeholder="Search a place"/>
+                                            </div>
+                                            <div id="mapnav-x-icon" class="col-1">
+                                                <i id="mapnav-x-i" class="bi bi-x-lg"></i>
+                                            </div>
+                                            <div id="mapnav-search-icon" class="col-1">
+                                                <i class="bi bi-search"></i>
+                                            </div>
+                                            <div id="mapnav-direction-icon" class="col-1">
+                                                <img src="image/map/direction-icon.png"/>
+                                            </div>
+                                        </div>
+                                        <div id="mapnav-search-suggestion">
+                                            <ul id="mapnav-search-suggestion-list"> 
+                                            </ul>
+                                        </div>
+                                        <div id="mapnav-result-box">
+                                        </div>
+                                    </div>
+                                    <div id="error-alert">
+                                        <div id="error-content">
+                                            <div id="error-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                                            <div id="error-text">Please give an input</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="mapnav-direction-container">
+                                <div id="mapnav-direction">
+                                    <div id="mapnav-direction-x">
+                                        <i id="mapnav-direction-x-icon" class="bi bi-x-lg"></i>
+                                    </div>
+
+                                    <div id="select-type-container">
+                                        <div id="select-type-icon"><i class="bi bi-signpost-split"></i></div>
+                                        <div id="select-type-dropdown">
+                                            <select id="select-type">
+                                                <option value="foot">Foot</option>
+                                                <option value="bike">Bike</option>
+                                                <option value="car">Car</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div id="mapnav-direction-border" class="row">
+                                        <div id="mapnav-direction-input1" class="col-12">
+                                            <input id="input-text1" type="text" placeholder="Starting destination"/>
+                                        </div>
+                                    </div>
+                                    <div id="mapnav-direction-border" class="row">
+                                        <div id="mapnav-direction-input2" class="col-11">
+                                            <input id="input-text2" type="text" placeholder="Ending destination"/>
+                                        </div>
+                                        <div id="mapnav-direction-icon2" class="col-1">
+                                            <img src="image/map/direction-icon.png"/>
+                                        </div>
+                                    </div>
+                                    <div id="direction-result">
+                                        <div id="direction-header-container">
+                                            <div id="direction-header">Direction</div>
+                                            <div id="direction-description">
+                                                <div id="direction-duration">Duration: </div>
+                                                <div id="direction-distance">Distance</div>
+                                            </div>
+                                        </div>
+                                        <div id="direction-steps">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="error-alert2">
+                                    <div id="error-content2">
+                                        <div id="error-icon2"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                                        <div id="error-text2">Please give an input</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="nav-icon"><i class="bi bi-caret-left-fill"></i></div>
+            </div> 
+            <div id="map"></div>
+            <div id="reposition-map">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-crosshair2" viewBox="0 0 16 16">
+                    <path d="M8 0a.5.5 0 0 1 .5.5v.518A7 7 0 0 1 14.982 7.5h.518a.5.5 0 0 1 0 1h-.518A7 7 0 0 1 8.5 14.982v.518a.5.5 0 0 1-1 0v-.518A7 7 0 0 1 1.018 8.5H.5a.5.5 0 0 1 0-1h.518A7 7 0 0 1 7.5 1.018V.5A.5.5 0 0 1 8 0m-.5 2.02A6 6 0 0 0 2.02 7.5h1.005A5 5 0 0 1 7.5 3.025zm1 1.005A5 5 0 0 1 12.975 7.5h1.005A6 6 0 0 0 8.5 2.02zM12.975 8.5A5 5 0 0 1 8.5 12.975v1.005a6 6 0 0 0 5.48-5.48zM7.5 12.975A5 5 0 0 1 3.025 8.5H2.02a6 6 0 0 0 5.48 5.48zM10 8a2 2 0 1 0-4 0 2 2 0 0 0 4 0"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js" integrity="sha512-NQfB/bDaB8kaSXF8E77JjhHG5PM6XVRxvHzkZiwl3ddWCEPBa23T76MuWSwAJdMGJnmQqM0VeY9kFszsrBEFrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- encode plugin -->
+    <script src="Polyline.encoded.js"></script>
+    
+    <!-- group layer plugin -->
+    <script src="https://cdn.jsdelivr.net/gh/ismyrnow/leaflet-groupedlayercontrol@gh-pages/dist/leaflet.groupedlayercontrol.min.js"></script>
+
+    <!-- marker cluster plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js" integrity="sha512-OFs3W4DIZ5ZkrDhBFtsCP6JXtMEDGmhl0QPlmWYBJay40TT1n3gt2Xuw8Pf/iezgW9CdabjkNChRqozl/YADmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- map js -->
+    <script src="map.js"></script>
+
+    <!-- data js -->
+    <script src="data.js"></script>
+
+    <!-- style js -->
+    <script src="style.js"></script>
+
+    <!-- my js -->
+    <script src="cardContent.js"></script>
+    
+</body>
+</html>
